@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kpi",
+  "type": "registry:ui",
+  "title": "Kpi",
+  "description": "Structured Liquidity Kpi — React component driving the SL class system.",
+  "dependencies": [
+    "lucide-react"
+  ],
+  "registryDependencies": [
+    "https://structured.glass/r/structured-liquidity.json",
+    "https://structured.glass/r/tooltip.json",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/kpi.tsx",
+      "content": "import * as React from \"react\";\nimport { ArrowDownRight, ArrowUpRight, Info, Minus } from \"lucide-react\";\n\nimport { Tooltip } from \"@/components/ui/tooltip\";\nimport { cn } from \"@/lib/utils\";\n\nexport function KpiGrid({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-kpi-grid\", className)} {...props} />;\n}\n\nexport interface KpiCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, \"title\"> {\n  change?: React.ReactNode;\n  description?: React.ReactNode;\n  direction?: \"down\" | \"flat\" | \"up\";\n  label: React.ReactNode;\n  loading?: boolean;\n  unavailableLabel?: React.ReactNode;\n  value?: React.ReactNode;\n  variant?: \"benchmark\" | \"default\";\n}\n\n/**\n * Default Structured Liquidity KPI card.\n *\n * Data is supplied by the adopter. Missing data renders an explicit unavailable\n * state; the component never invents a fallback metric.\n */\nexport function KpiCard({\n  change,\n  className,\n  description,\n  direction = \"flat\",\n  label,\n  loading = false,\n  unavailableLabel = \"N/A\",\n  value,\n  variant = \"default\",\n  ...props\n}: KpiCardProps) {\n  const unavailable = !loading && (value === null || value === undefined);\n  const DirectionIcon =\n    direction === \"up\" ? ArrowUpRight : direction === \"down\" ? ArrowDownRight : Minus;\n\n  return (\n    <div\n      className={cn(\"sl-kpi-card\", variant === \"benchmark\" && \"is-benchmark\", className)}\n      data-state={loading ? \"loading\" : unavailable ? \"unavailable\" : \"ready\"}\n      {...props}\n    >\n      <div className=\"sl-kpi-label\">\n        <span>{label}</span>\n        {description ? (\n          <Tooltip content={description} className=\"sl-kpi-tip-wrap\">\n            <button type=\"button\" className=\"sl-kpi-info\" aria-label={`About ${String(label)}`}>\n              <Info aria-hidden=\"true\" />\n            </button>\n          </Tooltip>\n        ) : null}\n      </div>\n      <div className=\"sl-kpi-row\">\n        <strong className=\"sl-kpi-value\">\n          {loading ? <span className=\"sl-kpi-skeleton\" aria-label=\"Loading metric\" /> : unavailable ? unavailableLabel : value}\n        </strong>\n        {!loading && !unavailable && change ? (\n          <span className=\"sl-kpi-change\">\n            <DirectionIcon aria-hidden=\"true\" />\n            {change}\n          </span>\n        ) : null}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/kpi.tsx"
+    }
+  ]
+}

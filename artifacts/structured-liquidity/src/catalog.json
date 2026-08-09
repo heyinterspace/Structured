@@ -911,6 +911,22 @@
       ]
     },
     {
+      "name": "KPI · default metric grid",
+      "registry": "kpi",
+      "cap": "KPI · default metric grid",
+      "category": "data",
+      "status": "stable",
+      "tags": [
+        "display",
+        "metric",
+        "responsive"
+      ],
+      "kinds": [
+        "display",
+        "feedback"
+      ]
+    },
+    {
       "name": "Section header",
       "registry": "section-header",
       "cap": "Section header",

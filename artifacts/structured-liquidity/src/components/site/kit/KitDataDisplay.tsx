@@ -32,6 +32,7 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import { Meter } from "@/components/ui/meter";
+import { KpiCard, KpiGrid } from "@/components/ui/kpi";
 
 export function KitDataDisplay() {
   return (
@@ -40,11 +41,48 @@ export function KitDataDisplay() {
         <span className="kg-name">Data display</span>
         <span className="kg-rule"></span>
         <span className="kg-count">
-          Alert · Avatar · Calendar · Card · Media player · Stat · Table ·
+          Alert · Avatar · Calendar · Card · KPI · Media player · Stat · Table ·
           Waveform
         </span>
       </div>
       <div className="kit-grid">
+        <div className="glass kit-cell w12">
+          <span className="kit-cap">KPI · default metric grid</span>
+          <KpiGrid>
+            <KpiCard
+              label="Investments"
+              value={50}
+              change="+16%"
+              direction="up"
+              description="Use one auditable grain and source for every KPI."
+            />
+            <KpiCard
+              label="Markups"
+              value={20}
+              change="+18%"
+              direction="up"
+              description="Tooltip definitions travel with the metric."
+            />
+            <KpiCard
+              label="Net TVPI"
+              value="1.28x"
+              description="Adopters supply database-backed values; the component supplies presentation."
+            />
+            <KpiCard
+              label="Venture performance"
+              value={58}
+              variant="benchmark"
+              description="A secondary benchmark may use the neutral negative surface, never a competing accent."
+            />
+            <KpiCard label="Pending analysis" loading />
+            <KpiCard
+              label="Unavailable"
+              value={null}
+              description="Missing data stays explicit instead of falling back to a hard-coded number."
+            />
+          </KpiGrid>
+        </div>
+
         <div className="glass kit-cell w8">
           <span className="kit-cap">Stat · metric display</span>
           <StatStrip>

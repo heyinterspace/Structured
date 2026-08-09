@@ -63,6 +63,12 @@ npx shadcn@latest add https://structured-liquidity.replit.app/r/button.json     
 
 Each `registry:ui` item is a plain React component (no Radix) that emits the SL classes and declares the base style as a `registryDependency`, so the CSS comes along. The registry index lives at `/registry.json`.
 
+For application KPI surfaces, install `kpi.json` and use `KpiGrid` with
+`KpiCard`. This is the default Structured Liquidity metric pattern: square
+accent cards, mono labels, optional definition tooltips and comparison badges,
+plus explicit loading and unavailable states. Applications supply audited
+values; the component must never invent a hard-coded fallback metric.
+
 **B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load the three font families; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
 
 ## Anatomy of a rigid container holding glass
