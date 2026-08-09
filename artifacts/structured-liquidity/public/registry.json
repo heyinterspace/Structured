@@ -238,6 +238,12 @@
       "description": "Structured Liquidity Keycap — React component driving the SL class system."
     },
     {
+      "name": "kpi",
+      "type": "registry:ui",
+      "title": "Kpi",
+      "description": "Structured Liquidity Kpi — React component driving the SL class system."
+    },
+    {
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
