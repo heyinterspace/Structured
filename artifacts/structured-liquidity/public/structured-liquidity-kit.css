@@ -567,3 +567,82 @@
 .sl-template-immersive { min-height: 100dvh; }
 .sl-template-immersive > main { position: relative; flex: 1; overflow: hidden; }
 @media (max-width: 760px) { .sl-template-guided > .sl-site-content { grid-template-columns: 1fr; } }
+
+/* Field-sourced from recurring social-proof cards on Interspace and Bumblebee. */
+.sl-testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 1rem;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: rgb(var(--glass-tint) / 0.08);
+  box-shadow: 4px 4px 0 0 var(--hard-shadow);
+}
+.sl-testimonial-source {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.sl-testimonial-quote {
+  margin: 0;
+  font-family: var(--body);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.sl-testimonial-author {
+  padding-top: 0.65rem;
+  border-top: 1px solid rgb(var(--edge) / 0.3);
+  font-family: var(--display);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+.sl-testimonial-meta {
+  display: block;
+  margin-top: 0.15rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+/* Field-sourced from the recurring trust and portfolio identity walls. */
+.sl-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 0.55rem;
+}
+.sl-logo-tile {
+  display: grid;
+  min-height: 86px;
+  place-items: center;
+  align-content: center;
+  gap: 0.45rem;
+  padding: 0.65rem;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: rgb(var(--glass-tint) / 0.08);
+  box-shadow: 3px 3px 0 0 var(--hard-shadow);
+}
+.sl-logo-mark {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--display);
+  font-weight: 800;
+}
+.sl-logo-label {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}

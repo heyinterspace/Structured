@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "logo-grid",
+  "type": "registry:ui",
+  "title": "Logo Grid",
+  "description": "Structured Liquidity Logo Grid — React component driving the SL class system.",
+  "registryDependencies": [
+    "https://structured.glass/r/structured-liquidity.json",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/logo-grid.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/** Responsive identity grid generalized from portfolio and trust surfaces. */\nexport function LogoGrid({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-logo-grid\", className)} {...props} />;\n}\n\nexport function LogoTile({ className, ...props }: React.HTMLAttributes<HTMLElement>) {\n  return <article className={cn(\"sl-logo-tile\", className)} {...props} />;\n}\n\nexport function LogoMark({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-logo-mark\", className)} {...props} />;\n}\n\nexport function LogoLabel({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-logo-label\", className)} {...props} />;\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/logo-grid.tsx"
+    }
+  ]
+}

@@ -199,11 +199,16 @@ function startSlosh() {
   let rawV = 0,
     slosh = 0,
     sloshV = 0;
+  let ticking = false;
 
   const onScroll = () => {
     const y = window.pageYOffset || 0;
     rawV += y - lastY;
     lastY = y;
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(tick);
+    }
   };
   const tick = () => {
     sloshV += rawV * 0.015;
@@ -217,10 +222,13 @@ function startSlosh() {
       "skewY(" + (slosh * 0.45).toFixed(2) + "deg) translateY(" + (slosh * 0.3).toFixed(2) + "px)";
     const nodes = document.querySelectorAll<HTMLElement>(".lw-slosh");
     for (let i = 0; i < nodes.length; i++) nodes[i].style.transform = tr;
+    if (Math.abs(rawV) < 0.01 && Math.abs(sloshV) < 0.01 && Math.abs(slosh) < 0.01) {
+      ticking = false;
+      return;
+    }
     requestAnimationFrame(tick);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
-  requestAnimationFrame(tick);
 }
 
 /* ---------------- React components ---------------- */

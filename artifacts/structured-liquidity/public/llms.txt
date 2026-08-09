@@ -2,6 +2,14 @@
 
 > An open UI design language that pairs **rigid containment** (sharp 90° corners, flat blurless offset shadows, a strict grid) with **liquid depth** (semi-transparent, light-reflecting glass) and **semantic clarity** (one accent, intentional type). This file makes the language machine-readable so an AI agent can adopt it faithfully. Theme it live on the page; every visual is driven by CSS custom properties.
 
+## Install before editing UI
+
+Run this as the first implementation step, before recreating tokens or writing components:
+
+`npx shadcn@latest add https://structured.glass/r/structured-liquidity-agent.json`
+
+This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Verify both landed, read the installed skill, and only then start UI work. For theme files without the agent skill, install `https://structured.glass/r/structured-liquidity.json`.
+
 ## The three pillars
 
 1. **Structured Containment**: Sharp 90° corners, flat unblurred shadows, a strict grid. Boundaries are never ambiguous. Shadows are an offset solid fact (never a soft blur). Borders carry weight (2–3px) and define the object.
@@ -35,7 +43,7 @@ Core defaults:
 - `--edge` `0 0 0` (rgb channels), `--hard-shadow` `#000000`, `--neg` `#3c3f4b`
 - `--glass-blur` `18px`, `--glass-tint` `255 255 255`, `--glass-alpha` `0.07`
 - `--border-w` `2px`, `--hard-x` / `--hard-y` `7px`, `--radius` `0px`
-- `--display` Archivo, `--body` Outfit, `--mono` Space Mono
+- `--display` Inter, `--body` Inter, `--mono` Space Mono
 - `--content-w` `1200px`, `--shell-w` `1280px`, `--viewport-gutter` `4vw`
 - Light mode: set `data-mode="light"` on `<html>` (flips `--bg`, `--ink`, `--ink-dim`, `--glass-alpha`, etc.)
 
@@ -43,9 +51,7 @@ Core defaults:
 
 The language fixes three roles: a **display** face (headlines, buttons, brand), a **body** face (reading copy), and a **mono** face (labels, data, captions). Keep the display heavy and tight; keep the body humanist and legible; keep mono for anything tabular or label-like.
 
-- **Set 01 · Canonical · Archivo (header) · Outfit (body) · Space Mono (detail)**: the canonical Structured Liquidity pairing. Confident grotesk header, warm geometric body, technical mono for detail. Use this unless you have a reason not to.
-- **Set 02 · Editorial · Syne (header) · Inter (body) · IBM Plex Mono (detail)**: expressive display over a neutral workhorse body; good for marketing and brand surfaces.
-- **Set 03 · Modern · Bricolage Grotesque (header) · Plus Jakarta Sans (body) · JetBrains Mono (detail)**: quirky contemporary grotesque with a clean body and a developer-tool mono for detail.
+- **Canonical · Inter (header) · Inter (body) · Space Mono (detail)**: use weight and scale within Inter for hierarchy; reserve Space Mono for labels, data, code, and metadata.
 
 Rules of thumb: never pair two display faces; never set body copy in the display face (it gets tiring); use mono only for labels, code, numbers, and metadata, never for long paragraphs.
 
@@ -62,11 +68,12 @@ To adopt the kit, include the three stylesheets and the kit script, then use the
 
 ## How an agent should use this
 
-1. Read [design-tokens.json](design-tokens.json) and apply the tokens as CSS custom properties on `:root` (each token's `$extensions.cssVar` gives the exact variable name).
-2. Follow the **Hard rules** above when generating any new component, so output stays on-brand.
-3. Pull component markup from [registry.json](registry.json) instead of inventing class names.
-4. Pick a font pairing from the list above (default: Archivo · Outfit · Space Mono).
-5. Keep the visible Structured Liquidity attribution in the public site's footer.
+1. Run the agent install command above and verify its files before editing UI.
+2. Read the installed skill and [design-tokens.json](design-tokens.json).
+3. Pull components from [registry.json](registry.json) instead of inventing class names.
+4. Follow the **Hard rules** above for any new component.
+5. Use Inter for header/body roles and Space Mono only for detail.
+6. Keep the visible Structured Liquidity attribution in the public site's footer.
 
 ## Source
 

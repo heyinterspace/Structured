@@ -13,6 +13,9 @@ import {
 import { installCommand } from "./InstallButton";
 
 const AI_PROMPT = `You are designing in the Structured Liquidity UI language.
+Before editing UI, install the theme and its local agent skill:
+npx shadcn@latest add https://structured.glass/r/structured-liquidity-agent.json
+Verify that the Structured Liquidity styles and .agents/skills/structured-liquidity/SKILL.md exist before continuing.
 Rules:
 - Square corners (border-radius: 0).
 - Flat offset shadows only: box-shadow: 7px 7px 0 0 #000, never blurred.
@@ -20,7 +23,7 @@ Rules:
 - Exactly one accent (#a388ee) carries all emphasis.
 - Liquid glass = backdrop-filter blur over translucent white rgba(255,255,255,0.07).
 - Destructive surfaces are neutral gray (#3c3f4b), never red.
-- Type: Archivo for headings/buttons/brand, Outfit for body, Space Mono for labels and data.
+- Type: Inter for headings/buttons/brand and body, Space Mono for labels and data.
 - Leading icons (Lucide) on nav links and buttons.
 Use the tokens in design-tokens.json and the component markup in registry.json.
 Full spec: llms.txt.`;
@@ -31,8 +34,8 @@ const ROOT_TOKENS = `:root{
   --edge:0 0 0; --hard-shadow:#000000; --neg:#3c3f4b; --neg-ink:#f0f0f2;
   --glass-blur:18px; --glass-tint:255 255 255; --glass-alpha:0.07;
   --border-w:2px; --hard-x:7px; --hard-y:7px; --radius:0px;
-  --display:"Archivo","Helvetica Neue",system-ui,sans-serif;
-  --body:"Outfit","Helvetica Neue",system-ui,sans-serif;
+  --display:"Inter","Helvetica Neue",system-ui,sans-serif;
+  --body:"Inter","Helvetica Neue",system-ui,sans-serif;
   --mono:"Space Mono",ui-monospace,"SFMono-Regular",monospace;
 }`;
 
@@ -65,9 +68,9 @@ export function Adopt() {
         <span className="eyebrow">Agent-ready · adopt the language</span>
         <h2 className="section-title">Built to be read by machines.</h2>
         <p className="lead">
-          Structured Liquidity ships its rules, tokens, and components in formats an AI agent can
-          read directly, so the language travels into new products without losing its grammar. Point
-          any AI tool at the files below, or paste the prompt into your assistant.
+          Give an agent one command before its first UI edit. It installs both the theme and a local
+          Structured Liquidity skill, so the rules stay in the project instead of being rediscovered
+          over several iterations.
         </p>
       </div>
 
@@ -120,18 +123,21 @@ export function Adopt() {
           <div className="adopt-h">
             <span className="kit-cap">
               <Terminal />
-              Install with shadcn
+              Install theme + agent skill
             </span>
             <CopyButton text={installCommand()} />
           </div>
           <p>
-            Drop the entire design language — tokens, stylesheets, and kit script — into any
-            shadcn-configured project. Add a single component by swapping the file name (e.g.{" "}
-            <code>/r/button.json</code>).
+            Run this first. It installs the full design language and writes the local agent skill
+            that tells future coding agents to use it. Individual components can then be added by
+            swapping the file name (for example, <code>/r/button.json</code>).
           </p>
           <pre id="install-cmd" className="code-block">
             {installCommand()}
           </pre>
+          <p>
+            Theme only: <code>{installCommand("structured-liquidity")}</code>
+          </p>
         </div>
 
         <div className="glass kit-cell">

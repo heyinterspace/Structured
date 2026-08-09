@@ -10,9 +10,17 @@ import {
 import { FrameworkAttribution } from "@/components/ui/attribution";
 import { FilterGroup, FilterSummary, FilterToolbar } from "@/components/ui/filter-toolbar";
 import { Omnibar, OmnibarAttachment } from "@/components/ui/omnibar";
+import { LogoGrid, LogoLabel, LogoMark, LogoTile } from "@/components/ui/logo-grid";
 import { SiteContent, SiteShell } from "@/components/ui/site-shell";
 import { Step, Stepper } from "@/components/ui/stepper";
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
+import {
+  TestimonialAuthor,
+  TestimonialCard,
+  TestimonialMeta,
+  TestimonialQuote,
+  TestimonialSource,
+} from "@/components/ui/testimonial-card";
 
 export function KitPatterns() {
   return (
@@ -21,7 +29,7 @@ export function KitPatterns() {
         <span className="kg-name">Production patterns</span>
         <span className="kg-rule" />
         <span className="kg-count">
-          Shell · Attribution · Timeline · Stepper · Filters · Omnibar · Detail panel
+          Shell · Attribution · Timeline · Stepper · Filters · Omnibar · Detail panel · Testimonials · Logos
         </span>
       </div>
       <div className="kit-grid">
@@ -99,6 +107,37 @@ export function KitPatterns() {
               <Button size="sm" variant="ghost">Dismiss</Button>
             </DetailPanelFooter>
           </DetailPanel>
+        </div>
+
+        <div className="glass kit-cell w6">
+          <span className="kit-cap">Testimonial card</span>
+          <TestimonialCard>
+            <TestimonialSource>Verified family review</TestimonialSource>
+            <TestimonialQuote>
+              “The same familiar faces, thoughtful updates, and a place our child is excited to
+              return to.”
+            </TestimonialQuote>
+            <TestimonialAuthor>
+              Brooklyn parent <TestimonialMeta>Daycare portal</TestimonialMeta>
+            </TestimonialAuthor>
+          </TestimonialCard>
+        </div>
+
+        <div className="glass kit-cell w6">
+          <span className="kit-cap">Logo grid</span>
+          <LogoGrid>
+            {[
+              ["IV", "Advisory"],
+              ["2D", "Syndicate"],
+              ["BB", "Daycare"],
+              ["CG", "Research"],
+            ].map(([mark, label]) => (
+              <LogoTile key={mark}>
+                <LogoMark>{mark}</LogoMark>
+                <LogoLabel>{label}</LogoLabel>
+              </LogoTile>
+            ))}
+          </LogoGrid>
         </div>
       </div>
     </div>

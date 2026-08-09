@@ -1075,6 +1075,24 @@
         "display",
         "feedback"
       ]
+    },
+    {
+      "name": "Testimonial card",
+      "registry": "testimonial-card",
+      "cap": "Testimonial card",
+      "category": "data",
+      "status": "stable",
+      "tags": ["display", "field-sourced", "social-proof"],
+      "kinds": ["display"]
+    },
+    {
+      "name": "Logo grid",
+      "registry": "logo-grid",
+      "cap": "Logo grid",
+      "category": "layout",
+      "status": "stable",
+      "tags": ["display", "field-sourced", "identity"],
+      "kinds": ["display"]
     }
   ],
   "facets": [

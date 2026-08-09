@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Check, ChevronDown, Moon, Sun } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 
 /* ============================================================
    Live theme tweaker — React port of the original vanilla panel.
@@ -18,7 +18,6 @@ interface Tweaks {
   border: number;
   shadow: number;
   radius: number;
-  font: "Archivo" | "Space Grotesk" | "Syne";
   mode: Mode;
 }
 
@@ -28,14 +27,7 @@ const DEFAULTS: Tweaks = {
   border: 2,
   shadow: 7,
   radius: 0,
-  font: "Archivo",
   mode: "dark",
-};
-
-const FONTS: Record<Tweaks["font"], string> = {
-  Archivo: '"Archivo", "Helvetica Neue", system-ui, sans-serif',
-  "Space Grotesk": '"Space Grotesk", system-ui, sans-serif',
-  Syne: '"Syne", system-ui, sans-serif',
 };
 
 const ACCENTS = ["#a388ee", "#7c9cff", "#3dd7c8", "#ffb454", "#ff7a90"];
@@ -78,7 +70,6 @@ function apply(t: Tweaks): void {
   root.setProperty("--hard-x", t.shadow + "px");
   root.setProperty("--hard-y", t.shadow + "px");
   root.setProperty("--radius", t.radius + "px");
-  root.setProperty("--display", FONTS[t.font] || FONTS.Archivo);
   document.documentElement.setAttribute("data-mode", t.mode);
 }
 
@@ -111,123 +102,6 @@ function accentPour(x: number, y: number, hex: string): void {
   node.addEventListener("animationend", () => node.remove());
 }
 
-const FONT_KEYS = Object.keys(FONTS) as Tweaks["font"][];
-
-function FontSelect({
-  value,
-  onChange,
-}: {
-  value: Tweaks["font"];
-  onChange: (f: Tweaks["font"]) => void;
-}) {
-  const [open, setOpen] = useState(false);
-  const [active, setActive] = useState(() => Math.max(0, FONT_KEYS.indexOf(value)));
-  const selRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLButtonElement>(null);
-  const optRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    if (open) {
-      const i = Math.max(0, FONT_KEYS.indexOf(value));
-      setActive(i);
-      requestAnimationFrame(() => optRefs.current[i]?.focus());
-    }
-  }, [open, value]);
-
-  const clamp = (i: number) => Math.max(0, Math.min(FONT_KEYS.length - 1, i));
-  const moveTo = (i: number) => {
-    const n = clamp(i);
-    setActive(n);
-    optRefs.current[n]?.focus();
-  };
-
-  const onKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === "Escape") {
-      setOpen(false);
-      triggerRef.current?.focus();
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      if (!open) setOpen(true);
-      else moveTo(active + 1);
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      if (!open) {
-        setActive(FONT_KEYS.length - 1);
-        setOpen(true);
-      } else moveTo(active - 1);
-    } else if ((e.key === "Enter" || e.key === " ") && open) {
-      const el = document.activeElement;
-      if (el instanceof HTMLElement && el.classList.contains("twk-option")) {
-        e.preventDefault();
-        onChange(FONT_KEYS[active]);
-        setOpen(false);
-        triggerRef.current?.focus();
-      }
-    }
-  };
-
-  return (
-    <div
-      ref={selRef}
-      className={"twk-select" + (open ? " open" : "")}
-      onKeyDown={onKeyDown}
-      onBlur={() => {
-        setTimeout(() => {
-          if (selRef.current && !selRef.current.contains(document.activeElement)) setOpen(false);
-        }, 0);
-      }}
-    >
-      <button
-        ref={triggerRef}
-        type="button"
-        className="twk-field twk-select-trigger"
-        role="combobox"
-        aria-haspopup="listbox"
-        aria-expanded={open}
-        aria-controls="twk-font-list"
-        aria-label="Display font"
-        aria-activedescendant={open ? `twk-font-opt-${active}` : undefined}
-        onClick={(e) => {
-          e.stopPropagation();
-          setOpen((o) => !o);
-        }}
-      >
-        <span className="twk-select-val">{value}</span>
-        <ChevronDown />
-      </button>
-      <div
-        id="twk-font-list"
-        className="twk-select-list"
-        role="listbox"
-        aria-label="Display font"
-      >
-        {FONT_KEYS.map((f, idx) => (
-          <div
-            key={f}
-            ref={(n) => {
-              optRefs.current[idx] = n;
-            }}
-            id={`twk-font-opt-${idx}`}
-            className={"twk-option" + (idx === active ? " active" : "")}
-            role="option"
-            tabIndex={-1}
-            aria-selected={f === value}
-            onClick={() => {
-              onChange(f);
-              setOpen(false);
-              triggerRef.current?.focus();
-            }}
-            onMouseEnter={() => setActive(idx)}
-          >
-            <span>{f}</span>
-            <Check className="twk-check" />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export function Tweaker() {
   const [state, setState] = useState<Tweaks>(() => {
     const t = load();
@@ -245,7 +119,6 @@ export function Tweaker() {
     <K extends keyof Tweaks>(key: K, value: Tweaks[K]) => {
       setState((prev) => {
         const next = { ...prev, [key]: value };
-        if (key === "font") requestAnimationFrame(() => window.dispatchEvent(new Event("resize")));
         return next;
       });
     },
@@ -324,13 +197,6 @@ export function Tweaker() {
           {sliderRow("Flat shadow", "shadow", 0, 16)}
 
           <div className="twk-sect">Voice</div>
-          <div className="twk-row">
-            <div className="twk-lbl">
-              <span>Display font</span>
-            </div>
-            <FontSelect value={state.font} onChange={(f) => set("font", f)} />
-          </div>
-
           <div className="twk-row">
             <div className="twk-lbl">
               <span>Accent</span>

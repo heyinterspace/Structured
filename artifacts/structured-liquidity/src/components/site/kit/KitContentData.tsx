@@ -86,28 +86,7 @@ export function KitContentData() {
               <FontPairFonts>
                 <FontSpecimen role="header">
                   <FontRole>Header</FontRole>
-                  <FontName className="ff-archivo">Archivo</FontName>
-                </FontSpecimen>
-                <FontSpecimen role="body">
-                  <FontRole>Body</FontRole>
-                  <FontName className="ff-outfit">Outfit</FontName>
-                </FontSpecimen>
-                <FontSpecimen role="detail">
-                  <FontRole>Detail</FontRole>
-                  <FontName className="ff-spacemono">Space Mono</FontName>
-                </FontSpecimen>
-              </FontPairFonts>
-              <FontPairNote>
-                Confident grotesque header, warm body, technical mono: the
-                default.
-              </FontPairNote>
-            </FontPair>
-            <FontPair>
-              <FontPairTitle>Set 02 · Editorial</FontPairTitle>
-              <FontPairFonts>
-                <FontSpecimen role="header">
-                  <FontRole>Header</FontRole>
-                  <FontName className="ff-syne">Syne</FontName>
+                  <FontName className="ff-inter">Inter</FontName>
                 </FontSpecimen>
                 <FontSpecimen role="body">
                   <FontRole>Body</FontRole>
@@ -115,33 +94,12 @@ export function KitContentData() {
                 </FontSpecimen>
                 <FontSpecimen role="detail">
                   <FontRole>Detail</FontRole>
-                  <FontName className="ff-ibmplexmono">IBM Plex Mono</FontName>
+                  <FontName className="ff-spacemono">Space Mono</FontName>
                 </FontSpecimen>
               </FontPairFonts>
               <FontPairNote>
-                Expressive display over a neutral workhorse: marketing and brand
-                surfaces.
-              </FontPairNote>
-            </FontPair>
-            <FontPair>
-              <FontPairTitle>Set 03 · Modern</FontPairTitle>
-              <FontPairFonts>
-                <FontSpecimen role="header">
-                  <FontRole>Header</FontRole>
-                  <FontName className="ff-bricolage">Bricolage Grotesque</FontName>
-                </FontSpecimen>
-                <FontSpecimen role="body">
-                  <FontRole>Body</FontRole>
-                  <FontName className="ff-jakarta">Plus Jakarta Sans</FontName>
-                </FontSpecimen>
-                <FontSpecimen role="detail">
-                  <FontRole>Detail</FontRole>
-                  <FontName className="ff-jetbrainsmono">JetBrains Mono</FontName>
-                </FontSpecimen>
-              </FontPairFonts>
-              <FontPairNote>
-                Quirky contemporary grotesque with a clean body and developer
-                mono.
+                One disciplined sans across hierarchy and reading, with technical mono reserved
+                for labels, data, and code.
               </FontPairNote>
             </FontPair>
           </FontPairings>

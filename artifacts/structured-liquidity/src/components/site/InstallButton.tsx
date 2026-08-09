@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Download, Check } from "lucide-react";
 import { useToast } from "@/components/ui/toast";
 
-/** The registry item a bare Install copies — the base style brings the whole language. */
-const DEFAULT_ITEM = "structured-liquidity";
+/** Default to the agent bundle: it installs the theme and its persistent local skill together. */
+const DEFAULT_ITEM = "structured-liquidity-agent";
 
 /** Build the install command from wherever the registry is being served. */
 export function installCommand(item: string = DEFAULT_ITEM) {
@@ -29,7 +29,7 @@ interface InstallButtonProps {
 export function InstallButton({
   item = DEFAULT_ITEM,
   className = "btn solid",
-  label = "Install",
+  label = "Install for agents",
   style,
   iconOnly = false,
 }: InstallButtonProps) {

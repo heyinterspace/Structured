@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-07-29",
+  "reviewedAt": "2026-08-09",
   "projects": [
     {
       "id": "interspace-ventures",
@@ -14,7 +14,7 @@
       "shotAlt": "Interspace Ventures strategic-finance website using Structured Liquidity",
       "description": "The operating home for Interspace advisory, ventures, portfolio intelligence, and operator networks, using rigid navigation, comparison grids, metric surfaces, and the canonical purple register.",
       "adoption": ["structured-containment", "liquid-depth", "semantic-clarity"],
-      "absorbedComponents": ["filter-toolbar", "site-shell", "stat", "timeline"],
+      "absorbedComponents": ["filter-toolbar", "logo-grid", "site-shell", "stat", "testimonial-card", "timeline"],
       "candidatePatterns": ["comparison-grid"]
     },
     {
@@ -39,7 +39,7 @@
       "domain": "exobase.dev",
       "href": null,
       "repository": "Interspace-Ventures/exobase",
-      "lifecycle": "live",
+      "lifecycle": "staging",
       "routeStatus": "domain-pending",
       "tag": "Website operating system",
       "shot": null,
@@ -62,24 +62,24 @@
       "shotAlt": "2 Days Early investment-syndicate website built on Structured Liquidity",
       "description": "An operator-led fintech investment syndicate using the structured-containment half of the language with a green accent, sharp portfolio grids, stat rails, and profile-driven storytelling.",
       "adoption": ["structured-containment", "semantic-clarity"],
-      "absorbedComponents": ["marquee", "profile-header", "section-header", "stat"],
-      "candidatePatterns": ["portfolio-logo-grid"]
+      "absorbedComponents": ["logo-grid", "marquee", "profile-header", "section-header", "stat"],
+      "candidatePatterns": []
     },
     {
-      "id": "project-chrysalis",
-      "name": "Project Chrysalis",
+      "id": "bumblebee",
+      "name": "Bumblebee",
       "domain": "bumblebee.nyc",
       "href": "https://bumblebee.nyc",
       "repository": "Interspace-Ventures/bumblebee",
       "lifecycle": "live",
       "routeStatus": "verified",
-      "tag": "Early-learning habitat",
-      "shot": "bumblebee.png",
-      "shotAlt": "Project Chrysalis, the Bumblebee Brooklyn daycare website",
-      "description": "A warm early-learning site in the light-mode register: rigid black-bordered containers, flat shadows, amber emphasis, and friendly editorial content without losing structural clarity.",
+      "tag": "Daycare portal",
+      "shot": "bumblebee-showcase.jpg",
+      "shotAlt": "Bumblebee daycare portal for Brooklyn families",
+      "description": "A daycare portal for Brooklyn families, using rigid black-bordered navigation, flat shadows, warm editorial cards, caregiver trust signals, and clear paths to program, testimonials, and visits.",
       "adoption": ["structured-containment", "semantic-clarity"],
-      "absorbedComponents": ["card", "section-header"],
-      "candidatePatterns": ["daily-rhythm", "family-faq"]
+      "absorbedComponents": ["card", "section-header", "testimonial-card"],
+      "candidatePatterns": ["daily-rhythm", "family-faq", "credential-strip", "location-card"]
     },
     {
       "id": "universe",

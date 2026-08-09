@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "testimonial-card",
+  "type": "registry:ui",
+  "title": "Testimonial Card",
+  "description": "Structured Liquidity Testimonial Card — React component driving the SL class system.",
+  "registryDependencies": [
+    "https://structured.glass/r/structured-liquidity.json",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/testimonial-card.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/** Field-sourced quote card shared by advisory and family-facing products. */\nexport function TestimonialCard({ className, ...props }: React.HTMLAttributes<HTMLElement>) {\n  return <figure className={cn(\"sl-testimonial\", className)} {...props} />;\n}\n\nexport function TestimonialSource({ className, ...props }: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-testimonial-source\", className)} {...props} />;\n}\n\nexport function TestimonialQuote({ className, ...props }: React.HTMLAttributes<HTMLElement>) {\n  return <blockquote className={cn(\"sl-testimonial-quote\", className)} {...props} />;\n}\n\nexport function TestimonialAuthor({ className, ...props }: React.HTMLAttributes<HTMLElement>) {\n  return <figcaption className={cn(\"sl-testimonial-author\", className)} {...props} />;\n}\n\nexport function TestimonialMeta({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-testimonial-meta\", className)} {...props} />;\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/testimonial-card.tsx"
+    }
+  ]
+}

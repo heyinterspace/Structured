@@ -22,7 +22,6 @@ interface Adopter {
 
 const ADOPTERS = adopterRegistry.projects as Adopter[];
 const LIVE = ADOPTERS.filter((project) => project.lifecycle === "live");
-const STAGING = ADOPTERS.filter((project) => project.lifecycle === "staging");
 
 const STATUS_LABEL: Record<RouteStatus, string> = {
   verified: "Live",
@@ -117,7 +116,6 @@ export function Showcase() {
 
       <div className="show-registry-meta reveal">
         <span>{LIVE.length} live</span>
-        <span>{STAGING.length} staging</span>
         <span>Reviewed {adopterRegistry.reviewedAt}</span>
       </div>
 
@@ -127,20 +125,6 @@ export function Showcase() {
         ))}
       </div>
 
-      <div className="show-stage-head reveal">
-        <span className="eyebrow">Staging · tracked before launch</span>
-        <h3>Signals from the frontier.</h3>
-        <p>
-          Private builds and concepts stay visible to the system without being presented as public
-          launches. Their useful patterns can still graduate into the shared library.
-        </p>
-      </div>
-
-      <div className="show-grid show-grid-staging reveal">
-        {STAGING.map((project) => (
-          <ProjectCard project={project} key={project.id} />
-        ))}
-      </div>
     </section>
   );
 }

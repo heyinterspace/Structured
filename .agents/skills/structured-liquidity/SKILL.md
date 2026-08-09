@@ -17,7 +17,7 @@ Follow these literally — they are what keep generated output on-brand:
 4. **Exactly one accent.** `--accent` carries all emphasis. Never add a competing hue.
 5. **Glass is depth, not color.** Liquid glass = `backdrop-filter: blur(var(--glass-blur))` over `rgba(var(--glass-tint), var(--glass-alpha))`. Keep it neutral/translucent.
 6. **Destructive is gray, not red.** Destructive *containers* use `--neg`. Error *text* may warn in color.
-7. **Fixed type roles.** display (`--display`, Archivo) = headings/buttons/brand; mono (`--mono`, Space Mono) = labels/data/captions/eyebrows; body (`--body`, Outfit) = reading copy.
+7. **Fixed type roles.** display (`--display`, Inter) = headings/buttons/brand; body (`--body`, Inter) = reading copy; mono (`--mono`, Space Mono) = labels/data/captions/eyebrows.
 8. **Leading icons.** Nav links and buttons take a leading Lucide icon, then the label.
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
 
@@ -32,8 +32,8 @@ Apply these as CSS custom properties on `:root` (dark-mode defaults):
   --edge:0 0 0; --hard-shadow:#000000; --neg:#3c3f4b; --neg-ink:#f0f0f2;
   --glass-blur:18px; --glass-tint:255 255 255; --glass-alpha:0.07;
   --border-w:2px; --hard-x:7px; --hard-y:7px; --radius:0px;
-  --display:"Archivo","Helvetica Neue",system-ui,sans-serif;
-  --body:"Outfit","Helvetica Neue",system-ui,sans-serif;
+  --display:"Inter","Helvetica Neue",system-ui,sans-serif;
+  --body:"Inter","Helvetica Neue",system-ui,sans-serif;
   --mono:"Space Mono",ui-monospace,"SFMono-Regular",monospace;
 }
 ```
@@ -42,28 +42,34 @@ Light mode: set `data-mode="light"` on `<html>` and override `--bg:#dfe5f2; --bg
 
 The canonical machine-readable set is `design-tokens.json` (W3C Design Tokens format; each token's `$extensions.cssVar` gives the exact variable name).
 
-## Recommended font pairings
+## Type layout
 
-Three roles — header / body / detail (display / body / mono). Never pair two header faces; never set body copy in the header face; use the detail mono only for labels/data/code.
-
-- **Set 01 · Canonical — Archivo · Outfit · Space Mono** — canonical default.
-- **Set 02 · Editorial — Syne · Inter · IBM Plex Mono** — expressive/editorial.
-- **Set 03 · Modern — Bricolage Grotesque · Plus Jakarta Sans · JetBrains Mono** — quirky contemporary.
+Three roles — header / body / detail (display / body / mono). Inter carries both sans-serif roles; use weight and scale for hierarchy. Use Space Mono only for labels, data, code, captions, and eyebrows.
 
 ## Components
 
 The specimen ships a **shadcn-installable registry** served at `/r/*.json`. Two ways to adopt, depending on the target project:
 
+### Installation gate for agents
+
+Before making the first UI edit in a target project, run:
+
+```bash
+npx shadcn@latest add https://structured.glass/r/structured-liquidity-agent.json
+```
+
+Verify that the theme styles and `.agents/skills/structured-liquidity/SKILL.md` landed. Do not spend early iterations approximating the language by hand.
+
 **A. React + Tailwind project (preferred).** Use the shadcn CLI. Install the whole language (tokens + the three stylesheets + the kit script) first, then any component:
 
 ```bash
-npx shadcn@latest add https://structured-liquidity.replit.app/r/structured-liquidity.json   # base style — do this first
-npx shadcn@latest add https://structured-liquidity.replit.app/r/button.json                  # then any component
+npx shadcn@latest add https://structured.glass/r/structured-liquidity.json   # base style — do this first
+npx shadcn@latest add https://structured.glass/r/button.json                  # then any component
 ```
 
 Each `registry:ui` item is a plain React component (no Radix) that emits the SL classes and declares the base style as a `registryDependency`, so the CSS comes along. The registry index lives at `/registry.json`.
 
-**B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load the three font families; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
+**B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load Inter and Space Mono; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
 
 ## Anatomy of a rigid container holding glass
 

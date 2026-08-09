@@ -30,6 +30,7 @@ import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(HERE, "..");
+const REPO_ROOT = join(ROOT, "..", "..");
 const UI_DIR = join(ROOT, "src/components/ui");
 const TEMPLATE_DIR = join(ROOT, "src/components/templates");
 const PUBLIC = join(ROOT, "public");
@@ -222,8 +223,8 @@ const cssVars = {
     "hard-x": "7px",
     "hard-y": "7px",
     "radius": "0px",
-    "display": '"Archivo","Helvetica Neue",system-ui,sans-serif',
-    "body": '"Outfit","Helvetica Neue",system-ui,sans-serif',
+    "display": '"Inter","Helvetica Neue",system-ui,sans-serif',
+    "body": '"Inter","Helvetica Neue",system-ui,sans-serif',
     "mono": '"Space Mono",ui-monospace,"SFMono-Regular",monospace',
   },
 };
@@ -256,12 +257,34 @@ const baseItem = {
   files: baseFiles,
 };
 
+const agentItem = {
+  $schema: ITEM_SCHEMA,
+  name: "structured-liquidity-agent",
+  type: "registry:item",
+  title: "Structured Liquidity Agent Bundle",
+  description:
+    "Install Structured Liquidity plus a persistent local agent skill before the first UI edit.",
+  registryDependencies: [itemUrl(BASE_NAME)],
+  files: [
+    {
+      path: "registry/rules/structured-liquidity/SKILL.md",
+      content: readFileSync(
+        join(REPO_ROOT, ".agents", "skills", "structured-liquidity", "SKILL.md"),
+        "utf8",
+      ),
+      type: "registry:file",
+      target: ".agents/skills/structured-liquidity/SKILL.md",
+    },
+  ],
+};
+
 /* ---- write everything ------------------------------------------------- */
 
 rmSync(OUT_DIR, { recursive: true, force: true });
 mkdirSync(OUT_DIR, { recursive: true });
 
 writeFileSync(join(OUT_DIR, `${BASE_NAME}.json`), JSON.stringify(baseItem, null, 2) + "\n");
+writeFileSync(join(OUT_DIR, `${agentItem.name}.json`), JSON.stringify(agentItem, null, 2) + "\n");
 for (const { name, item } of uiItems) {
   writeFileSync(join(OUT_DIR, `${name}.json`), JSON.stringify(item, null, 2) + "\n");
 }
@@ -280,11 +303,17 @@ const registry = {
       title: baseItem.title,
       description: baseItem.description,
     },
+    {
+      name: agentItem.name,
+      type: agentItem.type,
+      title: agentItem.title,
+      description: agentItem.description,
+    },
     ...items,
   ],
 };
 writeFileSync(join(WRITE_DIR, "registry.json"), JSON.stringify(registry, null, 2) + "\n");
 
 console.log(
-  `registry: wrote ${uiItems.length + templateItems.length + 1} items to public/r/ + public/registry.json (base ${BASE_URL})`,
+  `registry: wrote ${uiItems.length + templateItems.length + 2} items to public/r/ + public/registry.json (base ${BASE_URL})`,
 );

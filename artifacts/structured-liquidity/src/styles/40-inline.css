@@ -487,8 +487,7 @@
   /* Proportional readability bump: nudge the root size so all rem-based text grows together (tweaker panel uses px and stays put). */
   html{font-size:108%;}
 
-  /* ── Body copy face: Outfit. Display/headings & brand keep --display (Archivo, tweaker-controlled) ── */
-  :root{--body:"Outfit","Helvetica Neue",system-ui,sans-serif;}
+  /* Inter carries header and body roles; Space Mono remains reserved for detail. */
   body{font-family:var(--body);}
   h1, h2, h3, .wordmark, .brand .name{font-family:var(--display);}
 
@@ -792,8 +791,8 @@
   .pairings .pf.is-detail .pf-name{font-size:0.95rem;font-weight:400;letter-spacing:0;}
   .pairings .pair-note{font-family:var(--mono);font-size:0.72rem;color:var(--ink-dim);margin-top:0.6rem;}
   /* Show each face in its own typeface so it's visible at a glance. */
-  .ff-archivo{font-family:"Archivo","Helvetica Neue",sans-serif;}
-  .ff-outfit{font-family:"Outfit","Helvetica Neue",sans-serif;}
+  .ff-archivo{font-family:"Inter","Helvetica Neue",sans-serif;}
+  .ff-outfit{font-family:"Inter","Helvetica Neue",sans-serif;}
   .ff-syne{font-family:"Syne","Helvetica Neue",sans-serif;}
   .ff-inter{font-family:"Inter","Helvetica Neue",sans-serif;}
   .ff-bricolage{font-family:"Bricolage Grotesque","Helvetica Neue",sans-serif;}

@@ -32,8 +32,9 @@
   --neg: #3c3f4b;             /* negative / destructive surface (gray, never red) */
   --neg-ink: #f0f0f2;
 
+  --display: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --body: "Inter", "Helvetica Neue", system-ui, sans-serif;
   --mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
-  --display: "Archivo", "Helvetica Neue", system-ui, sans-serif;
 }
 
 /* tighter rhythm — denser, less airy */
@@ -53,7 +54,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; background: var(--bg); }
+html { scroll-behavior: auto; background: var(--bg); }
 
 body {
   margin: 0;

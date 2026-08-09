@@ -106,13 +106,13 @@
   "fontFamily": {
     "$type": "fontFamily",
     "display": {
-      "$value": ["Archivo", "Helvetica Neue", "system-ui", "sans-serif"],
-      "$description": "Headings, buttons, brand. Heavy and tight. Controlled live by the page tweaker.",
+      "$value": ["Inter", "Helvetica Neue", "system-ui", "sans-serif"],
+      "$description": "Headings, buttons, and brand. Use weight and scale to create hierarchy.",
       "$extensions": { "cssVar": "--display" }
     },
     "body": {
-      "$value": ["Outfit", "Helvetica Neue", "system-ui", "sans-serif"],
-      "$description": "Paragraph / reading copy. Humanist and legible.",
+      "$value": ["Inter", "Helvetica Neue", "system-ui", "sans-serif"],
+      "$description": "Paragraph and reading copy. Neutral and legible.",
       "$extensions": { "cssVar": "--body" }
     },
     "mono": {

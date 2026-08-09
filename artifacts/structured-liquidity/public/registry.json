@@ -10,6 +10,12 @@
       "description": "The Structured Liquidity design language base: theme tokens plus the three distributable stylesheets and the kit interaction script. Install this first — every component depends on it."
     },
     {
+      "name": "structured-liquidity-agent",
+      "type": "registry:item",
+      "title": "Structured Liquidity Agent Bundle",
+      "description": "Install Structured Liquidity plus a persistent local agent skill before the first UI edit."
+    },
+    {
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
@@ -244,6 +250,12 @@
       "description": "Structured Liquidity Label — React component driving the SL class system."
     },
     {
+      "name": "logo-grid",
+      "type": "registry:ui",
+      "title": "Logo Grid",
+      "description": "Structured Liquidity Logo Grid — React component driving the SL class system."
+    },
+    {
       "name": "marquee",
       "type": "registry:ui",
       "title": "Marquee",
@@ -428,6 +440,12 @@
       "type": "registry:ui",
       "title": "Tabs",
       "description": "Structured Liquidity Tabs — React component driving the SL class system."
+    },
+    {
+      "name": "testimonial-card",
+      "type": "registry:ui",
+      "title": "Testimonial Card",
+      "description": "Structured Liquidity Testimonial Card — React component driving the SL class system."
     },
     {
       "name": "textarea",
