@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dropzone",
+  "type": "registry:ui",
+  "title": "Dropzone",
+  "description": "Structured Liquidity Dropzone — React component driving the SL class system.",
+  "registryDependencies": [
+    "https://structured.glass/r/structured-liquidity.json",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/dropzone.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport interface DropzoneProps extends React.LabelHTMLAttributes<HTMLLabelElement> {\n  active?: boolean;\n}\n\n/** Accessible file target; consumers own validation and upload state. */\nexport function Dropzone({ className, active, ...props }: DropzoneProps) {\n  return (\n    <label\n      className={cn(\"sl-dropzone\", className)}\n      data-active={active || undefined}\n      {...props}\n    />\n  );\n}\n\nexport function DropzoneInput({\n  className,\n  ...props\n}: React.InputHTMLAttributes<HTMLInputElement>) {\n  return (\n    <input\n      className={cn(\"sl-dropzone-input\", className)}\n      type=\"file\"\n      {...props}\n    />\n  );\n}\n\nexport function DropzoneIcon({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return (\n    <span\n      className={cn(\"sl-dropzone-icon\", className)}\n      aria-hidden=\"true\"\n      {...props}\n    />\n  );\n}\n\nexport function DropzoneTitle({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-dropzone-title\", className)} {...props} />;\n}\n\nexport function DropzoneDescription({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return (\n    <span className={cn(\"sl-dropzone-description\", className)} {...props} />\n  );\n}\n\nexport function DropzoneMeta({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-dropzone-meta\", className)} {...props} />;\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/dropzone.tsx"
+    }
+  ]
+}

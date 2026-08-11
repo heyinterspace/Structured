@@ -21,7 +21,7 @@ export function Components() {
           in the language.
         </h2>
         <p className="lead">
-          More than seventy primitives, from buttons and forms to overlays, navigation, and data
+          More than eighty primitives, from buttons and forms to overlays, navigation, and data
           display, each one a rigid container holding liquid glass. None of it is a static mockup:
           click, type, toggle, and open, and every piece reskins from the same live tokens.
         </p>

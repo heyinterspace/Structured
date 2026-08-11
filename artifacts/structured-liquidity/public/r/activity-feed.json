@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "activity-feed",
+  "type": "registry:ui",
+  "title": "Activity Feed",
+  "description": "Structured Liquidity Activity Feed — React component driving the SL class system.",
+  "registryDependencies": [
+    "https://structured.glass/r/structured-liquidity.json",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/activity-feed.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/** Chronological product updates, signals, and changelog entries. */\nexport function ActivityFeed({\n  className,\n  ...props\n}: React.OlHTMLAttributes<HTMLOListElement>) {\n  return <ol className={cn(\"sl-activity-feed\", className)} {...props} />;\n}\n\nexport function ActivityItem({\n  className,\n  ...props\n}: React.LiHTMLAttributes<HTMLLIElement>) {\n  return <li className={cn(\"sl-activity-item\", className)} {...props} />;\n}\n\nexport function ActivityMarker({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return (\n    <span\n      className={cn(\"sl-activity-marker\", className)}\n      aria-hidden=\"true\"\n      {...props}\n    />\n  );\n}\n\nexport function ActivityContent({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-activity-content\", className)} {...props} />;\n}\n\nexport function ActivityHeader({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-activity-header\", className)} {...props} />;\n}\n\nexport function ActivityTitle({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLHeadingElement>) {\n  return <h4 className={cn(\"sl-activity-title\", className)} {...props} />;\n}\n\nexport function ActivityMeta({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-activity-meta\", className)} {...props} />;\n}\n\nexport function ActivityDescription({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLParagraphElement>) {\n  return <p className={cn(\"sl-activity-description\", className)} {...props} />;\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/activity-feed.tsx"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pricing-card",
+  "type": "registry:ui",
+  "title": "Pricing Card",
+  "description": "Structured Liquidity Pricing Card — React component driving the SL class system.",
+  "registryDependencies": [
+    "https://structured.glass/r/structured-liquidity.json",
+    "utils"
+  ],
+  "files": [
+    {
+      "path": "registry/ui/pricing-card.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\nexport function PricingGrid({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-pricing-grid\", className)} {...props} />;\n}\n\nexport interface PricingCardProps extends React.HTMLAttributes<HTMLElement> {\n  featured?: boolean;\n}\n\n/** Plan, package, or subscription card with one clear conversion action. */\nexport function PricingCard({\n  className,\n  featured,\n  ...props\n}: PricingCardProps) {\n  return (\n    <article\n      className={cn(\"sl-pricing-card\", className)}\n      data-featured={featured || undefined}\n      {...props}\n    />\n  );\n}\n\nexport function PricingHeader({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-pricing-header\", className)} {...props} />;\n}\n\nexport function PricingName({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLHeadingElement>) {\n  return <h3 className={cn(\"sl-pricing-name\", className)} {...props} />;\n}\n\nexport function PricingPrice({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-pricing-price\", className)} {...props} />;\n}\n\nexport function PricingAmount({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-pricing-amount\", className)} {...props} />;\n}\n\nexport function PricingCadence({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLSpanElement>) {\n  return <span className={cn(\"sl-pricing-cadence\", className)} {...props} />;\n}\n\nexport function PricingDescription({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLParagraphElement>) {\n  return <p className={cn(\"sl-pricing-description\", className)} {...props} />;\n}\n\nexport function PricingFeatures({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLUListElement>) {\n  return <ul className={cn(\"sl-pricing-features\", className)} {...props} />;\n}\n\nexport function PricingFeature({\n  className,\n  ...props\n}: React.LiHTMLAttributes<HTMLLIElement>) {\n  return <li className={cn(\"sl-pricing-feature\", className)} {...props} />;\n}\n\nexport function PricingFooter({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) {\n  return <div className={cn(\"sl-pricing-footer\", className)} {...props} />;\n}\n",
+      "type": "registry:ui",
+      "target": "components/ui/pricing-card.tsx"
+    }
+  ]
+}

@@ -646,3 +646,224 @@
   text-transform: uppercase;
   color: var(--ink-dim);
 }
+
+/* Field-sourced from recurring update, signal, and changelog streams. */
+.sl-activity-feed {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sl-activity-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding-bottom: 0.9rem;
+}
+.sl-activity-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: calc(1.125rem - 1px);
+  top: 2.1rem;
+  bottom: 0;
+  width: 2px;
+  background: rgb(var(--edge));
+}
+.sl-activity-marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0 0 var(--hard-shadow);
+}
+.sl-activity-content {
+  min-width: 0;
+  padding: 0.7rem;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: rgb(var(--glass-tint) / 0.07);
+}
+.sl-activity-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+.sl-activity-title {
+  margin: 0;
+  font: 700 0.82rem/1.25 var(--display);
+}
+.sl-activity-meta {
+  flex: none;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+}
+.sl-activity-description {
+  margin: 0.35rem 0 0;
+  color: var(--ink-dim);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+@media (max-width: 520px) {
+  .sl-activity-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+}
+
+/* Field-sourced from recurring upload and evidence-intake flows. */
+.sl-dropzone {
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  align-content: center;
+  gap: 0.45rem;
+  padding: 1.25rem;
+  border: var(--border-w) dashed rgb(var(--edge));
+  background: rgb(var(--glass-tint) / 0.06);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease;
+  box-shadow: 4px 4px 0 0 var(--hard-shadow);
+}
+.sl-dropzone:hover,
+.sl-dropzone:focus-within,
+.sl-dropzone[data-active] {
+  transform: translate(1px, 1px);
+  background: rgb(var(--glass-tint) / 0.11);
+  box-shadow: 6px 6px 0 0 var(--hard-shadow);
+}
+.sl-dropzone-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.sl-dropzone-icon {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 2px 2px 0 0 var(--hard-shadow);
+}
+.sl-dropzone-icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+.sl-dropzone-title {
+  font-family: var(--display);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+.sl-dropzone-description {
+  max-width: 32rem;
+  color: var(--ink-dim);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+.sl-dropzone-meta {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Field-sourced from packages, plan displays, and subscription cards. */
+.sl-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+.sl-pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: rgb(var(--glass-tint) / 0.07);
+  box-shadow: 5px 5px 0 0 var(--hard-shadow);
+}
+.sl-pricing-card[data-featured] {
+  border-top: 0.45rem solid var(--accent);
+  padding-top: 0.7rem;
+}
+.sl-pricing-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+}
+.sl-pricing-name {
+  margin: 0;
+  font: 800 1.05rem/1.15 var(--display);
+}
+.sl-pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+}
+.sl-pricing-amount {
+  font: 800 clamp(1.8rem, 4vw, 2.55rem)/1 var(--display);
+  letter-spacing: -0.04em;
+}
+.sl-pricing-cadence {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--ink-dim);
+  text-transform: uppercase;
+}
+.sl-pricing-description {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.sl-pricing-features {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sl-pricing-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+.sl-pricing-feature svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex: none;
+  margin-top: 0.08rem;
+  color: var(--accent);
+}
+.sl-pricing-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.2rem;
+}

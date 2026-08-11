@@ -1,4 +1,15 @@
+import { Check, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  ActivityContent,
+  ActivityDescription,
+  ActivityFeed,
+  ActivityHeader,
+  ActivityItem,
+  ActivityMarker,
+  ActivityMeta,
+  ActivityTitle,
+} from "@/components/ui/activity-feed";
 import {
   DetailPanel,
   DetailPanelBody,
@@ -8,9 +19,38 @@ import {
   DetailPanelTitle,
 } from "@/components/ui/detail-panel";
 import { FrameworkAttribution } from "@/components/ui/attribution";
-import { FilterGroup, FilterSummary, FilterToolbar } from "@/components/ui/filter-toolbar";
+import {
+  FilterGroup,
+  FilterSummary,
+  FilterToolbar,
+} from "@/components/ui/filter-toolbar";
 import { Omnibar, OmnibarAttachment } from "@/components/ui/omnibar";
-import { LogoGrid, LogoLabel, LogoMark, LogoTile } from "@/components/ui/logo-grid";
+import {
+  LogoGrid,
+  LogoLabel,
+  LogoMark,
+  LogoTile,
+} from "@/components/ui/logo-grid";
+import {
+  Dropzone,
+  DropzoneDescription,
+  DropzoneIcon,
+  DropzoneInput,
+  DropzoneMeta,
+  DropzoneTitle,
+} from "@/components/ui/dropzone";
+import {
+  PricingAmount,
+  PricingCadence,
+  PricingCard,
+  PricingDescription,
+  PricingFeature,
+  PricingFeatures,
+  PricingFooter,
+  PricingHeader,
+  PricingName,
+  PricingPrice,
+} from "@/components/ui/pricing-card";
 import { SiteContent, SiteShell } from "@/components/ui/site-shell";
 import { Step, Stepper } from "@/components/ui/stepper";
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
@@ -29,7 +69,8 @@ export function KitPatterns() {
         <span className="kg-name">Production patterns</span>
         <span className="kg-rule" />
         <span className="kg-count">
-          Shell · Attribution · Timeline · Stepper · Filters · Omnibar · Detail panel · Testimonials · Logos
+          Shell · Activity · Upload · Pricing · Timeline · Filters · Detail
+          panel · Proof
         </span>
       </div>
       <div className="kit-grid">
@@ -61,8 +102,18 @@ export function KitPatterns() {
         <div className="glass kit-cell w6">
           <span className="kit-cap">Stepper</span>
           <Stepper>
-            <Step step={1} label="Profile" detail="Complete" status="complete" />
-            <Step step={2} label="Preferences" detail="In progress" status="current" />
+            <Step
+              step={1}
+              label="Profile"
+              detail="Complete"
+              status="complete"
+            />
+            <Step
+              step={2}
+              label="Preferences"
+              detail="In progress"
+              status="current"
+            />
             <Step step={3} label="Review" detail="Next" />
           </Stepper>
         </div>
@@ -71,8 +122,12 @@ export function KitPatterns() {
           <span className="kit-cap">Filter toolbar</span>
           <FilterToolbar>
             <FilterGroup>
-              <Button size="sm" variant="outline">Fintech</Button>
-              <Button size="sm" variant="outline">New York</Button>
+              <Button size="sm" variant="outline">
+                Fintech
+              </Button>
+              <Button size="sm" variant="outline">
+                New York
+              </Button>
             </FilterGroup>
             <FilterSummary>26 results</FilterSummary>
           </FilterToolbar>
@@ -100,11 +155,14 @@ export function KitPatterns() {
               <span className="sl-badge default">Live</span>
             </DetailPanelHeader>
             <DetailPanelBody>
-              A rigid inspection surface for metadata, previews, and context-aware actions.
+              A rigid inspection surface for metadata, previews, and
+              context-aware actions.
             </DetailPanelBody>
             <DetailPanelFooter>
               <Button size="sm">Open source</Button>
-              <Button size="sm" variant="ghost">Dismiss</Button>
+              <Button size="sm" variant="ghost">
+                Dismiss
+              </Button>
             </DetailPanelFooter>
           </DetailPanel>
         </div>
@@ -114,8 +172,8 @@ export function KitPatterns() {
           <TestimonialCard>
             <TestimonialSource>Verified family review</TestimonialSource>
             <TestimonialQuote>
-              “The same familiar faces, thoughtful updates, and a place our child is excited to
-              return to.”
+              “The same familiar faces, thoughtful updates, and a place our
+              child is excited to return to.”
             </TestimonialQuote>
             <TestimonialAuthor>
               Brooklyn parent <TestimonialMeta>Daycare portal</TestimonialMeta>
@@ -138,6 +196,85 @@ export function KitPatterns() {
               </LogoTile>
             ))}
           </LogoGrid>
+        </div>
+
+        <div className="glass kit-cell w6">
+          <span className="kit-cap">Activity feed</span>
+          <ActivityFeed>
+            <ActivityItem>
+              <ActivityMarker>01</ActivityMarker>
+              <ActivityContent>
+                <ActivityHeader>
+                  <ActivityTitle>Investor update published</ActivityTitle>
+                  <ActivityMeta>Today · 09:42</ActivityMeta>
+                </ActivityHeader>
+                <ActivityDescription>
+                  Operating notes and portfolio metrics are ready for review.
+                </ActivityDescription>
+              </ActivityContent>
+            </ActivityItem>
+            <ActivityItem>
+              <ActivityMarker>02</ActivityMarker>
+              <ActivityContent>
+                <ActivityHeader>
+                  <ActivityTitle>Research signal added</ActivityTitle>
+                  <ActivityMeta>Yesterday</ActivityMeta>
+                </ActivityHeader>
+                <ActivityDescription>
+                  A source-backed signal joined the evidence workspace.
+                </ActivityDescription>
+              </ActivityContent>
+            </ActivityItem>
+          </ActivityFeed>
+        </div>
+
+        <div className="glass kit-cell w6">
+          <span className="kit-cap">Dropzone</span>
+          <Dropzone>
+            <DropzoneInput accept="image/*,.pdf" />
+            <DropzoneIcon>
+              <Upload />
+            </DropzoneIcon>
+            <DropzoneTitle>Drop a file or choose one</DropzoneTitle>
+            <DropzoneDescription>
+              Attach evidence, artwork, or a source document.
+            </DropzoneDescription>
+            <DropzoneMeta>PDF, PNG, JPG · 20 MB max</DropzoneMeta>
+          </Dropzone>
+        </div>
+
+        <div className="glass kit-cell w6">
+          <span className="kit-cap">Pricing card</span>
+          <PricingCard featured>
+            <PricingHeader>
+              <PricingName>Operator</PricingName>
+              <span className="sl-badge default">Recommended</span>
+            </PricingHeader>
+            <PricingPrice>
+              <PricingAmount>$49</PricingAmount>
+              <PricingCadence>/ month</PricingCadence>
+            </PricingPrice>
+            <PricingDescription>
+              A clear package for teams moving from prototype to production.
+            </PricingDescription>
+            <PricingFeatures>
+              <PricingFeature>
+                <Check />
+                Full component registry
+              </PricingFeature>
+              <PricingFeature>
+                <Check />
+                Agent installation bundle
+              </PricingFeature>
+              <PricingFeature>
+                <Check />
+                Production patterns
+              </PricingFeature>
+            </PricingFeatures>
+            <PricingFooter>
+              <Button size="sm">Choose Operator</Button>
+            </PricingFooter>
+          </PricingCard>
         </div>
       </div>
     </div>
