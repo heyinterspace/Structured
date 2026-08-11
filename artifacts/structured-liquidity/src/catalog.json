@@ -1120,6 +1120,15 @@
       "status": "stable",
       "tags": ["display", "interactive", "field-sourced", "commerce"],
       "kinds": ["display", "interactive"]
+    },
+    {
+      "name": "Templates",
+      "registry": "site-templates",
+      "cap": "Templates",
+      "category": "layout",
+      "status": "stable",
+      "tags": ["layout", "field-sourced", "templates"],
+      "kinds": ["display"]
     }
   ],
   "facets": [

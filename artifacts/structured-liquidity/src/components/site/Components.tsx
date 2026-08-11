@@ -9,6 +9,7 @@ import { KitNavigation } from "./kit/KitNavigation";
 import { KitNavDisclosure } from "./kit/KitNavDisclosure";
 import { KitOverlaysFeedback } from "./kit/KitOverlaysFeedback";
 import { KitPatterns } from "./kit/KitPatterns";
+import { Templates } from "./Templates";
 
 export function Components() {
   return (
@@ -21,9 +22,10 @@ export function Components() {
           in the language.
         </h2>
         <p className="lead">
-          More than eighty primitives, from buttons and forms to overlays, navigation, and data
-          display, each one a rigid container holding liquid glass. None of it is a static mockup:
-          click, type, toggle, and open, and every piece reskins from the same live tokens.
+          More than eighty primitives, from buttons and forms to overlays,
+          navigation, and data display, each one a rigid container holding
+          liquid glass. None of it is a static mockup: click, type, toggle, and
+          open, and every piece reskins from the same live tokens.
         </p>
       </div>
 
@@ -39,6 +41,7 @@ export function Components() {
         <KitNavDisclosure />
         <KitOverlaysFeedback />
         <KitPatterns />
+        <Templates />
       </div>
     </section>
   );
