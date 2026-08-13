@@ -145,7 +145,7 @@
   .sl-shell-demo{display:grid;gap:.65rem;width:100%;font-family:var(--mono);font-size:.72rem;text-align:center;}
   .sl-shell-demo .sl-site-shell,.sl-shell-demo .sl-site-content{border:1px solid rgb(var(--edge));padding:.75rem;}
   .sl-shell-demo .sl-site-shell{background:rgb(var(--glass-tint)/.08);}
-  .sl-shell-demo .sl-site-content{background:rgb(var(--glass-tint)/.04);color:var(--ink-dim);}
+  .sl-shell-demo .sl-site-content{color:var(--ink-dim);}
   @media(max-width:720px){.template-grid{grid-template-columns:1fr;}}
 
   /* Big hero hypercube — container-less, oversized, sitting behind the hero

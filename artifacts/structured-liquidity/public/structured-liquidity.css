@@ -17,9 +17,10 @@
   --hard-x: 7px;
   --hard-y: 7px;
   --radius: 0px;
-  --content-w: 1200px;
   --shell-w: 1280px;
+  --content-w: var(--shell-w);
   --viewport-gutter: 4vw;
+  --body-surface: color-mix(in srgb, var(--bg) 94%, var(--ink) 6%);
   --floating-ui-clearance: 96px;
 
   /* ---- fixed palette (neobrutalism.dev) ---- */
@@ -212,9 +213,10 @@ h1, h2, h3 { font-weight: 800; line-height: 0.98; letter-spacing: -0.02em; margi
    ============================================================ */
 
 .wrap,
-.sl-site-content { width: min(var(--content-w), calc(100vw - (var(--viewport-gutter) * 2))); margin-inline: auto; }
+.sl-site-content,
 .shell,
 .sl-site-shell { width: min(var(--shell-w), calc(100vw - var(--viewport-gutter))); margin-inline: auto; }
+.sl-site-body { background: var(--body-surface); }
 section { padding: clamp(1.5rem, 3.4vh, 2.7rem) 0; position: relative; }
 .section-head { max-width: 70ch; margin-bottom: 1.1rem; }
 

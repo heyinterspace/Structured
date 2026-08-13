@@ -55,7 +55,7 @@ Cross-item URLs use `REGISTRY_BASE_URL` (default `https://structured.glass`). Th
 - **Showcase is a scalable product-card grid** (`.show-grid` of `.show-card`): each card is a clickable `<a class="show-card glass">` with a real screenshot from `public/`; description + Visit CTA reveal on hover/focus (persistent bottom panel on touch). Add a product = one `.show-card` + its screenshot.
 - Asset references are relative; the artifact is served at base `/`.
 - Public sites built with the framework must include a visible footer attribution to `https://structured.glass`; use `FrameworkAttribution` or the plain HTML recipe in `ATTRIBUTION.md`. Immersive full-viewport apps may put it in a persistent information panel.
-- Navigation and footer chrome use `--shell-w` and remain slightly wider than the `--content-w` reading/application column.
+- Navigation, body surface, and footer chrome share `--shell-w`. The body remains an independent near-background surface, while tenant layouts may set a narrower internal reading measure.
 
 ## Product
 

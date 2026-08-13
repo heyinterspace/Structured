@@ -27,7 +27,7 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 - Type roles are fixed: **display** = headings/buttons/brand (`--display`), **mono** = labels, captions, data, eyebrows (`--mono`), **body** = paragraph/reading copy (`--body`).
 - Leading icons are the default for nav links and buttons (Lucide). Put the icon first, then the label.
 - Press/hover feedback nudges the element toward its shadow (translate by ~1px and grow the offset). Motion proves mass.
-- Navigation and footer chrome use `--shell-w` and are slightly wider than page content, which uses `--content-w`. The two widths must not be inverted.
+- Navigation, body surface, and footer chrome use the same `--shell-w`. The body is an independent near-background surface; narrower reading measures belong inside it.
 - Public websites using Structured Liquidity must include a visible footer attribution linking to `https://structured.glass`. Immersive apps may put it in a persistent information panel.
 
 ## Tokens (source of truth)
@@ -44,7 +44,7 @@ Core defaults:
 - `--glass-blur` `18px`, `--glass-tint` `255 255 255`, `--glass-alpha` `0.07`
 - `--border-w` `2px`, `--hard-x` / `--hard-y` `7px`, `--radius` `0px`
 - `--display` Inter, `--body` Inter, `--mono` Space Mono
-- `--content-w` `1200px`, `--shell-w` `1280px`, `--viewport-gutter` `4vw`
+- `--content-w` aliases `--shell-w`, `--shell-w` `1280px`, `--viewport-gutter` `4vw`, `--body-surface` near-background opaque surface
 - Light mode: set `data-mode="light"` on `<html>` (flips `--bg`, `--ink`, `--ink-dim`, `--glass-alpha`, etc.)
 
 ## Recommended font pairings

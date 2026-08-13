@@ -77,8 +77,8 @@ export function KitPatterns() {
         <div className="glass kit-cell w12">
           <span className="kit-cap">Site shell</span>
           <div className="sl-shell-demo">
-            <SiteShell>Navigation and footer share this wider frame</SiteShell>
-            <SiteContent>Page content stays deliberately narrower</SiteContent>
+            <SiteShell>Navigation and footer use the shared site frame</SiteShell>
+            <SiteContent>Body surface aligns to the same frame</SiteContent>
           </div>
         </div>
 
