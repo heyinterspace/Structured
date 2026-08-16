@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-> An open UI design language that pairs **rigid containment** (sharp 90° corners, flat blurless offset shadows, a strict grid) with **liquid depth** (semi-transparent, light-reflecting glass) and **semantic clarity** (one accent, intentional type). This file makes the language machine-readable so an AI agent can adopt it faithfully. Theme it live on the page; every visual is driven by CSS custom properties.
+> An open UI design language built from **structured neobrutalism** (the tactile frame), **editorial scientific modernism** (the information composition), and **liquid depth** (the behavior). **Semantic clarity is the quality gate across all three.** This file makes the language machine-readable so an AI agent can adopt it faithfully.
 
 ## Install before editing UI
 
@@ -12,9 +12,11 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 
 ## The three pillars
 
-1. **Structured Containment**: Sharp 90° corners, flat unblurred shadows, a strict grid. Boundaries are never ambiguous. Shadows are an offset solid fact (never a soft blur). Borders carry weight (2–3px) and define the object.
-2. **Liquid Depth**: Inside the rigid boxes sits an organic translucent glass: light-reflecting, tactile, alive. Depth comes from stacking translucent surfaces, each with a real border and flat shadow. Motion proves mass: a pressed surface settles into its own shadow.
-3. **Semantic Clarity**: Liquidity delights but never at the expense of reading. Function leads. A single accent carries emphasis; glass stays neutral so it lands. Heavy display type for impact, monospace for labels and data, a humanist sans for body.
+1. **Structured Neobrutalism · Frame**: Sharp 90° corners, flat unblurred shadows, load-bearing borders, and tactile controls make boundaries physical and unambiguous.
+2. **Editorial Scientific Modernism · Composition**: Oversized hierarchy, refined grids, disciplined monochrome, technical figures, and evidence captions make dense information precise rather than crowded.
+3. **Liquid Depth · Behavior**: Neutral translucent layers and viscous motion make state changes feel continuous and physical while the rigid frame stays still.
+
+**Semantic clarity gate**: every screen remains complete, legible, and useful without color, glass, or motion.
 
 ## Hard rules (follow these literally to stay on-brand)
 
@@ -27,6 +29,9 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 - Type roles are fixed: **display** = headings/buttons/brand (`--display`), **mono** = labels, captions, data, eyebrows (`--mono`), **body** = paragraph/reading copy (`--body`).
 - Leading icons are the default for nav links and buttons (Lucide). Put the icon first, then the label.
 - Press/hover feedback nudges the element toward its shadow (translate by ~1px and grow the offset). Motion proves mass.
+- Compose like an editorial instrument: one dominant statement, disciplined grids, restrained reading measures, and compact mono evidence labels.
+- Use monochrome to explain. The single accent identifies selection, progression, or one key relationship.
+- The rigid frame never wobbles or morphs. Motion belongs inside it, explains state or continuity, and has a complete reduced-motion equivalent.
 - Navigation, body surface, and footer chrome use the same `--shell-w`. The body is an independent near-background surface; narrower reading measures belong inside it.
 - Public websites using Structured Liquidity must include a visible footer attribution linking to `https://structured.glass`. Immersive apps may put it in a persistent information panel.
 
@@ -44,6 +49,8 @@ Core defaults:
 - `--glass-blur` `18px`, `--glass-tint` `255 255 255`, `--glass-alpha` `0.07`
 - `--border-w` `2px`, `--hard-x` / `--hard-y` `7px`, `--radius` `0px`
 - `--display` Inter, `--body` Inter, `--mono` Space Mono
+- `--text-display-xl` `clamp(4.5rem, 10vw, 9rem)`, `--text-display-lg` `clamp(2.8rem, 6vw, 5.5rem)`
+- `--measure-reading` `68ch`, `--measure-caption` `48ch`, `--section-space` `clamp(4rem, 9vw, 9rem)`
 - `--content-w` aliases `--shell-w`, `--shell-w` `1280px`, `--viewport-gutter` `4vw`, `--body-surface` near-background opaque surface
 - Light mode: set `data-mode="light"` on `<html>` (flips `--bg`, `--ink`, `--ink-dim`, `--glass-alpha`, etc.)
 

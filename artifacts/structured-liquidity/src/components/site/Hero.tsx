@@ -9,23 +9,25 @@ export function Hero() {
     <header className="hero wrap" id="top">
       <div className="hero-grid">
         <div>
-          <span className="eyebrow reveal">An open shadcn theme · est. 2026</span>
+          <span className="eyebrow reveal">
+            An open shadcn theme · est. 2026
+          </span>
           <h1 className="wordmark reveal">
             <span className="brutal">Structured</span>
             <br />
             <LiquidWord text="Liquidity" />
           </h1>
           <p className="lead reveal">
-            Rigid containers with sharp, uncompromising edges. Inside them, a liquid glass that
-            reflects light and gives every surface tactile depth. <em>Structured Liquidity</em>{" "}
-            marries the discipline of the grid to the delight of the material: a complete, open UI
-            language any product can speak, not the look of just one. This page is both the specimen
-            and the spec, so retheme it live as you read.
+            A design language for information-rich software: tactile
+            neobrutalist structure, editorial scientific composition, and liquid
+            depth in motion. <em>Structured Liquidity</em> makes interfaces feel
+            physical, read like instruments, and move like living material. This
+            page is both specimen and spec, so retheme it live as you read.
           </p>
           <div className="hero-tags reveal">
-            <span className="tag">Structured containment</span>
+            <span className="tag">Tactile structure</span>
+            <span className="tag">Editorial intelligence</span>
             <span className="tag">Liquid depth</span>
-            <span className="tag">Semantic clarity</span>
           </div>
           <div className="hero-cta reveal">
             <InstallButton />
@@ -33,7 +35,12 @@ export function Hero() {
               <Sparkles />
               Showcase
             </a>
-            <a className="btn glassy" href={GITHUB} target="_blank" rel="noopener">
+            <a
+              className="btn glassy"
+              href={GITHUB}
+              target="_blank"
+              rel="noopener"
+            >
               <Github />
               Source
             </a>

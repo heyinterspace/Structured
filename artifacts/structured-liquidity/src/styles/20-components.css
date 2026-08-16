@@ -104,7 +104,7 @@
 .wordmark {
   font-weight: 900;
   font-stretch: 125%;
-  font-size: clamp(2.2rem, 7.4vw, 5.2rem);
+  font-size: var(--text-display-xl);
   line-height: 0.84;
   letter-spacing: -0.03em;
   margin: 0.25em 0 0.3em;
