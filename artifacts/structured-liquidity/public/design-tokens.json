@@ -1,5 +1,5 @@
 {
-  "$description": "Structured Liquidity design tokens. W3C Design Tokens Community Group format. Each token carries its CSS custom-property name in $extensions.cssVar so an agent can apply it directly to :root.",
+  "$description": "Structured Liquidity design tokens for Tactile Structure, Liquid Depth, and Editorial Framework. Semantic Clarity remains the quality gate across all three, not a fourth pillar. W3C Design Tokens Community Group format. Each token carries its CSS custom-property name in $extensions.cssVar so an agent can apply it directly to :root.",
   "color": {
     "$type": "color",
     "accent": {

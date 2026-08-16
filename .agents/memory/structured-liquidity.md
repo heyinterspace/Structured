@@ -5,7 +5,7 @@ description: The durable decisions behind the SL specimen port — what it is, a
 
 # Structured Liquidity
 
-An open UI design language ("tactile structure + editorial intelligence + liquid depth") shipped as a live specimen at `artifacts/structured-liquidity`. Structured neobrutalism owns the frame, editorial scientific modernism owns composition, and liquid depth owns behavior. Semantic clarity is the cross-cutting quality gate. Token reference, file map, and pillars are documented in `replit.md` — don't duplicate them; read there.
+An open UI design language—**Tactile Structure. Liquid Depth. Editorial Framework.**—shipped as a live specimen at `artifacts/structured-liquidity`. Tactile Structure is structured neobrutalism: the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction. Liquid Depth is layering, continuity, glass, and motion that communicates state and believable mass. Editorial Framework is hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence; it is informed by editorial scientific modernism. Semantic Clarity remains the quality gate across all three, not a fourth pillar. Token reference, file map, and pillars are documented in `replit.md` — don't duplicate them; read there.
 
 ## The non-obvious trap (why the port isn't a verbatim copy)
 
@@ -104,7 +104,7 @@ The verbatim kit ships several components as static CSS-only stubs — e.g. the 
 
 **Styled scrollbars (gotcha):** style them in `index.html` inline `<style>`, not the verbatim public CSS. DON'T set `scrollbar-width`/`scrollbar-color` globally on `*` — modern Chrome then switches to the native thin scrollbar and IGNORES every `::-webkit-scrollbar` rule, leaving a default grey bar (this was the bug). Instead: drive Chrome+Safari purely via `::-webkit-scrollbar*` pseudo-elements, and feed Firefox the standard `scrollbar-width`/`scrollbar-color` only inside `@supports not selector(::-webkit-scrollbar){ html{...} }`. Also: `--glass-tint` is a SPACE-separated triplet (`255 255 255`), so use modern `rgb(var(--glass-tint) / 0.06)` slash syntax for scrollbar colours (legacy `rgba(...,a)` parses inconsistently in the `scrollbar-color` shorthand). Headless screenshots don't render OS scrollbars, so they can't verify this — reason about it instead.
 
-**The ethos has three orthogonal design dimensions (content decision):** Structured Neobrutalism (frame), Editorial Scientific Modernism (composition), and Liquid Depth (behavior). Semantic Clarity is the quality gate across them, not a fourth visual pillar. Keep the hero tags in lockstep with these three responsibilities. **Why:** each dimension answers a different implementation question, while the clarity gate ensures the page still works without color, glass, or motion.
+**The ethos has three orthogonal design dimensions (content decision), always in this order:** Tactile Structure (frame), Liquid Depth (behavior), and Editorial Framework (composition). Editorial Framework is informed by editorial scientific modernism; that phrase names its visual tradition, never a pillar. Semantic Clarity remains the quality gate across all three, not a fourth pillar. Keep the hero, manifesto, figure, docs, guidance, CSS comments, and generated registry in lockstep. **Why:** each dimension answers a different implementation question, while the clarity gate ensures the page still works without color, glass, or motion.
 
 ## Showcase = product-card grid (mode-aware overlay gotcha)
 

@@ -1,7 +1,7 @@
 /* ============================================================
-   STRUCTURED LIQUIDITY — tactile structure, editorial
-   intelligence, and liquid depth. Semantic clarity is the
-   quality gate across all three dimensions. This stylesheet IS
+   STRUCTURED LIQUIDITY — Tactile Structure. Liquid Depth.
+   Editorial Framework. Semantic Clarity remains the quality
+   gate across all three, not a fourth pillar. This stylesheet IS
    the specimen.
    ============================================================ */
 
@@ -22,7 +22,7 @@
   --body-surface: color-mix(in srgb, var(--bg) 94%, var(--ink) 6%);
   --floating-ui-clearance: 96px;
 
-  /* ---- editorial scientific composition ---- */
+  /* ---- Editorial Framework, informed by editorial scientific modernism ---- */
   --text-display-xl: clamp(4.5rem, 10vw, 9rem);
   --text-display-lg: clamp(2.8rem, 6vw, 5.5rem);
   --measure-reading: 68ch;

@@ -7,20 +7,20 @@ export function Pillars() {
           Structure holds it. Evidence explains it. Liquidity brings it to life.
         </h2>
         <p className="lead">
-          The three ideas govern different dimensions of the interface.
-          Neobrutalism defines the frame, editorial scientific modernism
-          composes the information, and liquid depth gives behavior continuity
-          and mass.
+          Tactile Structure defines the frame. Liquid Depth makes state and mass
+          perceptible. Editorial Framework composes hierarchy and evidence.
+          Semantic Clarity tests the complete system rather than competing as a
+          fourth pillar.
         </p>
       </div>
 
       <div className="pillars">
         <div className="glass pillar reveal">
           <span className="pnum">Pillar 01</span>
-          <h3>Structured Neobrutalism</h3>
+          <h3>Tactile Structure</h3>
           <p>
-            Sharp 90° corners, flat unblurred shadows, a strict grid. Boundaries
-            are never ambiguous.
+            Structured neobrutalism—the physical frame, load-bearing borders,
+            hard shadows, clear affordances, and tactile interaction.
           </p>
           <ul>
             <li>
@@ -38,12 +38,38 @@ export function Pillars() {
           </ul>
         </div>
 
-        <div className="glass pillar reveal editorial-pillar">
+        <div className="glass pillar reveal">
           <span className="pnum">Pillar 02</span>
-          <h3>Editorial Scientific Modernism</h3>
+          <h3>Liquid Depth</h3>
           <p>
-            Oversized hierarchy, refined grids, disciplined color, and technical
-            figures make dense information feel precise rather than crowded.
+            Layering, continuity, glass, and motion that communicates state and
+            believable mass.
+          </p>
+          <ul>
+            <li>
+              <div>
+                <strong className="rule-h">Depth through layers</strong>: stack
+                translucent surfaces while every boundary remains structurally
+                legible.
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong className="rule-h">Motion explains change</strong>:
+                liquid settles, connects, and reveals state inside a frame that
+                never wobbles.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div className="glass pillar reveal editorial-pillar">
+          <span className="pnum">Pillar 03</span>
+          <h3>Editorial Framework</h3>
+          <p>
+            Hierarchy, refined grids, oversized typography, technical diagrams,
+            captions, labeling, and evidence. It is informed by editorial
+            scientific modernism.
           </p>
           <ul>
             <li>
@@ -63,34 +89,9 @@ export function Pillars() {
             </li>
           </ul>
         </div>
-
-        <div className="glass pillar reveal">
-          <span className="pnum">Pillar 03</span>
-          <h3>Liquid Depth</h3>
-          <p>
-            Inside the rigid frame lives a tactile material that reflects light,
-            preserves continuity, and responds with believable mass.
-          </p>
-          <ul>
-            <li>
-              <div>
-                <strong className="rule-h">Depth through layers</strong>: stack
-                translucent surfaces while every boundary remains structurally
-                legible.
-              </div>
-            </li>
-            <li>
-              <div>
-                <strong className="rule-h">Motion explains change</strong>:
-                liquid settles, connects, and reveals state inside a frame that
-                never wobbles.
-              </div>
-            </li>
-          </ul>
-        </div>
       </div>
       <p className="manifesto-gate reveal">
-        <strong>Quality gate · Semantic clarity</strong>
+        <strong>Quality gate · Semantic Clarity</strong>
         Every screen must remain complete, legible, and useful without color,
         glass, or motion.
       </p>

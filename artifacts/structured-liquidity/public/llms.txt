@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-> An open UI design language built from **structured neobrutalism** (the tactile frame), **editorial scientific modernism** (the information composition), and **liquid depth** (the behavior). **Semantic clarity is the quality gate across all three.** This file makes the language machine-readable so an AI agent can adopt it faithfully.
+> **Tactile Structure. Liquid Depth. Editorial Framework.** Semantic Clarity remains the quality gate across all three, not a fourth pillar. This file makes the language machine-readable so an AI agent can adopt it faithfully.
 
 ## Install before editing UI
 
@@ -12,11 +12,11 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 
 ## The three pillars
 
-1. **Structured Neobrutalism · Frame**: Sharp 90° corners, flat unblurred shadows, load-bearing borders, and tactile controls make boundaries physical and unambiguous.
-2. **Editorial Scientific Modernism · Composition**: Oversized hierarchy, refined grids, disciplined monochrome, technical figures, and evidence captions make dense information precise rather than crowded.
-3. **Liquid Depth · Behavior**: Neutral translucent layers and viscous motion make state changes feel continuous and physical while the rigid frame stays still.
+1. **Tactile Structure · Frame**: Structured neobrutalism—the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction.
+2. **Liquid Depth · Behavior**: Layering, continuity, glass, and motion that communicates state and believable mass.
+3. **Editorial Framework · Composition**: Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence. It is informed by editorial scientific modernism.
 
-**Semantic clarity gate**: every screen remains complete, legible, and useful without color, glass, or motion.
+**Semantic Clarity gate**: every screen remains complete, legible, and useful without color, glass, or motion. It is not a fourth pillar.
 
 ## Hard rules (follow these literally to stay on-brand)
 

@@ -2,24 +2,24 @@
 
 ## The operating model
 
-**Tactile structure. Editorial intelligence. Liquid depth.**
+**Tactile Structure. Liquid Depth. Editorial Framework.**
 
 Structured Liquidity combines three orthogonal design dimensions:
 
-1. **Structured neobrutalism is the frame.** Square corners, load-bearing borders, hard offset shadows, and tactile controls make the interface feel physical and decisive.
-2. **Editorial scientific modernism is the composition.** Oversized typography, refined grids, disciplined monochrome, technical figures, and evidence captions make dense information legible and authoritative.
-3. **Liquid depth is the behavior.** Neutral glass, layered continuity, and viscous motion give state changes believable mass without weakening the frame.
+1. **Tactile Structure:** Structured neobrutalism—the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction.
+2. **Liquid Depth:** Layering, continuity, glass, and motion that communicates state and believable mass.
+3. **Editorial Framework:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence. It is informed by editorial scientific modernism.
 
-Semantic clarity is not a competing visual pillar. It is the quality gate across the system: every screen must remain complete, legible, and useful without color, glass, or motion.
+Semantic Clarity remains the quality gate across all three, not a fourth pillar: every screen must remain complete, legible, and useful without color, glass, or motion.
 
 ## Decision ownership
 
-| Question                                            | Owner                          |
-| --------------------------------------------------- | ------------------------------ |
-| What contains this information?                     | Structured neobrutalism        |
-| How is the information composed and evidenced?      | Editorial scientific modernism |
-| How does state change or depth become perceptible?  | Liquid depth                   |
-| Is the result understandable in its simplest state? | Semantic clarity gate          |
+| Question                                            | Owner                 |
+| --------------------------------------------------- | --------------------- |
+| What contains this information?                     | Tactile Structure     |
+| How does state change or depth become perceptible?  | Liquid Depth          |
+| How is the information composed and evidenced?      | Editorial Framework   |
+| Is the result understandable in its simplest state? | Semantic Clarity gate |
 
 ## Expression rules
 
@@ -32,6 +32,6 @@ Semantic clarity is not a competing visual pillar. It is the quality gate across
 
 ## Short language
 
-Primary phrase: **Tactile structure. Editorial intelligence. Liquid depth.**
+Primary phrase: **Tactile Structure. Liquid Depth. Editorial Framework.**
 
 Manifesto phrase: **Structure holds it. Evidence explains it. Liquidity brings it to life.**

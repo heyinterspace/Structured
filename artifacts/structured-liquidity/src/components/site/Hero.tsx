@@ -18,16 +18,20 @@ export function Hero() {
             <LiquidWord text="Liquidity" />
           </h1>
           <p className="lead reveal">
-            A design language for information-rich software: tactile
-            neobrutalist structure, editorial scientific composition, and liquid
-            depth in motion. <em>Structured Liquidity</em> makes interfaces feel
-            physical, read like instruments, and move like living material. This
-            page is both specimen and spec, so retheme it live as you read.
+            <em>Tactile Structure. Liquid Depth. Editorial Framework.</em>{" "}
+            Tactile Structure is structured neobrutalism: the physical frame,
+            load-bearing borders, hard shadows, clear affordances, and tactile
+            interaction. Liquid Depth is layering, continuity, glass, and motion
+            that communicates state and believable mass. Editorial Framework is
+            hierarchy, refined grids, oversized typography, technical diagrams,
+            captions, labeling, and evidence; it is informed by editorial
+            scientific modernism. This page is both specimen and spec, so
+            retheme it live as you read.
           </p>
           <div className="hero-tags reveal">
-            <span className="tag">Tactile structure</span>
-            <span className="tag">Editorial intelligence</span>
-            <span className="tag">Liquid depth</span>
+            <span className="tag">Tactile Structure</span>
+            <span className="tag">Liquid Depth</span>
+            <span className="tag">Editorial Framework</span>
           </div>
           <div className="hero-cta reveal">
             <InstallButton />

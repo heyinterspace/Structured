@@ -263,7 +263,7 @@ const baseItem = {
   type: "registry:style",
   title: "Structured Liquidity",
   description:
-    "The Structured Liquidity design language base: theme tokens plus the three distributable stylesheets and the kit interaction script. Install this first — every component depends on it.",
+    "The Structured Liquidity design language base: Tactile Structure, Liquid Depth, and Editorial Framework, with Semantic Clarity as the quality gate. Includes theme tokens, three distributable stylesheets, and the kit interaction script. Install this first — every component depends on it.",
   dependencies: ["clsx", "tailwind-merge", "class-variance-authority", "lucide-react"],
   registryDependencies: ["utils"],
   cssVars,
@@ -276,7 +276,7 @@ const agentItem = {
   type: "registry:item",
   title: "Structured Liquidity Agent Bundle",
   description:
-    "Install Structured Liquidity plus a persistent local agent skill before the first UI edit.",
+    "Install the Tactile Structure, Liquid Depth, and Editorial Framework language plus its persistent local agent skill before the first UI edit.",
   registryDependencies: [itemUrl(BASE_NAME)],
   files: [
     {

@@ -1,11 +1,17 @@
 ---
 name: structured-liquidity
-description: Apply the Structured Liquidity UI design language — tactile structured neobrutalism, editorial scientific modernism, and liquid depth, all held to a semantic clarity quality gate. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
+description: Apply the Structured Liquidity UI design language — Tactile Structure, Liquid Depth, and Editorial Framework, all held to a Semantic Clarity quality gate. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
 ---
 
 # Structured Liquidity
 
-An open UI design language: **tactile structure** + **editorial intelligence** + **liquid depth**. Structured neobrutalism defines the frame, editorial scientific modernism composes the information, and liquid depth defines behavior. **Semantic clarity is the quality gate across all three.** The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
+**Tactile Structure. Liquid Depth. Editorial Framework.**
+
+1. **Tactile Structure:** Structured neobrutalism—the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction.
+2. **Liquid Depth:** Layering, continuity, glass, and motion that communicates state and believable mass.
+3. **Editorial Framework:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence. It is informed by editorial scientific modernism.
+
+**Semantic Clarity remains the quality gate across all three, not a fourth pillar.** The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
 ## The non-negotiable rules
 
@@ -22,7 +28,7 @@ Follow these literally — they are what keep generated output on-brand:
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
 10. **Compose like an editorial instrument.** Use oversized hierarchy, refined grids, generous major-section rhythm, and compact mono captions for sources, state, and evidence.
 11. **Monochrome carries information.** The accent identifies selection, progression, or one key relationship; it does not decorate the page.
-12. **Pass the semantic clarity gate.** Every screen must remain complete, legible, and useful without color, glass, or motion.
+12. **Pass the Semantic Clarity gate.** Every screen must remain complete, legible, and useful without color, glass, or motion.
 
 ## Tokens
 

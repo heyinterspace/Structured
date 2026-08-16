@@ -30,25 +30,25 @@ export function EthosFigure() {
           <div className="technical-node node-structure">
             <span>01 · Frame</span>
             <strong>
-              Structured
+              Tactile
               <br />
-              neobrutalism
-            </strong>
-          </div>
-          <div className="technical-node node-editorial">
-            <span>02 · Composition</span>
-            <strong>
-              Editorial scientific
-              <br />
-              modernism
+              structure
             </strong>
           </div>
           <div className="technical-node node-liquid">
-            <span>03 · Behavior</span>
+            <span>02 · Behavior</span>
             <strong>
               Liquid
               <br />
               depth
+            </strong>
+          </div>
+          <div className="technical-node node-editorial">
+            <span>03 · Composition</span>
+            <strong>
+              Editorial
+              <br />
+              framework
             </strong>
           </div>
           <div className="technical-core" aria-hidden="true">
@@ -59,9 +59,11 @@ export function EthosFigure() {
           <span>FIG. 01 / DESIGN OPERATING MODEL</span>
           <p>
             <strong>
-              Tactile structure. Editorial intelligence. Liquid depth.
+              Tactile Structure. Liquid Depth. Editorial Framework.
             </strong>{" "}
-            Semantic clarity tests the complete system.
+            The physical frame, believable state and mass, and evidence-led
+            composition work in that order. Semantic Clarity tests the complete
+            system; it is not a fourth pillar.
           </p>
         </figcaption>
       </figure>
