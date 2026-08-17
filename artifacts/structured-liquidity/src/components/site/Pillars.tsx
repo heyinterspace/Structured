@@ -4,23 +4,24 @@ export function Pillars() {
       <div className="section-head reveal">
         <span className="eyebrow">Principles · the foundation</span>
         <h2 className="section-title">
-          Structure holds it. Evidence explains it. Liquidity brings it to life.
+          Three faces. One design language.
         </h2>
         <p className="lead">
-          Tactile Structure defines the frame. Liquid Depth makes state and mass
-          perceptible. Editorial Framework composes hierarchy and evidence.
-          Semantic Clarity tests the complete system rather than competing as a
-          fourth pillar.
+          Neobrutalist Structure defines the physical frame. Liquid Glass Motion
+          makes state, continuity, and mass perceptible. Editorial Modern
+          Frameworks compose hierarchy and evidence. Together they form the
+          Structured Liquidity trifecta; Semantic Clarity tests the complete
+          system rather than competing as a fourth pillar.
         </p>
       </div>
 
       <div className="pillars">
         <div className="glass pillar reveal">
           <span className="pnum">Pillar 01</span>
-          <h3>Tactile Structure</h3>
+          <h3>Neobrutalist Structure</h3>
           <p>
-            Structured neobrutalism—the physical frame, load-bearing borders,
-            hard shadows, clear affordances, and tactile interaction.
+            The physical frame: load-bearing borders, hard shadows, square
+            geometry, clear affordances, and tactile interaction.
           </p>
           <ul>
             <li>
@@ -40,10 +41,10 @@ export function Pillars() {
 
         <div className="glass pillar reveal">
           <span className="pnum">Pillar 02</span>
-          <h3>Liquid Depth</h3>
+          <h3>Liquid Glass Motion</h3>
           <p>
-            Layering, continuity, glass, and motion that communicates state and
-            believable mass.
+            Layered glass, continuity, and purposeful motion that communicate
+            state and give interfaces believable mass.
           </p>
           <ul>
             <li>
@@ -65,11 +66,11 @@ export function Pillars() {
 
         <div className="glass pillar reveal editorial-pillar">
           <span className="pnum">Pillar 03</span>
-          <h3>Editorial Framework</h3>
+          <h3>Editorial Modern Frameworks</h3>
           <p>
             Hierarchy, refined grids, oversized typography, technical diagrams,
-            captions, labeling, and evidence. It is informed by editorial
-            scientific modernism.
+            captions, labeling, and evidence, informed by editorial scientific
+            modernism.
           </p>
           <ul>
             <li>

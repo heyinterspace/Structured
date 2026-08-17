@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-A live, deployable specimen + landing page for **Structured Liquidity** — **Tactile Structure. Liquid Depth. Editorial Framework.** Tactile Structure is structured neobrutalism: the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction. Liquid Depth is layering, continuity, glass, and motion that communicates state and believable mass. Editorial Framework is hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence; it is informed by editorial scientific modernism. Semantic Clarity remains the quality gate across all three, not a fourth pillar. The page is both the specimen and the documentation of the language, with a live in-page theme tweaker, and it **dogfoods its own React components**. It also publishes those components as a **shadcn-installable registry** at `/r/*.json`. Structured Liquidity is an Interspace Venture (est. 2026); the source is on GitHub at https://github.com/heyinterspace/Structured.
+A live, deployable specimen + landing page for **Structured Liquidity** — **Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.** Neobrutalist Structure is the physical frame: load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction. Liquid Glass Motion is layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass. Editorial Modern Frameworks compose hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence; they are informed by editorial scientific modernism. Together they form the Structured Liquidity trifecta, represented by the cube's three visible faces. Semantic Clarity remains the quality gate across all three, not a fourth pillar. The page is both the specimen and the documentation of the language, with a live in-page theme tweaker, and it **dogfoods its own React components**. It also publishes those components as a **shadcn-installable registry** at `/r/*.json`. Structured Liquidity is an Interspace Venture (est. 2026); the source is on GitHub at https://github.com/heyinterspace/Structured.
 
 ## Run & Operate
 
@@ -59,7 +59,7 @@ Cross-item URLs use `REGISTRY_BASE_URL` (default `https://structured.glass`). Th
 
 ## Product
 
-A single-page specimen + reference for the Structured Liquidity design language: it explains the three dimensions in order—Tactile Structure as frame, Liquid Depth as behavior, Editorial Framework as composition—demonstrates a full component kit, lets visitors retheme it live, and lets them install it via shadcn. Semantic Clarity tests the complete system and is not a fourth pillar.
+A single-page specimen + reference for the Structured Liquidity design language: it explains the trifecta in order—Neobrutalist Structure as frame, Liquid Glass Motion as state, Editorial Modern Frameworks as composition—demonstrates a full component kit, lets visitors retheme it live, and lets them install it via shadcn. The cube's three visible faces represent the trifecta. Semantic Clarity tests the complete system and is not a fourth pillar.
 
 ## Design language tokens (the knobs the page reads)
 

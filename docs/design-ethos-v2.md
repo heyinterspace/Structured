@@ -2,13 +2,13 @@
 
 ## The operating model
 
-**Tactile Structure. Liquid Depth. Editorial Framework.**
+**Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
 
-Structured Liquidity combines three orthogonal design dimensions:
+Structured Liquidity is a trifecta of three orthogonal design dimensions, represented by the three visible faces of its cube:
 
-1. **Tactile Structure:** Structured neobrutalism—the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction.
-2. **Liquid Depth:** Layering, continuity, glass, and motion that communicates state and believable mass.
-3. **Editorial Framework:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence. It is informed by editorial scientific modernism.
+1. **Neobrutalist Structure:** The physical frame—load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction.
+2. **Liquid Glass Motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
+3. **Editorial Modern Frameworks:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence, informed by editorial scientific modernism.
 
 Semantic Clarity remains the quality gate across all three, not a fourth pillar: every screen must remain complete, legible, and useful without color, glass, or motion.
 
@@ -16,10 +16,10 @@ Semantic Clarity remains the quality gate across all three, not a fourth pillar:
 
 | Question                                            | Owner                 |
 | --------------------------------------------------- | --------------------- |
-| What contains this information?                     | Tactile Structure     |
-| How does state change or depth become perceptible?  | Liquid Depth          |
-| How is the information composed and evidenced?      | Editorial Framework   |
-| Is the result understandable in its simplest state? | Semantic Clarity gate |
+| What contains this information?                     | Neobrutalist Structure       |
+| How does state change or mass become perceptible?   | Liquid Glass Motion          |
+| How is the information composed and evidenced?      | Editorial Modern Frameworks  |
+| Is the result understandable in its simplest state? | Semantic Clarity gate        |
 
 ## Expression rules
 
@@ -32,6 +32,6 @@ Semantic Clarity remains the quality gate across all three, not a fourth pillar:
 
 ## Short language
 
-Primary phrase: **Tactile Structure. Liquid Depth. Editorial Framework.**
+Primary phrase: **Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
 
-Manifesto phrase: **Structure holds it. Evidence explains it. Liquidity brings it to life.**
+Manifesto phrase: **Three faces. One design language.**

@@ -1,17 +1,17 @@
 ---
 name: structured-liquidity
-description: Apply the Structured Liquidity UI design language — Tactile Structure, Liquid Depth, and Editorial Framework, all held to a Semantic Clarity quality gate. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
+description: Apply the Structured Liquidity UI design language — Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks, all held to a Semantic Clarity quality gate. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
 ---
 
 # Structured Liquidity
 
-**Tactile Structure. Liquid Depth. Editorial Framework.**
+**Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
 
-1. **Tactile Structure:** Structured neobrutalism—the physical frame, load-bearing borders, hard shadows, clear affordances, and tactile interaction.
-2. **Liquid Depth:** Layering, continuity, glass, and motion that communicates state and believable mass.
-3. **Editorial Framework:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence. It is informed by editorial scientific modernism.
+1. **Neobrutalist Structure:** The physical frame—load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction.
+2. **Liquid Glass Motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
+3. **Editorial Modern Frameworks:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence, informed by editorial scientific modernism.
 
-**Semantic Clarity remains the quality gate across all three, not a fourth pillar.** The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
+Together they form the Structured Liquidity trifecta, represented by the three visible faces of the cube. **Semantic Clarity remains the quality gate across all three, not a fourth pillar.** The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
 ## The non-negotiable rules
 

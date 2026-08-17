@@ -7,13 +7,13 @@
       "name": "structured-liquidity",
       "type": "registry:style",
       "title": "Structured Liquidity",
-      "description": "The Structured Liquidity design language base: Tactile Structure, Liquid Depth, and Editorial Framework, with Semantic Clarity as the quality gate. Includes theme tokens, three distributable stylesheets, and the kit interaction script. Install this first — every component depends on it."
+      "description": "The Structured Liquidity design language base: Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks, with Semantic Clarity as the quality gate. Includes theme tokens, three distributable stylesheets, and the kit interaction script. Install this first — every component depends on it."
     },
     {
       "name": "structured-liquidity-agent",
       "type": "registry:item",
       "title": "Structured Liquidity Agent Bundle",
-      "description": "Install the Tactile Structure, Liquid Depth, and Editorial Framework language plus its persistent local agent skill before the first UI edit."
+      "description": "Install the Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks language plus its persistent local agent skill before the first UI edit."
     },
     {
       "name": "accordion",

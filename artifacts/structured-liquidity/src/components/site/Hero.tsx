@@ -18,20 +18,21 @@ export function Hero() {
             <LiquidWord text="Liquidity" />
           </h1>
           <p className="lead reveal">
-            <em>Tactile Structure. Liquid Depth. Editorial Framework.</em>{" "}
-            Tactile Structure is structured neobrutalism: the physical frame,
-            load-bearing borders, hard shadows, clear affordances, and tactile
-            interaction. Liquid Depth is layering, continuity, glass, and motion
-            that communicates state and believable mass. Editorial Framework is
-            hierarchy, refined grids, oversized typography, technical diagrams,
-            captions, labeling, and evidence; it is informed by editorial
-            scientific modernism. This page is both specimen and spec, so
-            retheme it live as you read.
+            <em>
+              Neobrutalist Structure. Liquid Glass Motion. Editorial Modern
+              Frameworks.
+            </em>{" "}
+            Structured Liquidity is a trifecta: a physical frame with
+            load-bearing borders and hard shadows; layered glass and motion that
+            make state feel continuous and massive; and editorial systems that
+            compose hierarchy, diagrams, captions, labels, and evidence.
+            Semantic Clarity tests the complete system. This page is both
+            specimen and spec, so retheme it live as you read.
           </p>
           <div className="hero-tags reveal">
-            <span className="tag">Tactile Structure</span>
-            <span className="tag">Liquid Depth</span>
-            <span className="tag">Editorial Framework</span>
+            <span className="tag">Neobrutalist Structure</span>
+            <span className="tag">Liquid Glass Motion</span>
+            <span className="tag">Editorial Modern Frameworks</span>
           </div>
           <div className="hero-cta reveal">
             <InstallButton />
@@ -50,8 +51,36 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div className="hero-cube-wrap" aria-hidden="true">
+        <div
+          className="hero-cube-wrap"
+          role="img"
+          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks."
+        >
           <Hypercube className="hero-cube" />
+          <span className="cube-face-label cube-face-structure" aria-hidden="true">
+            <b>01</b>
+            <span>
+              Neobrutalist
+              <br />
+              Structure
+            </span>
+          </span>
+          <span className="cube-face-label cube-face-motion" aria-hidden="true">
+            <b>02</b>
+            <span>
+              Liquid Glass
+              <br />
+              Motion
+            </span>
+          </span>
+          <span className="cube-face-label cube-face-editorial" aria-hidden="true">
+            <b>03</b>
+            <span>
+              Editorial Modern
+              <br />
+              Frameworks
+            </span>
+          </span>
         </div>
       </div>
     </header>

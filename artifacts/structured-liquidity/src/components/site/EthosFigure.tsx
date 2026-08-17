@@ -7,11 +7,11 @@ export function EthosFigure() {
       <div className="ethos-section-copy reveal">
         <span className="eyebrow">System diagram · 01</span>
         <h2 className="section-title" id="ethos-figure-title">
-          One language. Three dimensions.
+          The trifecta, made visible.
         </h2>
         <p className="lead">
-          The pillars do not compete for visual volume. Each owns a different
-          design decision and all three are held to the same semantic standard.
+          Like the three visible faces of the cube, each pillar owns a different
+          design decision while remaining inseparable from the whole.
         </p>
       </div>
 
@@ -30,25 +30,25 @@ export function EthosFigure() {
           <div className="technical-node node-structure">
             <span>01 · Frame</span>
             <strong>
-              Tactile
+              Neobrutalist
               <br />
               structure
             </strong>
           </div>
           <div className="technical-node node-liquid">
-            <span>02 · Behavior</span>
+            <span>02 · State</span>
             <strong>
-              Liquid
+              Liquid glass
               <br />
-              depth
+              motion
             </strong>
           </div>
           <div className="technical-node node-editorial">
             <span>03 · Composition</span>
             <strong>
-              Editorial
+              Editorial modern
               <br />
-              framework
+              frameworks
             </strong>
           </div>
           <div className="technical-core" aria-hidden="true">
@@ -56,14 +56,15 @@ export function EthosFigure() {
           </div>
         </div>
         <figcaption>
-          <span>FIG. 01 / DESIGN OPERATING MODEL</span>
+          <span>FIG. 01 / THE STRUCTURED LIQUIDITY TRIFECTA</span>
           <p>
             <strong>
-              Tactile Structure. Liquid Depth. Editorial Framework.
+              Neobrutalist Structure. Liquid Glass Motion. Editorial Modern
+              Frameworks.
             </strong>{" "}
-            The physical frame, believable state and mass, and evidence-led
-            composition work in that order. Semantic Clarity tests the complete
-            system; it is not a fourth pillar.
+            Frame, state, and composition operate as three faces of one system.
+            Semantic Clarity tests the complete system; it is not a fourth face
+            or pillar.
           </p>
         </figcaption>
       </figure>
