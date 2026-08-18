@@ -36,10 +36,6 @@ export function Hero() {
           </div>
           <div className="hero-cta reveal">
             <InstallButton />
-            <a className="btn glassy" href="#showcase">
-              <Sparkles />
-              Showcase
-            </a>
             <a
               className="btn glassy"
               href={GITHUB}
@@ -49,6 +45,10 @@ export function Hero() {
               <Github />
               Source
             </a>
+            <a className="btn glassy" href="#showcase">
+              <Sparkles />
+              Showcase
+            </a>
           </div>
         </div>
         <div
@@ -56,31 +56,7 @@ export function Hero() {
           role="img"
           aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks."
         >
-          <Hypercube className="hero-cube" />
-          <span className="cube-face-label cube-face-structure" aria-hidden="true">
-            <b>01</b>
-            <span>
-              Neobrutalist
-              <br />
-              Structure
-            </span>
-          </span>
-          <span className="cube-face-label cube-face-motion" aria-hidden="true">
-            <b>02</b>
-            <span>
-              Liquid Glass
-              <br />
-              Motion
-            </span>
-          </span>
-          <span className="cube-face-label cube-face-editorial" aria-hidden="true">
-            <b>03</b>
-            <span>
-              Editorial Modern
-              <br />
-              Frameworks
-            </span>
-          </span>
+          <Hypercube className="hero-cube" faceLabels={["01", "02", "03"]} />
         </div>
       </div>
     </header>

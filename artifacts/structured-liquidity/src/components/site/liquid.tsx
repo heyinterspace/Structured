@@ -157,7 +157,7 @@ const CUBE = {
     "M50 82 L50 63.44 M22.29 66 L38.36 56.72 M22.29 34 L38.36 43.28",
 };
 
-function buildCube(host: HTMLElement) {
+function buildCube(host: HTMLElement, faceLabels?: readonly [string, string, string]) {
   host.querySelector("svg.liquid-cube")?.remove();
 
   const uid = "lc-" + Math.random().toString(36).slice(2, 8);
@@ -185,6 +185,25 @@ function buildCube(host: HTMLElement) {
   );
   svg.appendChild(el("path", { class: "lw-cube-edge", d: CUBE.innerHex }));
   svg.appendChild(el("path", { class: "lw-cube-shell", d: CUBE.outerHex }));
+
+  if (faceLabels) {
+    const positions = [
+      { x: 37, y: 39 },
+      { x: 63, y: 39 },
+      { x: 50, y: 69 },
+    ];
+    faceLabels.forEach((label, index) => {
+      const text = el("text", {
+        class: "lw-cube-face-index",
+        x: positions[index].x,
+        y: positions[index].y,
+        "text-anchor": "middle",
+        "dominant-baseline": "central",
+      });
+      text.textContent = label;
+      svg.appendChild(text);
+    });
+  }
 
   host.appendChild(svg);
   host.classList.add("is-cube");
@@ -271,20 +290,22 @@ export function LiquidWord({
 export function Hypercube({
   className,
   style,
+  faceLabels,
 }: {
   className?: string;
   style?: React.CSSProperties;
+  faceLabels?: readonly [string, string, string];
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   useEffect(() => {
     const host = ref.current;
     if (!host) return;
-    buildCube(host);
+    buildCube(host, faceLabels);
     startSlosh();
     let rt: number;
     const onResize = () => {
       clearTimeout(rt);
-      rt = window.setTimeout(() => buildCube(host), 150);
+      rt = window.setTimeout(() => buildCube(host, faceLabels), 150);
     };
     window.addEventListener("resize", onResize);
     return () => {
@@ -292,6 +313,6 @@ export function Hypercube({
       window.removeEventListener("resize", onResize);
       host.querySelector("svg.liquid-cube")?.remove();
     };
-  }, []);
+  }, [faceLabels]);
   return <span ref={ref} className={cn("glyph", className)} style={style} aria-hidden="true" />;
 }

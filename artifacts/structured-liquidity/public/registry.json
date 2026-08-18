@@ -514,6 +514,12 @@
       "description": "Structured Liquidity Typography — React component driving the SL class system."
     },
     {
+      "name": "unit-economics-chart",
+      "type": "registry:ui",
+      "title": "Unit Economics Chart",
+      "description": "Structured Liquidity Unit Economics Chart — React component driving the SL class system."
+    },
+    {
       "name": "waveform",
       "type": "registry:ui",
       "title": "Waveform",
