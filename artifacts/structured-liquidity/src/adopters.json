@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-08-09",
+  "reviewedAt": "2026-08-18",
   "projects": [
     {
       "id": "interspace-ventures",
@@ -101,14 +101,14 @@
       "id": "observatory",
       "name": "Observatory",
       "domain": "observatory.bio",
-      "href": null,
+      "href": "https://observatory-staging.up.railway.app",
       "repository": "Interspace-Ventures/observatory",
       "lifecycle": "staging",
-      "routeStatus": "private",
+      "routeStatus": "verified",
       "tag": "Scientific workspace",
-      "shot": null,
-      "shotAlt": "Observatory scientific workspace in private staging",
-      "description": "A connected gene-analysis workspace with a persistent data rail, genomic and protein panels, report actions, and a multimodal command composer.",
+      "shot": "observatory-bio.png",
+      "shotAlt": "Observatory biology workspace landing page using editorial scientific modernism",
+      "description": "A scientific workspace for connected biological evidence, using an editorial research grid, oversized hierarchy, technical labeling, and one continuous visual thread from gene to protein to structure.",
       "adoption": ["structured-containment", "liquid-depth", "semantic-clarity"],
       "absorbedComponents": ["detail-panel", "omnibar", "sidebar", "stat"],
       "candidatePatterns": ["scientific-track-viewer", "evidence-report"]
@@ -126,7 +126,7 @@
       "shotAlt": "Dropship private media utility in staging",
       "description": "A mobile-first capture library with one universal intake bar, persistent glass dock, media-aware cards, edge detail panels, and context-sensitive export actions.",
       "adoption": ["structured-containment", "liquid-depth", "semantic-clarity"],
-      "absorbedComponents": ["detail-panel", "mobile-nav", "omnibar"],
+      "absorbedComponents": ["detail-panel", "mobile-nav", "omnibar", "unit-economics-chart"],
       "candidatePatterns": ["media-action-rail", "payload-chooser"]
     },
     {

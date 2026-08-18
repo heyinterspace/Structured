@@ -224,9 +224,13 @@ h1, h2, h3 { font-weight: 800; line-height: 0.98; letter-spacing: -0.02em; margi
    ============================================================ */
 
 .wrap,
+.shell { width: min(var(--shell-w), calc(100vw - var(--viewport-gutter))); margin-inline: auto; }
 .sl-site-content,
-.shell,
-.sl-site-shell { width: min(var(--shell-w), calc(100vw - var(--viewport-gutter))); margin-inline: auto; }
+.sl-site-shell {
+  width: min(100%, var(--shell-w));
+  max-width: calc(100vw - var(--viewport-gutter));
+  margin-inline: auto;
+}
 .sl-site-body { background: var(--body-surface); }
 section { padding: clamp(1.5rem, 3.4vh, 2.7rem) 0; position: relative; }
 .section-head { max-width: 70ch; margin-bottom: 1.1rem; }

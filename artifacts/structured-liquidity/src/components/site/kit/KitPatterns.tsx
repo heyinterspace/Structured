@@ -52,6 +52,7 @@ import {
   PricingPrice,
 } from "@/components/ui/pricing-card";
 import { SiteContent, SiteShell } from "@/components/ui/site-shell";
+import { UnitEconomicsChart } from "@/components/ui/unit-economics-chart";
 import { Step, Stepper } from "@/components/ui/stepper";
 import { Timeline, TimelineItem } from "@/components/ui/timeline";
 import {
@@ -69,8 +70,8 @@ export function KitPatterns() {
         <span className="kg-name">Production patterns</span>
         <span className="kg-rule" />
         <span className="kg-count">
-          Shell · Activity · Upload · Pricing · Timeline · Filters · Detail
-          panel · Proof
+          Shell · Activity · Upload · Pricing · Economics · Timeline · Filters ·
+          Detail panel · Proof
         </span>
       </div>
       <div className="kit-grid">
@@ -275,6 +276,41 @@ export function KitPatterns() {
               <Button size="sm">Choose Operator</Button>
             </PricingFooter>
           </PricingCard>
+        </div>
+
+        <div className="glass kit-cell w6">
+          <span className="kit-cap">Unit economics chart</span>
+          <UnitEconomicsChart
+            totalLabel="Monthly membership"
+            totalValue="$3.99"
+            allocations={[
+              {
+                label: "Payments",
+                value: "$0.50",
+                share: 12.5,
+                description: "Checkout, billing, and tax tooling.",
+              },
+              {
+                label: "Infrastructure",
+                value: "$0.75",
+                share: 18.75,
+                description: "Delivery, storage, and shared hosting.",
+              },
+              {
+                label: "AI capacity",
+                value: "$0.25",
+                share: 6.25,
+                description: "Private routing and reliability headroom.",
+              },
+              {
+                label: "Build + support",
+                value: "$2.50",
+                share: 62.5,
+                description: "Product work, safety, support, and margin.",
+              },
+            ]}
+            note="Quarter-rounded allocations make the model legible without implying every month costs exactly the same."
+          />
         </div>
       </div>
     </div>

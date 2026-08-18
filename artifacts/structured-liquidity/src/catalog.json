@@ -1007,6 +1007,15 @@
       "kinds": ["display"]
     },
     {
+      "name": "Unit economics chart",
+      "registry": "unit-economics-chart",
+      "cap": "Unit economics chart",
+      "category": "data",
+      "status": "stable",
+      "tags": ["data", "chart", "finance"],
+      "kinds": ["display"]
+    },
+    {
       "name": "Framework attribution",
       "registry": "attribution",
       "cap": "Framework attribution",
