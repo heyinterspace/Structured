@@ -10,8 +10,8 @@
 @import "./styles/30-kit.css";
 @import "./styles/40-inline.css";
 
-/* dark is the default (data-mode="dark" on <html>); expose the variant so
-   `dark:` utilities resolve against the same switch the tweaker writes. */
+/* Expose the optional dark variant against the same switch the tweaker writes.
+   Public editorial surfaces default to light mode. */
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
 
 /* Map the live SL custom properties onto Tailwind theme tokens with `inline`

@@ -7,18 +7,17 @@ export function Pillars() {
           Three faces. One design language.
         </h2>
         <p className="lead">
-          Neobrutalist Structure defines the physical frame. Liquid Glass Motion
-          makes state, continuity, and mass perceptible. Editorial Modern
-          Frameworks compose hierarchy and evidence. Together they form the
-          Structured Liquidity trifecta; Semantic Clarity tests the complete
-          system rather than competing as a fourth pillar.
+          Structured framing makes hierarchy and action unmistakable. Liquid
+          motion makes state and continuity perceptible. Scientific clarity
+          turns hierarchy, labels, diagrams, and evidence into one legible
+          system. Together they form the Structured Liquidity trifecta.
         </p>
       </div>
 
       <div className="pillars">
         <div className="glass pillar reveal">
           <span className="pnum">Pillar 01</span>
-          <h3>Neobrutalist Structure</h3>
+          <h3>Structured framing</h3>
           <p>
             The physical frame: load-bearing borders, hard shadows, square
             geometry, clear affordances, and tactile interaction.
@@ -41,7 +40,7 @@ export function Pillars() {
 
         <div className="glass pillar reveal">
           <span className="pnum">Pillar 02</span>
-          <h3>Liquid Glass Motion</h3>
+          <h3>Liquid motion</h3>
           <p>
             Layered glass, continuity, and purposeful motion that communicate
             state and give interfaces believable mass.
@@ -66,11 +65,11 @@ export function Pillars() {
 
         <div className="glass pillar reveal editorial-pillar">
           <span className="pnum">Pillar 03</span>
-          <h3>Editorial Modern Frameworks</h3>
+          <h3>Scientific clarity</h3>
           <p>
-            Hierarchy, refined grids, oversized typography, technical diagrams,
-            captions, labeling, and evidence, informed by editorial scientific
-            modernism.
+            Scientific Modernism applied to interfaces: refined grids,
+            decisive typography, technical diagrams, captions, labels, and
+            evidence.
           </p>
           <ul>
             <li>
@@ -92,9 +91,9 @@ export function Pillars() {
         </div>
       </div>
       <p className="manifesto-gate reveal">
-        <strong>Quality gate · Semantic Clarity</strong>
-        Every screen must remain complete, legible, and useful without color,
-        glass, or motion.
+        <strong>Quality floor · legibility</strong>
+        Every screen remains complete and useful without color, glass, or
+        motion. The aesthetic never outranks the information.
       </p>
     </section>
   );

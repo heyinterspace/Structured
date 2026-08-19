@@ -1,17 +1,17 @@
 ---
 name: structured-liquidity
-description: Apply the Structured Liquidity UI design language — Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks, all held to a Semantic Clarity quality gate. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
+description: Apply the Structured Liquidity UI design language — Structured framing, Liquid motion, and Scientific clarity. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
 ---
 
 # Structured Liquidity
 
-**Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
+**Structured framing. Liquid motion. Scientific clarity.**
 
-1. **Neobrutalist Structure:** The physical frame—load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction.
-2. **Liquid Glass Motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
-3. **Editorial Modern Frameworks:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence, informed by editorial scientific modernism.
+1. **Structured framing:** The physical and informational frame—load-bearing borders, square geometry, clear hierarchy, clear affordances, and tactile interaction.
+2. **Liquid motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
+3. **Scientific clarity:** Scientific Modernism applied to interfaces through refined grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint.
 
-Together they form the Structured Liquidity trifecta, represented by the three visible faces of the cube. **Semantic Clarity remains the quality gate across all three, not a fourth pillar.** The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
+Together they form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Legibility remains the quality floor across all three: the aesthetic never outranks the information. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
 ## The non-negotiable rules
 
@@ -28,11 +28,11 @@ Follow these literally — they are what keep generated output on-brand:
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
 10. **Compose like an editorial instrument.** Use oversized hierarchy, refined grids, generous major-section rhythm, and compact mono captions for sources, state, and evidence.
 11. **Monochrome carries information.** The accent identifies selection, progression, or one key relationship; it does not decorate the page.
-12. **Pass the Semantic Clarity gate.** Every screen must remain complete, legible, and useful without color, glass, or motion.
+12. **Protect the legibility floor.** Every screen must remain complete, legible, and useful without color, glass, or motion.
 
 ## Tokens
 
-Apply these as CSS custom properties on `:root` (dark-mode defaults):
+Apply these as CSS custom properties on `:root`. Public editorial surfaces should default to light mode; dark mode remains available for interfaces that benefit from it:
 
 ```css
 :root {

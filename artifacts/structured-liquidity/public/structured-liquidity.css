@@ -1,8 +1,6 @@
 /* ============================================================
-   STRUCTURED LIQUIDITY — Neobrutalist Structure. Liquid Glass
-   Motion. Editorial Modern Frameworks. Semantic Clarity remains the quality
-   gate across all three, not a fourth pillar. This stylesheet IS
-   the specimen.
+   STRUCTURED LIQUIDITY — Structured framing. Liquid motion.
+   Scientific clarity. This stylesheet IS the specimen.
    ============================================================ */
 
 :root {
@@ -22,7 +20,7 @@
   --body-surface: color-mix(in srgb, var(--bg) 94%, var(--ink) 6%);
   --floating-ui-clearance: 96px;
 
-  /* ---- Editorial Modern Frameworks, informed by editorial scientific modernism ---- */
+  /* ---- Scientific clarity, informed by Scientific Modernism ---- */
   --text-display-xl: clamp(4.5rem, 10vw, 9rem);
   --text-display-lg: clamp(2.8rem, 6vw, 5.5rem);
   --measure-reading: 68ch;
@@ -108,7 +106,14 @@ body {
   background-repeat: no-repeat;
   animation: fieldshift 30s ease-in-out infinite alternate;
 }
-[data-mode="light"] .field { opacity: 0.55; }
+[data-mode="light"] .field {
+  opacity: 1;
+  background:
+    radial-gradient(38vw 24vh at 84% 4%, rgba(163, 136, 238, 0.24), transparent 72%),
+    radial-gradient(34vw 22vh at 10% 58%, rgba(163, 136, 238, 0.12), transparent 74%),
+    linear-gradient(#dfe5f2, #e7ebf4);
+  animation-duration: 46s;
+}
 @keyframes fieldshift {
   from { transform: translateX(0); }
   to   { transform: translateX(-3vw); }
@@ -132,7 +137,7 @@ body {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.16;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }

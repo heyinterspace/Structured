@@ -2,7 +2,7 @@ import { Sparkles, Github } from "lucide-react";
 import { LiquidWord, Hypercube } from "./liquid";
 import { InstallButton } from "./InstallButton";
 
-const GITHUB = "https://github.com/heyinterspace/Structured";
+const GITHUB = "https://github.com/Interspace-Ventures/Structured";
 
 export function Hero() {
   return (
@@ -18,21 +18,17 @@ export function Hero() {
             <LiquidWord text="Liquidity" />
           </h1>
           <p className="lead reveal">
-            <em>
-              Neobrutalist Structure. Liquid Glass Motion. Editorial Modern
-              Frameworks.
-            </em>{" "}
-            Structured Liquidity is a trifecta: a physical frame with
-            load-bearing borders and hard shadows; layered glass and motion that
-            make state feel continuous and massive; and editorial systems that
-            compose hierarchy, diagrams, captions, labels, and evidence.
-            Semantic Clarity tests the complete system. This page is both
-            specimen and spec, so retheme it live as you read.
+            <em>Structured framing. Liquid motion. Scientific clarity.</em>{" "}
+            Structured Liquidity gives digital interfaces a rigorous frame,
+            movement that explains state, and an evidence-first editorial
+            system. The result is precise without feeling sterile and expressive
+            without becoming visual noise. This page is both specimen and spec,
+            so retheme it live as you read.
           </p>
           <div className="hero-tags reveal">
-            <span className="tag">Neobrutalist Structure</span>
-            <span className="tag">Liquid Glass Motion</span>
-            <span className="tag">Editorial Modern Frameworks</span>
+            <span className="tag">Structured framing</span>
+            <span className="tag">Liquid motion</span>
+            <span className="tag">Scientific clarity</span>
           </div>
           <div className="hero-cta reveal">
             <InstallButton />
@@ -54,7 +50,7 @@ export function Hero() {
         <div
           className="hero-cube-wrap"
           role="img"
-          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks."
+          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Structured framing, Liquid motion, and Scientific clarity."
         >
           <Hypercube className="hero-cube" faceLabels={["01", "02", "03"]} />
         </div>
