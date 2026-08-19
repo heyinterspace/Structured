@@ -188,7 +188,7 @@
   /* larger, more legible bullet copy (was 0.76rem dim mono) */
   .pillar li{font-size:0.9rem;line-height:1.55;color:color-mix(in srgb, var(--ink) 55%, var(--ink-dim));}
 
-  /* Editorial Modern Frameworks, informed by editorial scientific modernism: evidence-first hierarchy and technical figures. */
+  /* Scientific clarity: evidence-first hierarchy and technical figures. */
   .manifesto-gate{display:grid;grid-template-columns:minmax(190px,.55fr) 1fr;gap:var(--editorial-gap);
     margin:1.35rem 0 0;padding:1rem 1.1rem;border-top:var(--border-w) solid rgb(var(--edge));
     border-bottom:var(--rule-hairline) solid var(--diagram-muted);font-size:.9rem;color:var(--ink-dim);}

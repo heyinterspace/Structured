@@ -27,7 +27,7 @@ const DEFAULTS: Tweaks = {
   border: 2,
   shadow: 7,
   radius: 0,
-  mode: "dark",
+  mode: "light",
 };
 
 const ACCENTS = ["#a388ee", "#7c9cff", "#3dd7c8", "#ffb454", "#ff7a90"];
