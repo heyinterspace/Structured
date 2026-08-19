@@ -1007,6 +1007,15 @@
       "kinds": ["display"]
     },
     {
+      "name": "Unit economics chart",
+      "registry": "unit-economics-chart",
+      "cap": "Unit economics chart",
+      "category": "data",
+      "status": "stable",
+      "tags": ["data", "chart", "finance"],
+      "kinds": ["display"]
+    },
+    {
       "name": "Framework attribution",
       "registry": "attribution",
       "cap": "Framework attribution",
@@ -1120,6 +1129,15 @@
       "status": "stable",
       "tags": ["display", "interactive", "field-sourced", "commerce"],
       "kinds": ["display", "interactive"]
+    },
+    {
+      "name": "Templates",
+      "registry": "site-templates",
+      "cap": "Templates",
+      "category": "layout",
+      "status": "stable",
+      "tags": ["layout", "field-sourced", "templates"],
+      "kinds": ["display"]
     }
   ],
   "facets": [

@@ -1,4 +1,4 @@
-import { Compass, LayoutGrid, PanelsTopLeft, Sparkles, Bot, Github } from "lucide-react";
+import { Sparkles, Github } from "lucide-react";
 import { Hypercube } from "./liquid";
 import { InstallButton } from "./InstallButton";
 
@@ -12,41 +12,27 @@ export function Nav() {
         <span className="name">Structured Liquidity</span>
       </a>
       <div className="links">
-        <a href="#manifesto">
-          <Compass />
-          Principles
-        </a>
-        <a href="#components">
-          <LayoutGrid />
-          Components
-        </a>
-        <a href="#templates">
-          <PanelsTopLeft />
-          Templates
-        </a>
-        <a href="#showcase">
-          <Sparkles />
-          Showcase
-        </a>
-        <a href="#adopt">
-          <Bot />
-          For AI
-        </a>
         <InstallButton
-          iconOnly
-          className="btn solid nav-cta nav-icon"
-          style={{ "--hard-x": "3px", "--hard-y": "3px" } as React.CSSProperties}
+          className="btn solid nav-cta"
+          style={
+            { "--hard-x": "3px", "--hard-y": "3px" } as React.CSSProperties
+          }
         />
         <a
-          className="btn glassy nav-cta nav-icon"
+          className="btn glassy nav-cta"
           href={GITHUB}
           target="_blank"
           rel="noopener"
-          aria-label="Source"
-          title="Source"
-          style={{ "--hard-x": "3px", "--hard-y": "3px" } as React.CSSProperties}
+          style={
+            { "--hard-x": "3px", "--hard-y": "3px" } as React.CSSProperties
+          }
         >
           <Github />
+          Source
+        </a>
+        <a className="btn glassy nav-cta" href="#showcase">
+          <Sparkles />
+          Showcase
         </a>
       </div>
     </nav>

@@ -1,11 +1,17 @@
 ---
 name: structured-liquidity
-description: Apply the Structured Liquidity UI design language — rigid containers (sharp 90° corners, flat blurless offset shadows, solid load-bearing borders) holding semi-transparent liquid glass, with one accent and strict type roles. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
+description: Apply the Structured Liquidity UI design language — Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks, all held to a Semantic Clarity quality gate. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
 ---
 
 # Structured Liquidity
 
-An open UI design language: **rigid containment** + **liquid depth** + **semantic clarity**. The living specimen, the machine-readable token set, and the component registry are served by the `structured-liquidity` artifact. This skill is the short version an agent needs to produce on-brand output.
+**Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
+
+1. **Neobrutalist Structure:** The physical frame—load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction.
+2. **Liquid Glass Motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
+3. **Editorial Modern Frameworks:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence, informed by editorial scientific modernism.
+
+Together they form the Structured Liquidity trifecta, represented by the three visible faces of the cube. **Semantic Clarity remains the quality gate across all three, not a fourth pillar.** The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
 ## The non-negotiable rules
 
@@ -16,25 +22,46 @@ Follow these literally — they are what keep generated output on-brand:
 3. **Load-bearing borders.** `var(--border-w) solid rgb(var(--edge))`. The edge is black in both light and dark mode.
 4. **Exactly one accent.** `--accent` carries all emphasis. Never add a competing hue.
 5. **Glass is depth, not color.** Liquid glass = `backdrop-filter: blur(var(--glass-blur))` over `rgba(var(--glass-tint), var(--glass-alpha))`. Keep it neutral/translucent.
-6. **Destructive is gray, not red.** Destructive *containers* use `--neg`. Error *text* may warn in color.
+6. **Destructive is gray, not red.** Destructive _containers_ use `--neg`. Error _text_ may warn in color.
 7. **Fixed type roles.** display (`--display`, Inter) = headings/buttons/brand; body (`--body`, Inter) = reading copy; mono (`--mono`, Space Mono) = labels/data/captions/eyebrows.
 8. **Leading icons.** Nav links and buttons take a leading Lucide icon, then the label.
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
+10. **Compose like an editorial instrument.** Use oversized hierarchy, refined grids, generous major-section rhythm, and compact mono captions for sources, state, and evidence.
+11. **Monochrome carries information.** The accent identifies selection, progression, or one key relationship; it does not decorate the page.
+12. **Pass the Semantic Clarity gate.** Every screen must remain complete, legible, and useful without color, glass, or motion.
 
 ## Tokens
 
 Apply these as CSS custom properties on `:root` (dark-mode defaults):
 
 ```css
-:root{
-  --accent:#a388ee; --accent-ink:#000000;
-  --bg:#272933; --bg-2:#1f2028; --ink:#e6e6e6; --ink-dim:#9da0ab;
-  --edge:0 0 0; --hard-shadow:#000000; --neg:#3c3f4b; --neg-ink:#f0f0f2;
-  --glass-blur:18px; --glass-tint:255 255 255; --glass-alpha:0.07;
-  --border-w:2px; --hard-x:7px; --hard-y:7px; --radius:0px;
-  --display:"Inter","Helvetica Neue",system-ui,sans-serif;
-  --body:"Inter","Helvetica Neue",system-ui,sans-serif;
-  --mono:"Space Mono",ui-monospace,"SFMono-Regular",monospace;
+:root {
+  --accent: #a388ee;
+  --accent-ink: #000000;
+  --bg: #272933;
+  --bg-2: #1f2028;
+  --ink: #e6e6e6;
+  --ink-dim: #9da0ab;
+  --edge: 0 0 0;
+  --hard-shadow: #000000;
+  --neg: #3c3f4b;
+  --neg-ink: #f0f0f2;
+  --glass-blur: 18px;
+  --glass-tint: 255 255 255;
+  --glass-alpha: 0.07;
+  --border-w: 2px;
+  --hard-x: 7px;
+  --hard-y: 7px;
+  --radius: 0px;
+  --display: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --body: "Inter", "Helvetica Neue", system-ui, sans-serif;
+  --mono: "Space Mono", ui-monospace, "SFMono-Regular", monospace;
+  --text-display-xl: clamp(4.5rem, 10vw, 9rem);
+  --text-display-lg: clamp(2.8rem, 6vw, 5.5rem);
+  --measure-reading: 68ch;
+  --measure-caption: 48ch;
+  --grid-gutter: clamp(1rem, 2.5vw, 2.5rem);
+  --section-space: clamp(4rem, 9vw, 9rem);
 }
 ```
 
@@ -44,7 +71,11 @@ The canonical machine-readable set is `design-tokens.json` (W3C Design Tokens fo
 
 ## Type layout
 
-Three roles — header / body / detail (display / body / mono). Inter carries both sans-serif roles; use weight and scale for hierarchy. Use Space Mono only for labels, data, code, captions, and eyebrows.
+Three roles — header / body / detail (display / body / mono). Inter carries both sans-serif roles; use dramatic scale and weight for hierarchy. Use Space Mono only for labels, data, code, captions, and eyebrows. Prefer one dominant statement, a 12-column or similarly disciplined grid, short reading measures, and figure captions that identify evidence and state.
+
+## Motion contract
+
+The rigid frame never wobbles or morphs. Motion belongs inside it and must explain state, continuity, or spatial relationship. Use one liquid easing family; reserve ambient motion for a single focal specimen; provide a complete static state under `prefers-reduced-motion`. If the interface communicates the same thing without the animation, the motion is optional polish, not a dependency.
 
 ## Components
 
@@ -82,11 +113,11 @@ Each `registry:ui` item is a plain React component (no Radix) that emits the SL 
 
 ```css
 /* if you are not using the kit CSS, the container recipe is: */
-.container{
-  border:var(--border-w) solid rgb(var(--edge));
-  border-radius:var(--radius);
-  box-shadow:var(--hard-x) var(--hard-y) 0 0 var(--hard-shadow);
-  background:rgba(var(--glass-tint),var(--glass-alpha));
-  backdrop-filter:blur(var(--glass-blur)) saturate(150%);
+.container {
+  border: var(--border-w) solid rgb(var(--edge));
+  border-radius: var(--radius);
+  box-shadow: var(--hard-x) var(--hard-y) 0 0 var(--hard-shadow);
+  background: rgba(var(--glass-tint), var(--glass-alpha));
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
 }
 ```

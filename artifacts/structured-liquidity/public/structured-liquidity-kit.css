@@ -867,3 +867,90 @@
   margin-top: auto;
   padding-top: 0.2rem;
 }
+
+
+/* Field-sourced from Dropship's stacked membership economics view. */
+.sl-unit-economics {
+  width: 100%;
+  margin: 0;
+}
+.sl-unit-economics-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.sl-unit-economics-head strong {
+  color: var(--accent);
+  font-size: 0.82rem;
+}
+.sl-unit-economics-chart {
+  display: flex;
+  width: 100%;
+  height: 58px;
+  overflow: hidden;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: var(--bg-2);
+  box-shadow: 5px 5px 0 0 var(--hard-shadow);
+}
+.sl-unit-economics-chart > span {
+  display: block;
+  min-width: 3px;
+  height: 100%;
+  border-right: var(--border-w) solid rgb(var(--edge));
+  background: color-mix(in srgb, var(--accent) var(--allocation-strength), var(--bg-2));
+}
+.sl-unit-economics-chart > span:last-child {
+  border-right: 0;
+  background:
+    linear-gradient(135deg, rgb(var(--glass-tint) / 0.16) 25%, transparent 25%) -6px 0 / 12px 12px,
+    linear-gradient(225deg, rgb(var(--glass-tint) / 0.1) 25%, transparent 25%) -6px 0 / 12px 12px,
+    var(--accent);
+}
+.sl-unit-economics-legend {
+  display: grid;
+  margin-top: 1rem;
+  border-top: var(--border-w) solid rgb(var(--edge));
+}
+.sl-unit-economics-legend > div {
+  min-height: 54px;
+  display: grid;
+  grid-template-columns: 13px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid rgb(var(--edge) / 0.45);
+}
+.sl-unit-economics-legend i {
+  width: 11px;
+  height: 11px;
+  border: 1px solid rgb(var(--edge));
+  background: color-mix(in srgb, var(--accent) var(--allocation-strength), var(--bg-2));
+}
+.sl-unit-economics-legend span {
+  min-width: 0;
+  display: grid;
+  gap: 0.2rem;
+}
+.sl-unit-economics-legend strong,
+.sl-unit-economics-legend b {
+  font: 400 0.64rem/1.2 var(--mono);
+}
+.sl-unit-economics-legend strong {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.sl-unit-economics-legend small {
+  color: var(--ink-dim);
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
+.sl-unit-economics-note {
+  margin: 0.8rem 0 0;
+  color: var(--ink-dim);
+  font: 0.62rem/1.55 var(--mono);
+}

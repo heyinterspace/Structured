@@ -21,7 +21,9 @@ interface Adopter {
 }
 
 const ADOPTERS = adopterRegistry.projects as Adopter[];
-const LIVE = ADOPTERS.filter((project) => project.lifecycle === "live");
+const SHOWCASE = ADOPTERS.filter(
+  (project) => project.lifecycle === "live" || project.id === "observatory",
+);
 
 const STATUS_LABEL: Record<RouteStatus, string> = {
   verified: "Live",
@@ -59,7 +61,7 @@ function ProjectCard({ project }: { project: Adopter }) {
           <div className="vbody">
             <p className="show-card-desc">{project.description}</p>
             <span className="show-card-cta">
-              {project.href ? `Visit ${project.domain}` : `Tracking ${project.domain}`}{" "}
+              {project.href ? `View ${project.name}` : `Tracking ${project.domain}`}{" "}
               <span aria-hidden="true">→</span>
             </span>
           </div>
@@ -73,11 +75,13 @@ function ProjectCard({ project }: { project: Adopter }) {
           <span className="show-name">{project.name}</span>
           <span className="mono">{project.tag}</span>
         </div>
-        <span
-          className={`sl-badge ${project.routeStatus === "verified" ? "default" : "outline"}`}
-        >
-          {STATUS_LABEL[project.routeStatus]}
-        </span>
+        {project.lifecycle === "live" ? (
+          <span
+            className={`sl-badge ${project.routeStatus === "verified" ? "default" : "outline"}`}
+          >
+            {STATUS_LABEL[project.routeStatus]}
+          </span>
+        ) : null}
       </div>
     </>
   );
@@ -115,12 +119,12 @@ export function Showcase() {
       </div>
 
       <div className="show-registry-meta reveal">
-        <span>{LIVE.length} live</span>
+        <span>{SHOWCASE.length} showcased</span>
         <span>Reviewed {adopterRegistry.reviewedAt}</span>
       </div>
 
       <div className="show-grid reveal">
-        {LIVE.map((project) => (
+        {SHOWCASE.map((project) => (
           <ProjectCard project={project} key={project.id} />
         ))}
       </div>

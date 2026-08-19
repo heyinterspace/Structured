@@ -1,9 +1,8 @@
 /* ============================================================
-   STRUCTURED LIQUIDITY — a design language built on three
-   pillars: Rigid Containment (sharp 90° corners, flat blurless
-   shadows, grid discipline), Viscous Depth (semi-transparent
-   liquid glass that reflects light), and Semantic Clarity
-   (strict text + icon pairings). This stylesheet IS the specimen.
+   STRUCTURED LIQUIDITY — Neobrutalist Structure. Liquid Glass
+   Motion. Editorial Modern Frameworks. Semantic Clarity remains the quality
+   gate across all three, not a fourth pillar. This stylesheet IS
+   the specimen.
    ============================================================ */
 
 :root {
@@ -17,10 +16,23 @@
   --hard-x: 7px;
   --hard-y: 7px;
   --radius: 0px;
-  --content-w: 1200px;
   --shell-w: 1280px;
+  --content-w: var(--shell-w);
   --viewport-gutter: 4vw;
+  --body-surface: color-mix(in srgb, var(--bg) 94%, var(--ink) 6%);
   --floating-ui-clearance: 96px;
+
+  /* ---- Editorial Modern Frameworks, informed by editorial scientific modernism ---- */
+  --text-display-xl: clamp(4.5rem, 10vw, 9rem);
+  --text-display-lg: clamp(2.8rem, 6vw, 5.5rem);
+  --measure-reading: 68ch;
+  --measure-caption: 48ch;
+  --grid-gutter: clamp(1rem, 2.5vw, 2.5rem);
+  --section-space: clamp(4rem, 9vw, 9rem);
+  --editorial-gap: clamp(1.25rem, 3vw, 3rem);
+  --rule-hairline: 1px;
+  --diagram-line: color-mix(in srgb, var(--ink) 72%, transparent);
+  --diagram-muted: color-mix(in srgb, var(--ink) 42%, transparent);
 
   /* ---- fixed palette (neobrutalism.dev) ---- */
   --bg: #272933;
@@ -212,9 +224,14 @@ h1, h2, h3 { font-weight: 800; line-height: 0.98; letter-spacing: -0.02em; margi
    ============================================================ */
 
 .wrap,
-.sl-site-content { width: min(var(--content-w), calc(100vw - (var(--viewport-gutter) * 2))); margin-inline: auto; }
-.shell,
-.sl-site-shell { width: min(var(--shell-w), calc(100vw - var(--viewport-gutter))); margin-inline: auto; }
+.shell { width: min(var(--shell-w), calc(100vw - var(--viewport-gutter))); margin-inline: auto; }
+.sl-site-content,
+.sl-site-shell {
+  width: min(100%, var(--shell-w));
+  max-width: calc(100vw - var(--viewport-gutter));
+  margin-inline: auto;
+}
+.sl-site-body { background: var(--body-surface); }
 section { padding: clamp(1.5rem, 3.4vh, 2.7rem) 0; position: relative; }
 .section-head { max-width: 70ch; margin-bottom: 1.1rem; }
 

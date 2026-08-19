@@ -29,6 +29,7 @@ const ROOT = join(HERE, "..");
 const PUBLIC = join(ROOT, "public");
 const SCHEMA_DIR = join(HERE, "schemas");
 const UI_DIR = join(ROOT, "src/components/ui");
+const TEMPLATE_DIR = join(ROOT, "src/components/templates");
 const CATALOG = join(ROOT, "src/catalog.json");
 
 const ITEM_SCHEMA_URL = "https://ui.shadcn.com/schema/registry-item.json";
@@ -130,10 +131,10 @@ if (!existsSync(rDir)) {
 /* ---- 3. catalog ↔ component/registry coverage ------------------------ */
 
 // The gallery's per-cell Install button only renders when a catalog entry's
-// `registry` slug resolves to a generated public/r/<slug>.json (which in turn
-// only exists when src/components/ui/<slug>.tsx exists). A catalog entry that
-// points at a missing component, or a specimen added with no slug at all,
-// silently shows no Install button. Fail loudly here instead.
+// `registry` slug resolves to a generated public/r/<slug>.json backed by either
+// a UI primitive or a reusable block template. A catalog entry that points at
+// missing source, or a specimen added with no slug at all, silently shows no
+// Install button. Fail loudly here instead.
 if (!existsSync(CATALOG)) {
   fail("coverage: src/catalog.json is missing");
 } else {
@@ -146,8 +147,10 @@ if (!existsSync(CATALOG)) {
       continue;
     }
     const slug = c.registry;
-    if (!existsSync(join(UI_DIR, `${slug}.tsx`))) {
-      fail(`coverage: catalog entry "${label}" → registry "${slug}" has no src/components/ui/${slug}.tsx source`);
+    const hasUiSource = existsSync(join(UI_DIR, `${slug}.tsx`));
+    const hasTemplateSource = existsSync(join(TEMPLATE_DIR, `${slug}.tsx`));
+    if (!hasUiSource && !hasTemplateSource) {
+      fail(`coverage: catalog entry "${label}" → registry "${slug}" has no UI or template source`);
     }
     if (!existsSync(join(PUBLIC, "r", `${slug}.json`))) {
       fail(`coverage: catalog entry "${label}" → registry "${slug}" has no generated public/r/${slug}.json (run \`pnpm run registry\`)`);

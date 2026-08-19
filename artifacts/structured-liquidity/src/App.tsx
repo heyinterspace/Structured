@@ -6,7 +6,6 @@ import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { Pillars } from "@/components/site/Pillars";
 import { Components } from "@/components/site/Components";
-import { Templates } from "@/components/site/Templates";
 import { Showcase } from "@/components/site/Showcase";
 import { Adopt } from "@/components/site/Adopt";
 import { FooterCta } from "@/components/site/FooterCta";
@@ -25,7 +24,6 @@ export function App() {
       <Hero />
       <Pillars />
       <Components />
-      <Templates />
       <Showcase />
       <Adopt />
       <FooterCta />
