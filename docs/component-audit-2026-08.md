@@ -10,7 +10,7 @@ The Structured Liquidity registry was compared with the active Interspace, Obser
 | File intake and evidence upload        | Universe song and lyric upload; Observatory attachments; Exobase media forms                         | `dropzone`         |
 | Plans, packages, and subscriptions     | Interspace advisory packages; Exobase pricing display; Universe Pro and top-up cards                 | `pricing-card`     |
 
-Each addition keeps the language constraints: square containers, load-bearing black borders, neutral glass, flat zero-blur shadows, one accent, Inter for headings and body, and Space Mono for metadata.
+Each addition keeps the language constraints: square containers, load-bearing black borders, neutral glass, selective flat zero-blur shadows, one accent, Archivo for headings and body, and IBM Plex Mono for metadata.
 
 ## Covered by existing components
 

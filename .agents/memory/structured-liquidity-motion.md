@@ -9,7 +9,7 @@ Tactile interaction motion (press ripples, liquid toggles/switch sheen, flowing 
 
 ## Governing principle (content decision)
 The rigid **container** never bounces/squishes/morphs (sharp corners, flat offset shadow, grid hold). Only the **liquid inside** reacts — ripple, flood, settle with viscous overshoot, catch light. One shared easing token set (`--ease-liquid`, `--ease-liquid-over`, `--motion*`) so every motion feels like the same material.
-**Why:** generic bouncy UI or Apple's blurry-blob treatment both break Neobrutalist Structure; the physical frame must stay firm while Liquid Glass Motion happens inside it.
+**Why:** generic bouncy UI or Apple's blurry-blob treatment both break Structured Framing; the physical frame must stay firm while Liquid Motion happens inside it.
 **Adoption note:** this motion is specimen-only — it can't go in the distributable `public` CSS (verbatim rule), so do NOT document it in `registry.json`/SKILL.md.
 
 ## Trap 1 — `mix-blend-mode: plus-lighter` blows out over a vivid backdrop

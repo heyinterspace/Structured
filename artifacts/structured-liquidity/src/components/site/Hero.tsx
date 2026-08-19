@@ -19,20 +19,23 @@ export function Hero() {
           </h1>
           <p className="lead reveal">
             <em>
-              Neobrutalist Structure. Liquid Glass Motion. Editorial Modern
-              Frameworks.
+              Structured framing. Liquid motion. Scientific clarity.
             </em>{" "}
-            Structured Liquidity is a trifecta: a physical frame with
-            load-bearing borders and hard shadows; layered glass and motion that
-            make state feel continuous and massive; and editorial systems that
-            compose hierarchy, diagrams, captions, labels, and evidence.
-            Semantic Clarity tests the complete system. This page is both
-            specimen and spec, so retheme it live as you read.
+            Framing organizes information. Motion makes the system's behavior
+            perceptible. Clarity communicates meaning through ordered,
+            unmistakable hierarchy. Three visible faces, one coherent
+            interface.
           </p>
           <div className="hero-tags reveal">
-            <span className="tag">Neobrutalist Structure</span>
-            <span className="tag">Liquid Glass Motion</span>
-            <span className="tag">Editorial Modern Frameworks</span>
+            <span className="tag">
+              <b>01</b> Structured Framing
+            </span>
+            <span className="tag">
+              <b>02</b> Liquid Motion
+            </span>
+            <span className="tag">
+              <b>03</b> Scientific Clarity
+            </span>
           </div>
           <div className="hero-cta reveal">
             <InstallButton />
@@ -54,7 +57,7 @@ export function Hero() {
         <div
           className="hero-cube-wrap"
           role="img"
-          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist Structure, Liquid Glass Motion, and Editorial Modern Frameworks."
+          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Structured Framing, Liquid Motion, and Scientific Clarity."
         >
           <Hypercube className="hero-cube" faceLabels={["01", "02", "03"]} />
         </div>

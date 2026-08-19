@@ -3,25 +3,23 @@ export function Pillars() {
     <section id="manifesto" className="wrap">
       <div className="section-head reveal">
         <span className="eyebrow">Principles · the foundation</span>
-        <h2 className="section-title">
-          Three faces. One design language.
-        </h2>
+        <h2 className="section-title">Three faces. One design language.</h2>
         <p className="lead">
-          Neobrutalist Structure defines the physical frame. Liquid Glass Motion
-          makes state, continuity, and mass perceptible. Editorial Modern
-          Frameworks compose hierarchy and evidence. Together they form the
-          Structured Liquidity trifecta; Semantic Clarity tests the complete
-          system rather than competing as a fourth pillar.
+          Structured Framing organizes information. Liquid Motion makes the
+          system's behavior perceptible. Scientific Clarity communicates meaning
+          with disciplined hierarchy, evidence, and unmistakable legibility.
+          Together they form the three visible faces of Structured Liquidity.
         </p>
       </div>
 
       <div className="pillars">
-        <div className="glass pillar reveal">
+        <article className="pillar pillar-framing reveal">
           <span className="pnum">Pillar 01</span>
-          <h3>Neobrutalist Structure</h3>
+          <span className="psub">Frame · Affordance</span>
+          <h3>Structured Framing</h3>
           <p>
-            The physical frame: load-bearing borders, hard shadows, square
-            geometry, clear affordances, and tactile interaction.
+            Information organized through load-bearing borders, square geometry,
+            rational grids, clear affordances, and tactile interaction.
           </p>
           <ul>
             <li>
@@ -37,11 +35,12 @@ export function Pillars() {
               </div>
             </li>
           </ul>
-        </div>
+        </article>
 
-        <div className="glass pillar reveal">
+        <article className="pillar pillar-liquid reveal">
           <span className="pnum">Pillar 02</span>
-          <h3>Liquid Glass Motion</h3>
+          <span className="psub">State · Continuity</span>
+          <h3>Liquid Motion</h3>
           <p>
             Layered glass, continuity, and purposeful motion that communicate
             state and give interfaces believable mass.
@@ -62,15 +61,16 @@ export function Pillars() {
               </div>
             </li>
           </ul>
-        </div>
+        </article>
 
-        <div className="glass pillar reveal editorial-pillar">
+        <article className="pillar pillar-clarity reveal">
           <span className="pnum">Pillar 03</span>
-          <h3>Editorial Modern Frameworks</h3>
+          <span className="psub">Meaning · Legibility</span>
+          <h3>Scientific Clarity</h3>
           <p>
-            Hierarchy, refined grids, oversized typography, technical diagrams,
-            captions, labeling, and evidence, informed by editorial scientific
-            modernism.
+            Meaning communicated through disciplined hierarchy, measured
+            typography, captions, evidence, and purposeful whitespace. Swiss
+            modernism is the informing tradition.
           </p>
           <ul>
             <li>
@@ -83,19 +83,16 @@ export function Pillars() {
             </li>
             <li>
               <div>
-                <strong className="rule-h">Type and evidence agree</strong>:
-                display type creates hierarchy; mono captions label data,
-                sources, and state.
+                <strong className="rule-h">
+                  Every position is intentional
+                </strong>
+                : type, captions, data, and controls align to the same measured
+                grid.
               </div>
             </li>
           </ul>
-        </div>
+        </article>
       </div>
-      <p className="manifesto-gate reveal">
-        <strong>Quality gate · Semantic Clarity</strong>
-        Every screen must remain complete, legible, and useful without color,
-        glass, or motion.
-      </p>
     </section>
   );
 }

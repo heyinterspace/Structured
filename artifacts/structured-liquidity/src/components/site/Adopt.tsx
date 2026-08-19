@@ -18,25 +18,26 @@ npx shadcn@latest add https://structured.glass/r/structured-liquidity-agent.json
 Verify that the Structured Liquidity styles and .agents/skills/structured-liquidity/SKILL.md exist before continuing.
 Rules:
 - Square corners (border-radius: 0).
-- Flat offset shadows only: box-shadow: 7px 7px 0 0 #000, never blurred.
+- Flat offset shadows only: box-shadow: 5px 5px 0 0 #000, never blurred; reserve them for tactile affordances and intentional cutout layers.
 - Solid 2px black borders; the edge defines the object.
 - Exactly one accent (#a388ee) carries all emphasis.
-- Liquid glass = backdrop-filter blur over translucent white rgba(255,255,255,0.07).
-- Destructive surfaces are neutral gray (#3c3f4b), never red.
-- Type: Inter for headings/buttons/brand and body, Space Mono for labels and data.
+- Liquid glass = backdrop-filter blur over neutral translucent surfaces; use it to communicate state and depth, not as a default card treatment.
+- Destructive surfaces are neutral gray (#242424), never red.
+- Type: Archivo for headings/buttons/brand and body, IBM Plex Mono for labels and data.
+- Scientific Clarity: communicate meaning with a rational grid, exact alignment, measured line lengths, purposeful whitespace, evidence, and one dominant statement per view.
 - Leading icons (Lucide) on nav links and buttons.
 Use the tokens in design-tokens.json and the component markup in registry.json.
 Full spec: llms.txt.`;
 
 const ROOT_TOKENS = `:root{
   --accent:#a388ee; --accent-ink:#000000;
-  --bg:#272933; --bg-2:#1f2028; --ink:#e6e6e6; --ink-dim:#9da0ab;
-  --edge:0 0 0; --hard-shadow:#000000; --neg:#3c3f4b; --neg-ink:#f0f0f2;
-  --glass-blur:18px; --glass-tint:255 255 255; --glass-alpha:0.07;
-  --border-w:2px; --hard-x:7px; --hard-y:7px; --radius:0px;
-  --display:"Inter","Helvetica Neue",system-ui,sans-serif;
-  --body:"Inter","Helvetica Neue",system-ui,sans-serif;
-  --mono:"Space Mono",ui-monospace,"SFMono-Regular",monospace;
+  --bg:#f2f0ea; --bg-2:#ffffff; --ink:#111111; --ink-dim:#5d5d59;
+  --edge:0 0 0; --hard-shadow:#000000; --neg:#242424; --neg-ink:#ffffff;
+  --glass-blur:14px; --glass-tint:255 255 255; --glass-alpha:0.72;
+  --border-w:2px; --hard-x:5px; --hard-y:5px; --radius:0px;
+  --display:"Archivo","Helvetica Neue",Arial,system-ui,sans-serif;
+  --body:"Archivo","Helvetica Neue",Arial,system-ui,sans-serif;
+  --mono:"IBM Plex Mono","SFMono-Regular",ui-monospace,monospace;
 }`;
 
 function CopyButton({ text }: { text: string }) {
@@ -68,9 +69,9 @@ export function Adopt() {
         <span className="eyebrow">Agent-ready · adopt the language</span>
         <h2 className="section-title">Built to be read by machines.</h2>
         <p className="lead">
-          Give an agent one command before its first UI edit. It installs both the theme and a local
-          Structured Liquidity skill, so the rules stay in the project instead of being rediscovered
-          over several iterations.
+          Give an agent one command before its first UI edit. It installs both
+          the theme and a local Structured Liquidity skill, so the rules stay in
+          the project instead of being rediscovered over several iterations.
         </p>
       </div>
 
@@ -81,10 +82,16 @@ export function Adopt() {
             llms.txt
           </span>
           <p>
-            The AI-discoverable summary: the three pillars, the hard rules, the tokens, and the font
-            pairings, all in one Markdown file at the site root.
+            The AI-discoverable summary: the three pillars, the hard rules, the
+            tokens, and the font pairings, all in one Markdown file at the site
+            root.
           </p>
-          <a className="sl-btn default" href="llms.txt" target="_blank" rel="noopener">
+          <a
+            className="sl-btn default"
+            href="llms.txt"
+            target="_blank"
+            rel="noopener"
+          >
             <ExternalLink />
             Open llms.txt
           </a>
@@ -95,10 +102,15 @@ export function Adopt() {
             design-tokens.json
           </span>
           <p>
-            Every token in the W3C Design Tokens format, each carrying its exact CSS variable name.
-            Import it instead of guessing values.
+            Every token in the W3C Design Tokens format, each carrying its exact
+            CSS variable name. Import it instead of guessing values.
           </p>
-          <a className="sl-btn default" href="design-tokens.json" target="_blank" rel="noopener">
+          <a
+            className="sl-btn default"
+            href="design-tokens.json"
+            target="_blank"
+            rel="noopener"
+          >
             <ExternalLink />
             Open tokens
           </a>
@@ -109,11 +121,16 @@ export function Adopt() {
             registry.json
           </span>
           <p>
-            A shadcn-compatible registry: install the whole language or any single component with the
-            shadcn CLI — every item is a valid <code>registry-item</code> served at{" "}
-            <code>/r/*.json</code>.
+            A shadcn-compatible registry: install the whole language or any
+            single component with the shadcn CLI — every item is a valid{" "}
+            <code>registry-item</code> served at <code>/r/*.json</code>.
           </p>
-          <a className="sl-btn default" href="registry.json" target="_blank" rel="noopener">
+          <a
+            className="sl-btn default"
+            href="registry.json"
+            target="_blank"
+            rel="noopener"
+          >
             <ExternalLink />
             Open registry
           </a>
@@ -128,9 +145,10 @@ export function Adopt() {
             <CopyButton text={installCommand()} />
           </div>
           <p>
-            Run this first. It installs the full design language and writes the local agent skill
-            that tells future coding agents to use it. Individual components can then be added by
-            swapping the file name (for example, <code>/r/button.json</code>).
+            Run this first. It installs the full design language and writes the
+            local agent skill that tells future coding agents to use it.
+            Individual components can then be added by swapping the file name
+            (for example, <code>/r/button.json</code>).
           </p>
           <pre id="install-cmd" className="code-block">
             {installCommand()}
