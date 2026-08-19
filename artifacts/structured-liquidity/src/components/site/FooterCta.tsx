@@ -8,7 +8,7 @@ export function FooterCta() {
     <section className="wrap">
       <div className="glass cta-panel reveal">
         <h2>
-          Build with <b>Structure</b>. Flow with <b>Liquidity</b>. Compose with <b>Intent</b>.
+          Frame with <b>Structure</b>. Move with <b>Liquidity</b>. Communicate with <b>Clarity</b>.
         </h2>
         <p className="lead" style={{ textAlign: "center" }}>
           Structured Liquidity is an open UI language: a complete kit of rigid containers and liquid

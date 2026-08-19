@@ -27,11 +27,11 @@ const DEFAULTS: Tweaks = {
   border: 2,
   shadow: 7,
   radius: 0,
-  mode: "dark",
+  mode: "light",
 };
 
 const ACCENTS = ["#a388ee", "#7c9cff", "#3dd7c8", "#ffb454", "#ff7a90"];
-const STORAGE_KEY = "sl-tweaks";
+const STORAGE_KEY = "sl-tweaks-v2";
 
 /* accent -> readable ink for text sitting on the accent fill */
 function inkFor(hex: string): string {
@@ -162,7 +162,9 @@ export function Tweaker() {
           onClick={() => set("mode", state.mode === "dark" ? "light" : "dark")}
         >
           {state.mode === "dark" ? <Moon /> : <Sun />}
-          <span className="sl-mode-lbl">{state.mode === "dark" ? "Dark" : "Light"}</span>
+          <span className="sl-mode-lbl">
+            {state.mode === "dark" ? "Dark" : "Light"}
+          </span>
         </button>
         <button
           type="button"
@@ -183,7 +185,12 @@ export function Tweaker() {
       >
         <div className="twk-hd">
           <b>Mods</b>
-          <button type="button" className="twk-x" aria-label="Close" onClick={() => setOpen(false)}>
+          <button
+            type="button"
+            className="twk-x"
+            aria-label="Close"
+            onClick={() => setOpen(false)}
+          >
             ✕
           </button>
         </div>

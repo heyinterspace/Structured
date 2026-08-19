@@ -73,7 +73,9 @@ export function KitContentData() {
           <Empty>
             <EmptyIcon>♪</EmptyIcon>
             <EmptyTitle>No tracks yet</EmptyTitle>
-            <EmptyDescription>Import audio to start a library.</EmptyDescription>
+            <EmptyDescription>
+              Import audio to start a library.
+            </EmptyDescription>
             <Button size="sm">Import</Button>
           </Empty>
         </div>
@@ -86,20 +88,20 @@ export function KitContentData() {
               <FontPairFonts>
                 <FontSpecimen role="header">
                   <FontRole>Header</FontRole>
-                  <FontName className="ff-inter">Inter</FontName>
+                  <FontName className="ff-archivo">Archivo</FontName>
                 </FontSpecimen>
                 <FontSpecimen role="body">
                   <FontRole>Body</FontRole>
-                  <FontName className="ff-inter">Inter</FontName>
+                  <FontName className="ff-archivo">Archivo</FontName>
                 </FontSpecimen>
                 <FontSpecimen role="detail">
                   <FontRole>Detail</FontRole>
-                  <FontName className="ff-spacemono">Space Mono</FontName>
+                  <FontName className="ff-plexmono">IBM Plex Mono</FontName>
                 </FontSpecimen>
               </FontPairFonts>
               <FontPairNote>
-                One disciplined sans across hierarchy and reading, with technical mono reserved
-                for labels, data, and code.
+                A measured grotesk carries hierarchy and reading; a precise mono
+                is reserved for labels, evidence, data, and code.
               </FontPairNote>
             </FontPair>
           </FontPairings>
@@ -144,8 +146,8 @@ export function KitContentData() {
           <Typography>
             <TypographyTitle>Structure holds it.</TypographyTitle>
             <TypographyParagraph>
-              Heavy grotesk for impact, monospace for labels, and a measured
-              body that stays legible through the glass. Inline{" "}
+              Calibrated grotesk hierarchy, monospace evidence labels, and a
+              measured body that stays legible through every layer. Inline{" "}
               <TypographyCode>--accent</TypographyCode> tokens carry the system.
             </TypographyParagraph>
             <TypographyQuote>
