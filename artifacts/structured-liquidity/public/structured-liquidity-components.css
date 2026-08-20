@@ -213,17 +213,17 @@
 .draggable { cursor: grab; }
 .draggable:active { cursor: grabbing; }
 
-/* ---- PILLARS (the three-pillar manifesto) ---- */
-.pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: stretch; }
-@media (max-width: 640px) { .pillars { grid-template-columns: 1fr; } }
-.pillar { padding: 1.15rem 1.2rem; display: flex; flex-direction: column; }
-.pillar .pnum { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
-.pillar .psub { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); margin-top: 0.15rem; }
-.pillar h3 { font-size: 1.25rem; margin: 0.6rem 0 0.4rem; }
-.pillar > p { color: var(--ink-dim); font-size: 0.9rem; margin: 0; }
-.pillar ul { list-style: none; padding: 0; margin: 0.9rem 0 0; }
-.pillar li { font-family: var(--mono); font-size: 0.76rem; padding: 0.4rem 0; border-top: 1px solid rgba(var(--edge),0.15); color: var(--ink-dim); display: flex; gap: 0.5rem; }
-.pillar li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 0.35em; background: var(--accent); }
+/* ---- TENETS (the three-tenet manifesto) ---- */
+.tenets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: stretch; }
+@media (max-width: 640px) { .tenets { grid-template-columns: 1fr; } }
+.tenet { padding: 1.15rem 1.2rem; display: flex; flex-direction: column; }
+.tenet .pnum { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+.tenet .psub { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-dim); margin-top: 0.15rem; }
+.tenet h3 { font-size: 1.25rem; margin: 0.6rem 0 0.4rem; }
+.tenet > p { color: var(--ink-dim); font-size: 0.9rem; margin: 0; }
+.tenet ul { list-style: none; padding: 0; margin: 0.9rem 0 0; }
+.tenet li { font-family: var(--mono); font-size: 0.76rem; padding: 0.4rem 0; border-top: 1px solid rgba(var(--edge),0.15); color: var(--ink-dim); display: flex; gap: 0.5rem; }
+.tenet li::before { content: ""; flex: none; width: 8px; height: 8px; margin-top: 0.35em; background: var(--accent); }
 
 /* ---- PRINCIPLES GRID ---- */
 .principles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }

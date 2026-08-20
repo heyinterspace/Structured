@@ -1,4 +1,4 @@
-export function Pillars() {
+export function Tenets() {
   return (
     <section id="manifesto" className="wrap">
       <div className="section-head reveal">
@@ -8,18 +8,19 @@ export function Pillars() {
           Structured Framing organizes information. Liquid Motion makes the
           system's behavior perceptible. Scientific Clarity communicates meaning
           with disciplined hierarchy, evidence, and unmistakable legibility.
-          Together they form the three visible faces of Structured Liquidity.
+          Together these three tenets form Structured Liquidity.
         </p>
       </div>
 
-      <div className="pillars">
-        <article className="pillar pillar-framing reveal">
-          <span className="pnum">Pillar 01</span>
+      <div className="tenets">
+        <article className="tenet tenet-framing reveal">
+          <span className="pnum">Tenet 01</span>
           <span className="psub">Frame · Affordance</span>
           <h3>Structured Framing</h3>
           <p>
             Information organized through load-bearing borders, square geometry,
-            rational grids, clear affordances, and tactile interaction.
+            rational grids, clear affordances, and tactile interaction. The
+            frame makes hierarchy and action understandable before decoration.
           </p>
           <ul>
             <li>
@@ -37,40 +38,42 @@ export function Pillars() {
           </ul>
         </article>
 
-        <article className="pillar pillar-liquid reveal">
-          <span className="pnum">Pillar 02</span>
+        <article className="tenet tenet-liquid reveal">
+          <span className="pnum">Tenet 02</span>
           <span className="psub">State · Continuity</span>
           <h3>Liquid Motion</h3>
           <p>
-            Layered glass, continuity, and purposeful motion that communicate
-            state and give interfaces believable mass.
+            Motion carries state between navbar actions, menu options, tabs,
+            filters, overlays, and page areas without becoming the only carrier
+            of meaning.
           </p>
           <ul>
             <li>
               <div>
-                <strong className="rule-h">Depth through layers</strong>: stack
-                translucent surfaces while every boundary remains structurally
-                legible.
+                <strong className="rule-h">One marker carries continuity</strong>
+                : selection travels between related options instead of repainting
+                each surface.
               </div>
             </li>
             <li>
               <div>
                 <strong className="rule-h">Motion explains change</strong>:
                 liquid settles, connects, and reveals state inside a frame that
-                never wobbles.
+                never wobbles, with a complete reduced-motion state.
               </div>
             </li>
           </ul>
         </article>
 
-        <article className="pillar pillar-clarity reveal">
-          <span className="pnum">Pillar 03</span>
+        <article className="tenet tenet-clarity reveal">
+          <span className="pnum">Tenet 03</span>
           <span className="psub">Meaning · Legibility</span>
           <h3>Scientific Clarity</h3>
           <p>
             Meaning communicated through disciplined hierarchy, measured
             typography, captions, evidence, and purposeful whitespace. Swiss
-            modernism is the informing tradition.
+            modernism is the informing tradition. Every screen remains complete
+            and useful without relying on color, glass, or motion.
           </p>
           <ul>
             <li>

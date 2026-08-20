@@ -7,11 +7,11 @@ description: Apply the Structured Liquidity UI design language — Structured Fr
 
 **Structured framing. Liquid motion. Scientific clarity.**
 
-1. **Structured Framing:** How information is organized—load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows.
-2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible.
-3. **Scientific Clarity:** How meaning is communicated—disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: make information legible, ordered, and unmistakable.
+1. **Structured Framing:** How information is organized—load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows. The frame makes hierarchy and action understandable before decoration is added.
+2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible without becoming the only carrier of meaning. Every interaction has a complete reduced-motion state.
+3. **Scientific Clarity:** How meaning is communicated—disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
 
-Together they form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Scientific Clarity includes the quality test that every screen remains complete, legible, and useful without color, glass, or motion. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
+Together these three tenets form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Each tenet owns the clarity of its part of the interface. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
 ## The non-negotiable rules
 
@@ -28,7 +28,6 @@ Follow these literally — they are what keep generated output on-brand:
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
 10. **Communicate with scientific clarity.** Use a rational grid, exact alignment, asymmetric balance, measured line lengths, purposeful whitespace, and compact mono captions for sources, state, and evidence. Swiss modernism and the International Typographic Style are the reference tradition.
 11. **Monochrome carries information.** The accent identifies selection, progression, or one key relationship; it does not decorate the page.
-12. **Clarity survives effects.** Every screen must remain complete, legible, and useful without color, glass, or motion.
 
 ## Tokens
 
