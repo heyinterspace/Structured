@@ -57,19 +57,19 @@
     "blur": {
       "$type": "dimension",
       "$value": "14px",
-      "$description": "backdrop-filter blur radius for liquid glass surfaces.",
+      "$description": "Backdrop blur for moving state boundaries such as navigation, menus, and overlays; not for default information surfaces.",
       "$extensions": { "cssVar": "--glass-blur" }
     },
     "tint": {
       "$type": "color",
       "$value": "#ffffff",
-      "$description": "Glass fill tint. The CSS token --glass-tint holds rgb channels ('255 255 255') for rgba(var(--glass-tint), var(--glass-alpha)).",
+      "$description": "Neutral translucent fill for moving state boundaries. The CSS token --glass-tint holds rgb channels ('255 255 255') for rgb(var(--glass-tint) / var(--glass-alpha)).",
       "$extensions": { "cssVar": "--glass-tint", "cssValue": "255 255 255" }
     },
     "alpha": {
       "$type": "number",
       "$value": 0.72,
-      "$description": "Glass fill opacity for the light-first default. Dark mode lowers this to 0.08.",
+      "$description": "Translucent boundary opacity for the light-first default. Dark mode lowers this to 0.08.",
       "$extensions": { "cssVar": "--glass-alpha" }
     }
   },

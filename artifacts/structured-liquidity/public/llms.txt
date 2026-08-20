@@ -22,7 +22,8 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 - Shadows are **flat and offset**: `box-shadow: var(--hard-x) var(--hard-y) 0 0 var(--hard-shadow)`. Never use a blur radius. Reserve them for tactile affordances and deliberately layered cutout surfaces; flat information containers do not need a shadow.
 - Borders are solid and load-bearing: `var(--border-w) solid rgb(var(--edge))`. The edge (`--edge`) is black in both light and dark mode.
 - **Exactly one accent.** `--accent` carries all emphasis. Do not introduce a second hue to compete with it.
-- Glass surfaces use `backdrop-filter: blur(var(--glass-blur))` over `rgba(var(--glass-tint), var(--glass-alpha))`. Glass stays neutral/translucent and communicates state, continuity, or depth; it is not the default treatment for every card.
+- Default information surfaces are flat. Do not interpret Liquid Motion as permission to add decorative gradients or sheen.
+- Express Liquid Motion through shared markers moving between navbar actions, menu options, tabs, filters, overlays, and page areas. Use neutral translucency or `backdrop-filter` only at moving state boundaries.
 - Destructive surfaces use a neutral gray (`--neg`), never red. Error *text* may use a warning color, but destructive *containers* stay neutral.
 - Type roles are fixed: **display** = headings/buttons/brand (`--display`), **mono** = labels, captions, data, eyebrows (`--mono`), **body** = paragraph/reading copy (`--body`).
 - Leading icons are the default for nav links and buttons (Lucide). Put the icon first, then the label.

@@ -2,8 +2,8 @@
    STRUCTURED LIQUIDITY — component KIT
    A shadcn-complete library expressed in the design language:
    rigid containers (sharp edges, flat offset shadows, real
-   borders) holding viscous glass surfaces, with one accent
-   carrying every emphasis.
+   borders) holding flat scientific surfaces, with one accent
+   carrying selection and liquid motion between states.
    ============================================================ */
 
 /* ---- gallery scaffold ---- */
@@ -28,8 +28,7 @@
 
 /* glass + flat helpers reused locally */
 .sl-glass-fill {
-  background: linear-gradient(135deg, rgba(var(--glass-tint),0.12), rgba(var(--glass-tint),0.04));
-  backdrop-filter: blur(10px) saturate(170%); -webkit-backdrop-filter: blur(10px) saturate(170%);
+  background: var(--bg-2);
 }
 
 /* ============================================================
@@ -43,7 +42,7 @@
   transition: transform 0.12s cubic-bezier(.2,.8,.2,1), box-shadow 0.12s; white-space: nowrap;
 }
 .sl-btn.default { background: var(--accent); color: var(--accent-ink); box-shadow: 4px 4px 0 0 var(--hard-shadow); }
-.sl-btn.secondary { background: linear-gradient(135deg, rgba(var(--glass-tint),0.14), rgba(var(--glass-tint),0.05)); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 4px 4px 0 0 var(--hard-shadow); }
+.sl-btn.secondary { background: var(--bg-2); box-shadow: 4px 4px 0 0 var(--hard-shadow); }
 .sl-btn.outline { background: transparent; box-shadow: 4px 4px 0 0 var(--hard-shadow); }
 .sl-btn.ghost { background: transparent; border-color: transparent; box-shadow: none; color: var(--ink-dim); }
 .sl-btn.ghost:hover { color: var(--ink); background: rgba(var(--glass-tint),0.08); transform: none; }
@@ -75,13 +74,12 @@
 .sl-input, .sl-textarea {
   font-family: var(--mono); font-size: 0.82rem; color: var(--ink); width: 100%;
   padding: 0.6rem 0.8rem; border-radius: var(--radius); border: var(--border-w) solid rgb(var(--edge));
-  background: linear-gradient(135deg, rgba(var(--glass-tint),0.1), rgba(var(--glass-tint),0.03));
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); outline: none;
+  background: var(--bg-2);
+  box-shadow: none; outline: none;
 }
 .sl-textarea { min-height: 76px; resize: vertical; line-height: 1.5; }
 .sl-input::placeholder, .sl-textarea::placeholder { color: var(--ink-dim); }
-.sl-input:focus, .sl-textarea:focus { box-shadow: 3px 3px 0 0 var(--accent), inset 0 1px 0 rgba(255,255,255,0.25); }
+.sl-input:focus, .sl-textarea:focus { box-shadow: 3px 3px 0 0 var(--accent); }
 .sl-otp { display: flex; gap: 0.5rem; }
 .sl-otp input { width: 42px; height: 48px; text-align: center; font-family: var(--mono); font-size: 1.1rem; font-weight: 700; color: var(--ink); border: var(--border-w) solid rgb(var(--edge)); border-radius: var(--radius); background: rgba(var(--glass-tint),0.06); outline: none; box-shadow: 2px 2px 0 0 var(--hard-shadow); }
 .sl-otp input:focus { box-shadow: 2px 2px 0 0 var(--accent); }
@@ -125,8 +123,7 @@
 .sl-trigger {
   font-family: var(--mono); font-size: 0.82rem; color: var(--ink); cursor: pointer;
   padding: 0.55rem 0.8rem; border-radius: var(--radius); border: var(--border-w) solid rgb(var(--edge));
-  background: linear-gradient(135deg, rgba(var(--glass-tint),0.12), rgba(var(--glass-tint),0.04));
-  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  background: var(--bg-2);
   box-shadow: 2px 2px 0 0 var(--hard-shadow); display: inline-flex; align-items: center; justify-content: space-between; gap: 0.7rem; min-width: 160px;
 }
 .sl-trigger .chev { transition: transform 0.2s; color: var(--ink-dim); }
@@ -260,9 +257,9 @@
 /* ============================================================
    ASPECT RATIO / CARD
    ============================================================ */
-.sl-ratio { width: 100%; aspect-ratio: 16 / 9; border: var(--border-w) solid rgb(var(--edge)); border-radius: var(--radius); background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 40%, transparent), rgba(var(--glass-tint),0.06)); display: grid; place-items: center; font-family: var(--mono); font-size: 0.68rem; color: var(--ink-dim); box-shadow: inset 0 1px 0 rgba(255,255,255,0.25); }
+.sl-ratio { width: 100%; aspect-ratio: 16 / 9; border: var(--border-w) solid rgb(var(--edge)); border-radius: var(--radius); background: color-mix(in srgb, var(--accent) 30%, var(--bg-2)); display: grid; place-items: center; font-family: var(--mono); font-size: 0.68rem; color: var(--ink); }
 .sl-card-demo { border: var(--border-w) solid rgb(var(--edge)); border-radius: var(--radius); box-shadow: 4px 4px 0 0 var(--hard-shadow); overflow: hidden; background: rgba(var(--glass-tint),0.05); }
-.sl-card-demo .cd-media { aspect-ratio: 16/8; background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 55%, transparent), rgba(var(--glass-tint),0.1)); border-bottom: var(--border-w) solid rgb(var(--edge)); }
+.sl-card-demo .cd-media { aspect-ratio: 16/8; background: color-mix(in srgb, var(--accent) 34%, var(--bg-2)); border-bottom: var(--border-w) solid rgb(var(--edge)); }
 .sl-card-demo .cd-body { padding: 0.9rem 1rem; }
 .sl-card-demo .cd-body h4 { margin: 0 0 0.3rem; font-size: 1rem; }
 .sl-card-demo .cd-body p { margin: 0 0 0.8rem; font-size: 0.82rem; color: var(--ink-dim); }

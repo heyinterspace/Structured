@@ -25,6 +25,8 @@ Structured Liquidity is a trifecta of three orthogonal design tenets, represente
 - Treat diagrams as explanatory figures: label them, number them when useful, and provide a caption or source state.
 - Let the grid, alignment, and hierarchy convey order before adding borders or glass.
 - Reserve hard shadows for tactile affordances and deliberately layered cutout surfaces; not every container needs one.
+- Keep information surfaces flat. Gradients are not a default expression of liquidity.
+- Express Liquid Motion through shared markers and continuity between navbar actions, menu options, tabs, filters, overlays, and page areas.
 - Keep the rigid frame still. Motion happens within it to explain state, continuity, or spatial relationship.
 - A reduced-motion or static rendering is a complete rendering, not a degraded fallback.
 

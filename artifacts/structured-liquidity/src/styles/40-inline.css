@@ -50,7 +50,7 @@
   .show-stage-head h3{margin:.55rem 0 .65rem;font-size:clamp(1.8rem,4vw,3.2rem);line-height:.95;}
   .show-stage-head p{margin:0;color:var(--ink-dim);line-height:1.55;}
   .show-grid-staging .show-card{opacity:.82;}
-  .show-stage-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;padding:1.2rem;background:linear-gradient(135deg,rgb(var(--glass-tint)/.04),color-mix(in srgb,var(--accent) 22%,transparent));}
+  .show-stage-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.45rem;padding:1.2rem;background:color-mix(in srgb,var(--accent) 10%,var(--bg-2));}
   .show-stage-placeholder::before{content:"";width:54px;height:54px;border:var(--border-w) solid rgb(var(--edge));box-shadow:5px 5px 0 var(--hard-shadow);background:var(--accent);}
   .show-stage-placeholder span{margin-top:.65rem;font-family:var(--display);font-size:1rem;font-weight:800;text-transform:uppercase;}
   .show-stage-placeholder small{font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-dim);}
@@ -215,7 +215,7 @@
 
   /* ── Mobile navigation: a phone-framed demo of the two patterns a touch app
      leans on — a top bar with a slide-down drawer and a bottom tab bar. Rigid
-     phone frame, liquid-glass surfaces, one accent on the active tab. */
+     phone frame, flat surfaces, one moving accent on the active tab. */
   .sl-mnav{display:flex;justify-content:center;}
   .mn-phone{position:relative;width:100%;max-width:300px;overflow:hidden;display:flex;flex-direction:column;min-height:330px;
     border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);background:var(--bg-2);
@@ -423,10 +423,10 @@
      the cool frosted-glass panels (whose comma-form gradient is dropped, so they are
      pure backdrop-blur). Give the menu the same frosted glass so it blends; the menu
      already declares the backdrop-filter the opaque fill was defeating. */
-  [data-mode="light"] .sl-menu{background:linear-gradient(135deg, rgb(var(--glass-tint) / calc(var(--glass-alpha) + 0.06)), rgb(var(--glass-tint) / var(--glass-alpha)));}
+  [data-mode="light"] .sl-menu{background:rgb(var(--glass-tint) / calc(var(--glass-alpha) + 0.16));}
   /* Same fix for the context menu, which uses the same opaque fill but, unlike .sl-menu,
      declares no backdrop-filter of its own, so the blur is added here too. */
-  [data-mode="light"] .sl-ctx-menu{background:linear-gradient(135deg, rgb(var(--glass-tint) / calc(var(--glass-alpha) + 0.06)), rgb(var(--glass-tint) / var(--glass-alpha)));backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);}
+  [data-mode="light"] .sl-ctx-menu{background:rgb(var(--glass-tint) / calc(var(--glass-alpha) + 0.16));backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);}
   .sl-menu .item.ac-empty{display:none;color:var(--ink-dim);cursor:default;}
   .sl-menu .item.ac-empty:hover{background:transparent;color:var(--ink-dim);}
   .lb-req{color:var(--accent);margin-left:0.25rem;}
@@ -577,7 +577,7 @@
   .sl-waveform .wf-bar{flex:1 1 0;min-width:3px;height:var(--h,40%);background:var(--accent);border:1px solid rgb(var(--edge));box-sizing:border-box;transform-origin:bottom;}
   .sl-waveform .wf-bar.is-future{background:rgb(var(--glass-tint) / 0.22);}
   /* The Card demo's media area is a branded cover panel: rigid frame, accent gradient, single glyph. */
-  #components .sl-card-demo .cd-media{display:flex;align-items:center;justify-content:center;padding:0;min-height:88px;margin-bottom:0.7rem;background:linear-gradient(135deg, rgb(var(--glass-tint) / 0.10), var(--accent));border-bottom:var(--border-w) solid rgb(var(--edge));}
+  #components .sl-card-demo .cd-media{display:flex;align-items:center;justify-content:center;padding:0;min-height:88px;margin-bottom:0.7rem;background:color-mix(in srgb,var(--accent) 34%,var(--bg-2));border-bottom:var(--border-w) solid rgb(var(--edge));}
   #components .sl-card-demo .cd-media svg{width:1.9rem;height:1.9rem;color:var(--accent-ink);}
   /* Now-playing player: meta, then a waveform seek with its times, then a controls block.
      pl-controls stacks full-width rows: the transport deck (buttons spread across the full
@@ -613,7 +613,7 @@
   .sl-toolbar .sl-btn.sm{padding:0.4rem 0.55rem;}
   .sl-toolbar :is([data-lucide],svg){width:16px;height:16px;}
 
-  .sl-aspect{aspect-ratio:16/9;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 50%,transparent),rgba(var(--glass-tint),0.1));display:grid;place-items:center;font-family:var(--mono);font-size:0.78rem;color:var(--accent-ink);}
+  .sl-aspect{aspect-ratio:16/9;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:color-mix(in srgb,var(--accent) 34%,var(--bg-2));display:grid;place-items:center;font-family:var(--mono);font-size:0.78rem;color:var(--ink);}
 
   .sl-scroll{max-height:128px;overflow-y:auto;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:rgba(var(--glass-tint),0.05);}
   .sl-scroll .row{font-family:var(--mono);font-size:0.78rem;padding:0.45rem 0.6rem;color:var(--ink-dim);border-bottom:1px solid rgba(var(--edge),0.15);}
@@ -660,7 +660,7 @@
   .sl-kbd{font-family:var(--mono);font-size:0.72rem;padding:0.12rem 0.45rem;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);background:rgba(var(--glass-tint),0.07);box-shadow:1px 1px 0 0 var(--hard-shadow);color:var(--ink);}
 
   .sl-chart{display:flex;align-items:flex-end;gap:4px;height:128px;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:rgba(var(--glass-tint),0.05);padding:0.7rem;}
-  .sl-chart .bar{flex:1;background:linear-gradient(180deg,var(--accent),color-mix(in srgb,var(--accent) 35%,transparent));border:1px solid rgb(var(--edge));border-bottom:none;}
+  .sl-chart .bar{flex:1;background:var(--accent);border:1px solid rgb(var(--edge));border-bottom:none;}
 
   /* One slide at a time, paged by the prev/next + dots that mountCarousel()
      in the React app injects (which also adds .is-enhanced to the wrap). */
@@ -670,7 +670,7 @@
      keeps a native horizontal scroller and can still reach every slide. */
   .sl-carousel-wrap.is-enhanced .sl-carousel{scrollbar-width:none;-ms-overflow-style:none;}
   .sl-carousel-wrap.is-enhanced .sl-carousel::-webkit-scrollbar{display:none;}
-  .sl-carousel .slide{scroll-snap-align:start;flex:0 0 100%;aspect-ratio:16/9;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:linear-gradient(135deg, rgb(var(--glass-tint) / 0.10), var(--accent));display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--accent-ink);}
+  .sl-carousel .slide{scroll-snap-align:start;flex:0 0 100%;aspect-ratio:16/9;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:color-mix(in srgb,var(--accent) 34%,var(--bg-2));display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.3rem;color:var(--ink);}
   .sl-carousel-btn{position:absolute;width:34px;height:34px;display:grid;place-items:center;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);background:rgba(var(--glass-tint),0.16);backdrop-filter:blur(8px) saturate(160%);-webkit-backdrop-filter:blur(8px) saturate(160%);box-shadow:2px 2px 0 0 var(--hard-shadow);color:var(--ink);font-family:var(--mono);font-size:1.25rem;line-height:1;cursor:pointer;transition:transform .12s ease,background .2s ease,opacity .2s ease;z-index:2;}
   .sl-carousel-btn:hover{background:rgba(var(--glass-tint),0.26);}
   .sl-carousel-btn:active{transform:translate(2px,2px);box-shadow:0 0 0 0 var(--hard-shadow);}
@@ -926,15 +926,10 @@
     .sl-acc-body > p{ opacity:0; transform:translateY(-6px); transition:opacity var(--motion) var(--ease-liquid), transform var(--motion) var(--ease-liquid); }
     .sl-acc-item.open .sl-acc-body > p{ opacity:1; transform:none; }
 
-    /* --- hover refraction: pointer-tracked specular highlight on cards --- */
+    /* Flat information surfaces do not refract on hover. Liquid movement is
+       reserved for state transitions, navigation markers, and overlays. */
     .kit-cell, .show-card{ position:relative; }
-    .kit-cell::after, .show-card::after{
-      content:""; position:absolute; inset:0; pointer-events:none; z-index:2; opacity:0;
-      border-radius:inherit;
-      background:radial-gradient(200px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.07), transparent 55%);
-      transition:opacity var(--motion) var(--ease-liquid);
-    }
-    .kit-cell:hover::after, .show-card:hover::after{ opacity:1; }
+    .kit-cell::after, .show-card::after{ content:none; }
 
     /* --- liquid progress: the pooled caustics drift and a crest rides the
        surface (the glassy body + meniscus are defined statically above) --- */
@@ -1071,7 +1066,7 @@ body {
   top: 0;
   padding: 0.7rem 0;
   border-width: 0 0 1px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
   box-shadow: none;
   backdrop-filter: blur(16px) saturate(120%);
   -webkit-backdrop-filter: blur(16px) saturate(120%);
@@ -1085,16 +1080,68 @@ body {
   --s: 38px;
 }
 .nav .links {
-  gap: 0.45rem;
+  position: relative;
+  gap: 0;
+  border: 1px solid rgb(var(--edge));
+  isolation: isolate;
+}
+.nav .nav-action-slot {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  border-left: 1px solid color-mix(in srgb, var(--ink) 28%, transparent);
+}
+.nav .nav-action-slot:nth-of-type(2) {
+  border-left: 0;
+}
+.nav .nav-liquid-marker {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  z-index: 0;
+  width: var(--nav-marker-w, 0px);
+  opacity: var(--nav-marker-opacity, 0);
+  transform: translateX(var(--nav-marker-x, 0px));
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  border-bottom: 3px solid var(--accent);
+  transition:
+    transform var(--motion) var(--ease-liquid-over),
+    width var(--motion) var(--ease-liquid),
+    opacity var(--motion-fast) var(--ease-liquid);
+  pointer-events: none;
+}
+.nav .nav-page-progress {
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: var(--page-progress, 0%);
+  height: 3px;
+  background: var(--accent);
+  transition: width 120ms linear;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav .nav-liquid-marker,
+  .nav .nav-page-progress {
+    transition: none;
+  }
 }
 .nav .links .nav-cta {
   padding: 0.58rem 0.82rem;
   font-size: 0.74rem;
   font-weight: 650;
-  box-shadow: 3px 3px 0 var(--hard-shadow);
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  transform: none;
 }
-.nav .links .nav-cta.glassy {
-  background: color-mix(in srgb, var(--bg-2) 84%, transparent);
+.nav .links .nav-cta:hover,
+.nav .links .nav-cta:active {
+  color: var(--ink);
+  background: transparent;
+  box-shadow: none;
+  transform: none;
 }
 
 .hero {
@@ -1242,21 +1289,14 @@ body {
 }
 .tenet-framing {
   background: var(--bg-2);
-  box-shadow: 4px 4px 0 var(--hard-shadow);
-  z-index: 2;
-  transform: translate(-4px, -4px);
+  box-shadow: none;
+  transform: none;
 }
 .tenet-liquid {
-  background: linear-gradient(
-    145deg,
-    color-mix(in srgb, var(--accent) 13%, transparent),
-    rgb(var(--glass-tint) / var(--glass-alpha)) 60%
-  );
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  background: var(--bg-2);
 }
 .tenet-clarity {
-  background: transparent;
+  background: var(--bg-2);
 }
 #components .kit-filterbars {
   border-top: 1px solid var(--ink);
@@ -1332,7 +1372,7 @@ body {
   padding: clamp(3rem, 7vw, 6rem);
   text-align: left;
   align-items: flex-start;
-  background: color-mix(in srgb, var(--accent) 8%, var(--bg-2));
+  background: var(--bg-2);
   box-shadow: none;
 }
 .cta-panel h2 {
@@ -1352,7 +1392,10 @@ body {
   background: color-mix(in srgb, var(--bg) 90%, transparent);
   border-color: color-mix(in srgb, var(--ink) 22%, transparent);
 }
+[data-mode="dark"] .glass,
 [data-mode="dark"] .tenet-framing,
+[data-mode="dark"] .tenet-liquid,
+[data-mode="dark"] .tenet-clarity,
 [data-mode="dark"] #components .kit-grid.gallery .kit-cell,
 [data-mode="dark"] .show-card,
 [data-mode="dark"] .adopt-gallery .kit-cell {
@@ -1412,6 +1455,9 @@ body {
   .tenet ul {
     margin-top: 2rem;
     padding-top: 0;
+  }
+  .nav .links .nav-cta {
+    padding-inline: 0.62rem;
   }
   .tenet-framing {
     transform: none;

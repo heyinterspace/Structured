@@ -124,7 +124,7 @@ export function KitFormsInputs() {
         <div className="glass kit-cell w4">
           <span className="kit-cap">Checkbox</span>
           <div className="kit-col">
-            <Checkbox defaultChecked>Liquid glass surfaces</Checkbox>
+            <Checkbox defaultChecked>Liquid navigation transitions</Checkbox>
             <Checkbox>Flat shadows</Checkbox>
             <Checkbox defaultChecked>Sharp 90° corners</Checkbox>
           </div>
