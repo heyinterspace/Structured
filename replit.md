@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-A live, deployable specimen + landing page for **Structured Liquidity** — **Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.** Neobrutalist Structure is the physical frame: load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction. Liquid Glass Motion is layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass. Editorial Modern Frameworks compose hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence; they are informed by editorial scientific modernism. Together they form the Structured Liquidity trifecta, represented by the cube's three visible faces. Semantic Clarity remains the quality gate across all three, not a fourth pillar. The page is both the specimen and the documentation of the language, with a live in-page theme tweaker, and it **dogfoods its own React components**. It also publishes those components as a **shadcn-installable registry** at `/r/*.json`. Structured Liquidity is an Interspace Venture (est. 2026); the source is on GitHub at https://github.com/heyinterspace/Structured.
+A live, deployable specimen + landing page for **Structured Liquidity** — **Structured Framing. Liquid Motion. Scientific Clarity.** Structured Framing supplies the neobrutalist physical and informational frame: load-bearing borders, hard shadows, square geometry, unmistakable hierarchy, clear affordances, and tactile interaction. Liquid Motion uses layered glass, continuity, and purposeful movement to communicate state while preserving a complete reduced-motion experience. Scientific Clarity applies rational grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint so information remains complete and legible without relying on decoration. Together these three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. The page is both the specimen and the documentation of the language, with a live in-page theme tweaker, and it **dogfoods its own React components**. It also publishes those components as a **shadcn-installable registry** at `/r/*.json`. Structured Liquidity is an Interspace Venture (est. 2026); the source is on GitHub at https://github.com/heyinterspace/Structured.
 
 ## Run & Operate
 
@@ -20,7 +20,7 @@ A live, deployable specimen + landing page for **Structured Liquidity** — **Ne
 ## Where things live
 
 - `artifacts/structured-liquidity/index.html` — minimal React shell (`<div id="root">` + `<script src="/src/main.tsx">`)
-- `artifacts/structured-liquidity/src/main.tsx`, `src/App.tsx` — entry + page composition (Nav, Hero, Pillars, Components/gallery, Templates, Showcase, Adopt, FooterCta, Footer, Tweaker, Toaster, overlays)
+- `artifacts/structured-liquidity/src/main.tsx`, `src/App.tsx` — entry + page composition (Nav, Hero, Tenets, Components/gallery, Templates, Showcase, Adopt, FooterCta, Footer, Tweaker, Toaster, overlays)
 - `artifacts/structured-liquidity/src/index.css` — Tailwind entry: `@theme` + imports of the SL styles in `src/styles/` (`10-tokens-base.css`, `20-components.css`, `30-kit.css`, `40-inline.css`)
 - `artifacts/structured-liquidity/src/components/ui/*` — ~64 shadcn-style SL components (Button, Badge, Input, Select, Tabs, Accordion, Dialog, …). **Plain React + `lucide-react`, no Radix** — each emits SL classes and uses `cn()` from `src/lib/utils.ts`.
 - `artifacts/structured-liquidity/src/components/templates/*` — installable page structures distilled from the production portfolio: marketing site, data dashboard, guided flow, and immersive app.
@@ -59,7 +59,7 @@ Cross-item URLs use `REGISTRY_BASE_URL` (default `https://structured.glass`). Th
 
 ## Product
 
-A single-page specimen + reference for the Structured Liquidity design language: it explains the trifecta in order—Neobrutalist Structure as frame, Liquid Glass Motion as state, Editorial Modern Frameworks as composition—demonstrates a full component kit, lets visitors retheme it live, and lets them install it via shadcn. The cube's three visible faces represent the trifecta. Semantic Clarity tests the complete system and is not a fourth pillar.
+A single-page specimen + reference for the Structured Liquidity design language: it explains the three tenets in order—Structured Framing as physical and informational structure, Liquid Motion as state and continuity, and Scientific Clarity as composition and evidence—demonstrates a full component kit, lets visitors retheme it live, and lets them install it via shadcn. The cube's three visible faces represent the three-tenet system; clarity responsibilities are encoded directly in each tenet rather than treated as a separate gate.
 
 ## Design language tokens (the knobs the page reads)
 

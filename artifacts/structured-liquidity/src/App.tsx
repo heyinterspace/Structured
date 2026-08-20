@@ -4,7 +4,7 @@ import { ToastProvider, Toaster } from "@/components/ui/toast";
 import { Backdrop } from "@/components/site/Backdrop";
 import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
-import { Pillars } from "@/components/site/Pillars";
+import { Tenets } from "@/components/site/Tenets";
 import { Components } from "@/components/site/Components";
 import { Showcase } from "@/components/site/Showcase";
 import { Adopt } from "@/components/site/Adopt";
@@ -22,7 +22,7 @@ export function App() {
       <Backdrop />
       <Nav />
       <Hero />
-      <Pillars />
+      <Tenets />
       <Components />
       <Showcase />
       <Adopt />

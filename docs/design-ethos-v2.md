@@ -2,24 +2,23 @@
 
 ## The operating model
 
-**Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
+**Structured Framing. Liquid Motion. Scientific Clarity.**
 
-Structured Liquidity is a trifecta of three orthogonal design dimensions, represented by the three visible faces of its cube:
+Structured Liquidity is defined by three orthogonal design tenets, represented by the three visible faces of its cube:
 
-1. **Neobrutalist Structure:** The physical frame—load-bearing borders, hard shadows, square geometry, clear affordances, and tactile interaction.
-2. **Liquid Glass Motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
-3. **Editorial Modern Frameworks:** Hierarchy, refined grids, oversized typography, technical diagrams, captions, labeling, and evidence, informed by editorial scientific modernism.
+1. **Structured Framing:** Neobrutalist physical and informational structure—load-bearing borders, hard shadows, square geometry, unmistakable hierarchy, clear affordances, and tactile interaction. The structure must make content and action understandable before decoration is added.
+2. **Liquid Motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass. Motion must explain change without becoming the only carrier of meaning, and every interaction must have a complete reduced-motion state.
+3. **Scientific Clarity:** Scientific Modernism applied to interfaces through rational grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint. Information must remain complete, legible, and useful without reliance on color, glass, or motion.
 
-Semantic Clarity remains the quality gate across all three, not a fourth pillar: every screen must remain complete, legible, and useful without color, glass, or motion.
+The tenets are complete as a set. Clarity is not a separate gate: each tenet is responsible for making its part of the interface understandable.
 
 ## Decision ownership
 
-| Question                                            | Owner                 |
-| --------------------------------------------------- | --------------------- |
-| What contains this information?                     | Neobrutalist Structure       |
-| How does state change or mass become perceptible?   | Liquid Glass Motion          |
-| How is the information composed and evidenced?      | Editorial Modern Frameworks  |
-| Is the result understandable in its simplest state? | Semantic Clarity gate        |
+| Question                                          | Owner              |
+| ------------------------------------------------- | ------------------ |
+| What contains this information and clarifies action? | Structured Framing |
+| How does state change become perceptible and remain understandable? | Liquid Motion |
+| How is the information composed, labeled, and evidenced? | Scientific Clarity |
 
 ## Expression rules
 
@@ -32,6 +31,6 @@ Semantic Clarity remains the quality gate across all three, not a fourth pillar:
 
 ## Short language
 
-Primary phrase: **Neobrutalist Structure. Liquid Glass Motion. Editorial Modern Frameworks.**
+Primary phrase: **Structured Framing. Liquid Motion. Scientific Clarity.**
 
 Manifesto phrase: **Three faces. One design language.**

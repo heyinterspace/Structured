@@ -1,8 +1,8 @@
-export function Pillars() {
+export function Tenets() {
   return (
     <section id="manifesto" className="wrap">
       <div className="section-head reveal">
-        <span className="eyebrow">Principles · the foundation</span>
+        <span className="eyebrow">Tenets · the foundation</span>
         <h2 className="section-title">
           Three faces. One design language.
         </h2>
@@ -10,17 +10,19 @@ export function Pillars() {
           Structured framing makes hierarchy and action unmistakable. Liquid
           motion makes state and continuity perceptible. Scientific clarity
           turns hierarchy, labels, diagrams, and evidence into one legible
-          system. Together they form the Structured Liquidity trifecta.
+          system. Together, these three tenets form Structured Liquidity.
         </p>
       </div>
 
-      <div className="pillars">
-        <div className="glass pillar reveal">
-          <span className="pnum">Pillar 01</span>
+      <div className="tenets">
+        <div className="glass tenet reveal">
+          <span className="pnum">Tenet 01</span>
           <h3>Structured framing</h3>
           <p>
             The physical frame: load-bearing borders, hard shadows, square
-            geometry, clear affordances, and tactile interaction.
+            geometry, unmistakable hierarchy, clear affordances, and tactile
+            interaction. Content and action remain understandable before
+            decoration is added.
           </p>
           <ul>
             <li>
@@ -38,12 +40,13 @@ export function Pillars() {
           </ul>
         </div>
 
-        <div className="glass pillar reveal">
-          <span className="pnum">Pillar 02</span>
+        <div className="glass tenet reveal">
+          <span className="pnum">Tenet 02</span>
           <h3>Liquid motion</h3>
           <p>
             Layered glass, continuity, and purposeful motion that communicate
-            state and give interfaces believable mass.
+            state and give interfaces believable mass without becoming the
+            only carrier of meaning.
           </p>
           <ul>
             <li>
@@ -57,19 +60,20 @@ export function Pillars() {
               <div>
                 <strong className="rule-h">Motion explains change</strong>:
                 liquid settles, connects, and reveals state inside a frame that
-                never wobbles.
+                never wobbles, with a complete reduced-motion state.
               </div>
             </li>
           </ul>
         </div>
 
-        <div className="glass pillar reveal editorial-pillar">
-          <span className="pnum">Pillar 03</span>
+        <div className="glass tenet reveal scientific-tenet">
+          <span className="pnum">Tenet 03</span>
           <h3>Scientific clarity</h3>
           <p>
             Scientific Modernism applied to interfaces: refined grids,
             decisive typography, technical diagrams, captions, labels, and
-            evidence.
+            evidence. Information remains complete and legible without relying
+            on color, glass, or motion.
           </p>
           <ul>
             <li>
@@ -90,11 +94,6 @@ export function Pillars() {
           </ul>
         </div>
       </div>
-      <p className="manifesto-gate reveal">
-        <strong>Quality floor · legibility</strong>
-        Every screen remains complete and useful without color, glass, or
-        motion. The aesthetic never outranks the information.
-      </p>
     </section>
   );
 }

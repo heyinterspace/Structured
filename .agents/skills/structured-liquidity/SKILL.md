@@ -7,11 +7,11 @@ description: Apply the Structured Liquidity UI design language — Structured fr
 
 **Structured framing. Liquid motion. Scientific clarity.**
 
-1. **Structured framing:** The physical and informational frame—load-bearing borders, square geometry, clear hierarchy, clear affordances, and tactile interaction.
-2. **Liquid motion:** Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
-3. **Scientific clarity:** Scientific Modernism applied to interfaces through refined grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint.
+1. **Structured framing:** The physical and informational frame—load-bearing borders, square geometry, unmistakable hierarchy, clear affordances, and tactile interaction. Content and action must remain understandable before decoration is added.
+2. **Liquid motion:** Layered glass, continuity, and purposeful motion communicate state and give interfaces believable mass without becoming the only carrier of meaning. Every interaction needs a complete reduced-motion state.
+3. **Scientific clarity:** Scientific Modernism applied to interfaces through refined grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint. Information must remain complete, legible, and useful without relying on color, glass, or motion.
 
-Together they form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Legibility remains the quality floor across all three: the aesthetic never outranks the information. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
+Together these three tenets form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Each tenet owns the clarity of its part of the interface. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
 ## The non-negotiable rules
 
@@ -28,7 +28,6 @@ Follow these literally — they are what keep generated output on-brand:
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
 10. **Compose like an editorial instrument.** Use oversized hierarchy, refined grids, generous major-section rhythm, and compact mono captions for sources, state, and evidence.
 11. **Monochrome carries information.** The accent identifies selection, progression, or one key relationship; it does not decorate the page.
-12. **Protect the legibility floor.** Every screen must remain complete, legible, and useful without color, glass, or motion.
 
 ## Tokens
 

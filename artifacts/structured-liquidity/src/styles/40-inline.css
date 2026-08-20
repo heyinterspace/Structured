@@ -182,19 +182,11 @@
   /* "Structured" / "Liquidity" wordmark lines sat too tight (line-height .84) */
   .wordmark{line-height:0.96;}
 
-  /* pillar rule rows: the six operating rules folded into the three pillars */
-  .pillar li > div{flex:1;min-width:0;}
-  .pillar .rule-h{color:var(--ink);font-weight:700;}
+  /* tenet rule rows: the six operating rules folded into the three tenets */
+  .tenet li > div{flex:1;min-width:0;}
+  .tenet .rule-h{color:var(--ink);font-weight:700;}
   /* larger, more legible bullet copy (was 0.76rem dim mono) */
-  .pillar li{font-size:0.9rem;line-height:1.55;color:color-mix(in srgb, var(--ink) 55%, var(--ink-dim));}
-
-  /* Scientific clarity: evidence-first hierarchy and technical figures. */
-  .manifesto-gate{display:grid;grid-template-columns:minmax(190px,.55fr) 1fr;gap:var(--editorial-gap);
-    margin:1.35rem 0 0;padding:1rem 1.1rem;border-top:var(--border-w) solid rgb(var(--edge));
-    border-bottom:var(--rule-hairline) solid var(--diagram-muted);font-size:.9rem;color:var(--ink-dim);}
-  .manifesto-gate strong{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;
-    text-transform:uppercase;color:var(--ink);}
-  @media(max-width:700px){.manifesto-gate{grid-template-columns:1fr;gap:.55rem;}}
+  .tenet li{font-size:0.9rem;line-height:1.55;color:color-mix(in srgb, var(--ink) 55%, var(--ink-dim));}
 
   /* section eyebrow labels: larger, tighter tracking, higher contrast (was 0.72rem, 0.22em, dim) */
   .eyebrow{font-size:0.84rem;letter-spacing:0.15em;color:color-mix(in srgb, var(--ink) 78%, var(--ink-dim));}
@@ -495,11 +487,11 @@
 
   /* A little more breathing room between the navbar and the hero */
   .hero{padding-top:clamp(6.5rem,12vh,8.5rem);}
-  /* Closing CTA heading: pillar nouns picked out in the accent. */
+  /* Closing CTA heading: tenet nouns picked out in the accent. */
   .cta-panel h2 b{font-weight:inherit;color:var(--accent);}
 
-  /* Pillar body copy: larger & more approachable */
-  .pillar > p{font-size:1.02rem;line-height:1.55;}
+  /* Tenet body copy: larger & more approachable */
+  .tenet > p{font-size:1.02rem;line-height:1.55;}
 
   /* ── shadcn coverage: additional component opinions (all styling lives here) ── */
   .sl-sep{height:var(--border-w);background:rgb(var(--edge));border:none;width:100%;margin:0;}

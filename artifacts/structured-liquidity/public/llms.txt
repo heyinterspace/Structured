@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-> **Structured framing. Liquid motion. Scientific clarity.** Together they form the Structured Liquidity trifecta, represented by the cube's three visible faces. Legibility remains the quality floor across all three: the aesthetic never outranks the information. This file makes the language machine-readable so an AI agent can adopt it faithfully.
+> **Structured framing. Liquid motion. Scientific clarity.** These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. Each tenet carries its own responsibility for making the interface understandable. This file makes the language machine-readable so an AI agent can adopt it faithfully.
 
 ## Install before editing UI
 
@@ -10,13 +10,11 @@ Run this as the first implementation step, before recreating tokens or writing c
 
 This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Verify both landed, read the installed skill, and only then start UI work. For theme files without the agent skill, install `https://structured.glass/r/structured-liquidity.json`.
 
-## The three pillars
+## The three tenets
 
-1. **Structured framing · Frame**: The physical and informational frame—load-bearing borders, square geometry, clear hierarchy, clear affordances, and tactile interaction.
-2. **Liquid motion · State**: Layered glass, continuity, and purposeful motion that communicate state and give interfaces believable mass.
-3. **Scientific clarity · Composition**: Scientific Modernism applied through refined grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint.
-
-**Legibility floor**: every screen remains complete, legible, and useful without color, glass, or motion.
+1. **Structured framing · Frame**: The physical and informational frame—load-bearing borders, square geometry, unmistakable hierarchy, clear affordances, and tactile interaction. Content and action must remain understandable before decoration is added.
+2. **Liquid motion · State**: Layered glass, continuity, and purposeful motion communicate state and give interfaces believable mass without becoming the only carrier of meaning. Every interaction needs a complete reduced-motion state.
+3. **Scientific clarity · Composition**: Scientific Modernism applied through refined grids, decisive typography, technical diagrams, captions, labels, evidence, and restraint. Information must remain complete, legible, and useful without relying on color, glass, or motion.
 
 ## Hard rules (follow these literally to stay on-brand)
 
