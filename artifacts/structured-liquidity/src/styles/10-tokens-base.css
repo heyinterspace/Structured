@@ -103,10 +103,8 @@ body {
 }
 
 /* ============================================================
-   BACKDROP — a full-document-height iridescent field the glass
-   refracts. Not fixed (fixed/attachment:fixed only paint at the
-   document top in capture/print contexts) — it spans the whole
-   page so every section is tinted and nothing renders flat-black.
+   BACKDROP — flat paper plus a measured technical grid. Liquid
+   belongs to interaction and continuity, not decorative scenery.
    ============================================================ */
 
 .field {
@@ -118,39 +116,13 @@ body {
   z-index: -2;
   overflow: hidden;
   pointer-events: none;
-  background:
-    radial-gradient(
-      36vw 26vw at 86% 4%,
-      color-mix(in srgb, var(--accent) 18%, transparent),
-      transparent 72%
-    ),
-    radial-gradient(
-      30vw 24vw at 12% 42%,
-      color-mix(in srgb, var(--accent) 10%, transparent),
-      transparent 74%
-    ),
-    linear-gradient(var(--bg), var(--bg));
-  background-repeat: no-repeat;
-  animation: fieldshift 34s ease-in-out infinite alternate;
+  background: var(--bg);
 }
 [data-mode="light"] .field {
   opacity: 1;
 }
 [data-mode="dark"] .field {
-  opacity: 0.72;
-}
-@keyframes fieldshift {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-3vw);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .field {
-    animation: none;
-  }
+  opacity: 1;
 }
 
 .field .grid {
@@ -160,20 +132,7 @@ body {
     linear-gradient(rgba(var(--edge), 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(var(--edge), 0.045) 1px, transparent 1px);
   background-size: 64px 64px;
-  mask-image: linear-gradient(
-    180deg,
-    #000,
-    #000 40%,
-    rgba(0, 0, 0, 0.25) 75%,
-    transparent
-  );
-  -webkit-mask-image: linear-gradient(
-    180deg,
-    #000,
-    #000 40%,
-    rgba(0, 0, 0, 0.25) 75%,
-    transparent
-  );
+  opacity: 0.7;
 }
 
 .grain {
@@ -184,61 +143,25 @@ body {
   height: 100%;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.08;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  display: none;
 }
 
 /* ============================================================
-   GLASS-BRUTAL PRIMITIVE — frosted material + brutal edge
+   STRUCTURAL SURFACE — flat by default. Add blur only to transient
+   navigation, menus, overlays, and other moving state boundaries.
    ============================================================ */
 
 .glass {
   position: relative;
-  background: linear-gradient(
-    135deg,
-    rgba(var(--glass-tint), calc(var(--glass-alpha) + 0.06)),
-    rgba(var(--glass-tint), var(--glass-alpha))
-  );
-  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
-  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  background: var(--bg-2);
   border: var(--border-w) solid rgb(var(--edge));
   border-radius: var(--radius);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62);
+  box-shadow: none;
 }
 /* moving sheen + cursor specular */
-.glass::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: radial-gradient(
-    180px circle at var(--mx, 50%) var(--my, 0%),
-    rgba(255, 255, 255, 0.22),
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.glass:hover::before {
-  opacity: 1;
-}
+.glass::before,
 .glass::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(
-    115deg,
-    transparent 30%,
-    rgba(255, 255, 255, 0.1) 45%,
-    transparent 55%
-  );
-  background-size: 250% 250%;
-  background-position: 100% 100%;
-  opacity: 0.7;
+  content: none;
 }
 
 .flat {

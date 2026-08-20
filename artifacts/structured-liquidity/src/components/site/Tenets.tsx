@@ -44,16 +44,16 @@ export function Tenets() {
           <span className="psub">State · Continuity</span>
           <h3>Liquid Motion</h3>
           <p>
-            Layered glass, continuity, and purposeful motion that communicate
-            state and give interfaces believable mass without becoming the only
-            carrier of meaning.
+            Motion carries state between navbar actions, menu options, tabs,
+            filters, overlays, and page areas without becoming the only carrier
+            of meaning.
           </p>
           <ul>
             <li>
               <div>
-                <strong className="rule-h">Depth through layers</strong>: stack
-                translucent surfaces while every boundary remains structurally
-                legible.
+                <strong className="rule-h">One marker carries continuity</strong>
+                : selection travels between related options instead of repainting
+                each surface.
               </div>
             </li>
             <li>

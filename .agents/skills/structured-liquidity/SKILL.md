@@ -21,7 +21,7 @@ Follow these literally — they are what keep generated output on-brand:
 2. **Flat offset shadows, used selectively.** `box-shadow: var(--hard-x) var(--hard-y) 0 0 var(--hard-shadow)`. Blur is always `0`. Reserve shadows for tactile affordances and deliberately layered cutout surfaces; flat information containers can rely on borders, rules, and alignment.
 3. **Load-bearing borders.** `var(--border-w) solid rgb(var(--edge))`. The edge is black in both light and dark mode.
 4. **Exactly one accent.** `--accent` carries all emphasis. Never add a competing hue.
-5. **Glass is state and depth, not decoration.** Liquid glass = `backdrop-filter: blur(var(--glass-blur))` over `rgba(var(--glass-tint), var(--glass-alpha))`. Keep it neutral/translucent and use it where continuity, layering, or motion matters—not on every card.
+5. **Liquid is movement, not a gradient treatment.** Default information surfaces are flat. Express liquidity through moving selection markers, menu and popover settling, tab changes, scroll continuity, and transitions between areas. Use neutral translucency or `backdrop-filter` only at moving state boundaries such as navigation, menus, and overlays—not on every card.
 6. **Destructive is gray, not red.** Destructive _containers_ use `--neg`. Error _text_ may warn in color.
 7. **Fixed type roles.** display (`--display`, Archivo) = headings/buttons/brand; body (`--body`, Archivo) = reading copy; mono (`--mono`, IBM Plex Mono) = labels/data/captions/eyebrows.
 8. **Leading icons.** Nav links and buttons take a leading Lucide icon, then the label.
@@ -74,7 +74,7 @@ Three roles — header / body / detail (display / body / mono). Archivo carries 
 
 ## Motion contract
 
-The rigid frame never wobbles or morphs. Motion belongs inside it and must explain state, continuity, or spatial relationship. Use one liquid easing family; reserve ambient motion for a single focal specimen; provide a complete static state under `prefers-reduced-motion`. If the interface communicates the same thing without the animation, the motion is optional polish, not a dependency.
+The rigid frame never wobbles or morphs. Motion belongs inside it and must explain state, continuity, or spatial relationship. Prefer a shared marker that visibly travels between menu options, tabs, filters, navbar actions, and page areas over per-item gradient fills or decorative sheen. Use one liquid easing family; reserve ambient motion for a single focal specimen; provide a complete static state under `prefers-reduced-motion`. If the interface communicates the same thing without the animation, the motion is optional polish, not a dependency.
 
 ## Components
 
