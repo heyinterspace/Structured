@@ -5,22 +5,23 @@ export function Tenets() {
         <span className="eyebrow">Principles · the foundation</span>
         <h2 className="section-title">Three faces. One design language.</h2>
         <p className="lead">
-          Structured Framing organizes information. Liquid Motion makes the
-          system's behavior perceptible. Scientific Clarity communicates meaning
-          with disciplined hierarchy, evidence, and unmistakable legibility.
+          Neobrutalism gives the interface a tangible frame. Liquid Motion makes
+          the system's behavior perceptible. Scientific Clarity organizes
+          information and communicates meaning with disciplined hierarchy,
+          evidence, and unmistakable legibility.
           Together these three tenets form Structured Liquidity.
         </p>
       </div>
 
       <div className="tenets">
-        <article className="tenet tenet-framing reveal">
+        <article className="tenet tenet-neobrutalism reveal">
           <span className="pnum">Tenet 01</span>
-          <span className="psub">Frame · Affordance</span>
-          <h3>Structured Framing</h3>
+          <span className="psub">Structure · Affordance</span>
+          <h3>Neobrutalism</h3>
           <p>
-            Information organized through load-bearing borders, square geometry,
-            rational grids, clear affordances, and tactile interaction. The
-            frame makes hierarchy and action understandable before decoration.
+            Buttons, borders, navigation, footers, body containers, and panels
+            form a tactile system through square geometry, clear affordances,
+            and selective flat shadows.
           </p>
           <ul>
             <li>
@@ -67,13 +68,13 @@ export function Tenets() {
 
         <article className="tenet tenet-clarity reveal">
           <span className="pnum">Tenet 03</span>
-          <span className="psub">Meaning · Legibility</span>
+          <span className="psub">Information · Meaning</span>
           <h3>Scientific Clarity</h3>
           <p>
-            Meaning communicated through disciplined hierarchy, measured
-            typography, captions, evidence, and purposeful whitespace. Swiss
-            modernism is the informing tradition. Every screen remains complete
-            and useful without relying on color, glass, or motion.
+            Information organized through rational grids, disciplined hierarchy,
+            measured typography, captions, evidence, and purposeful whitespace.
+            Swiss modernism is the informing tradition. Every screen remains
+            complete and useful without relying on color, glass, or motion.
           </p>
           <ul>
             <li>

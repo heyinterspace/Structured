@@ -1,15 +1,15 @@
 ---
 name: structured-liquidity
-description: Apply the Structured Liquidity UI design language — Structured Framing, Liquid Motion, and Scientific Clarity. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
+description: Apply the Structured Liquidity UI design language — Neobrutalism, Liquid Motion, and Scientific Clarity. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
 ---
 
 # Structured Liquidity
 
-**Structured framing. Liquid motion. Scientific clarity.**
+**Neobrutalism. Liquid motion. Scientific clarity.**
 
-1. **Structured Framing:** How information is organized—load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows. The frame makes hierarchy and action understandable before decoration is added.
+1. **Neobrutalism:** How the interface is physically structured—buttons, borders, navigation, footers, body containers, panels, square geometry, clear affordances, and selective flat shadows. These structural layers make boundaries and actions tangible before effects are added.
 2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible without becoming the only carrier of meaning. Every interaction has a complete reduced-motion state.
-3. **Scientific Clarity:** How meaning is communicated—disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
+3. **Scientific Clarity:** How information is organized and meaning is communicated—rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
 
 Together these three tenets form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Each tenet owns the clarity of its part of the interface. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 

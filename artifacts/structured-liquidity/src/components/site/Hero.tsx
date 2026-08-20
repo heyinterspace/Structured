@@ -19,7 +19,7 @@ export function Hero() {
           </h1>
           <p className="lead reveal">
             <em>
-              Structured framing. Liquid motion. Scientific clarity.
+              Neobrutalism. Liquid motion. Scientific clarity.
             </em>{" "}
             Framing organizes information. Motion makes the system's behavior
             perceptible. Clarity communicates meaning through ordered,
@@ -28,7 +28,7 @@ export function Hero() {
           </p>
           <div className="hero-tags reveal">
             <span className="tag">
-              <b>01</b> Structured Framing
+              <b>01</b> Neobrutalism
             </span>
             <span className="tag">
               <b>02</b> Liquid Motion
@@ -57,7 +57,7 @@ export function Hero() {
         <div
           className="hero-cube-wrap"
           role="img"
-          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Structured Framing, Liquid Motion, and Scientific Clarity."
+          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalism, Liquid Motion, and Scientific Clarity."
         >
           <Hypercube className="hero-cube" faceLabels={["01", "02", "03"]} />
         </div>

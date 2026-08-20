@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-> **Structured framing. Liquid motion. Scientific clarity.** These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. Each tenet owns the clarity of its part of the interface. This file makes the language machine-readable so an AI agent can adopt it faithfully.
+> **Neobrutalism. Liquid motion. Scientific clarity.** These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. Each tenet owns a distinct part of the interface. This file makes the language machine-readable so an AI agent can adopt it faithfully.
 
 ## Install before editing UI
 
@@ -12,9 +12,9 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 
 ## The three tenets
 
-1. **Structured Framing · Organization**: Load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows organize information. The frame makes hierarchy and action understandable before decoration is added.
+1. **Neobrutalism · Structure**: Buttons, borders, navigation, footers, body containers, and panels form the physical interface through square geometry, clear affordances, and selective flat shadows. These structural layers make boundaries and actions tangible before effects are added.
 2. **Liquid Motion · Behavior**: Continuity, layered neutral glass, and purposeful motion make state and believable mass perceptible without becoming the only carrier of meaning. Every interaction has a complete reduced-motion state.
-3. **Scientific Clarity · Communication**: Disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace make meaning legible, ordered, and unmistakable. Swiss modernism and the International Typographic Style are the informing tradition. Every screen remains complete and useful without relying on color, glass, or motion.
+3. **Scientific Clarity · Information**: Rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace organize information and make meaning legible, ordered, and unmistakable. Swiss modernism and the International Typographic Style are the informing tradition. Every screen remains complete and useful without relying on color, glass, or motion.
 
 ## Hard rules (follow these literally to stay on-brand)
 

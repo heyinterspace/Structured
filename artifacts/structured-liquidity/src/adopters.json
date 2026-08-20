@@ -13,7 +13,7 @@
       "shot": "interspace-ventures.png",
       "shotAlt": "Interspace Ventures strategic-finance website using Structured Liquidity",
       "description": "The operating home for Interspace advisory, ventures, portfolio intelligence, and operator networks, using rigid navigation, comparison grids, metric surfaces, and the canonical purple register.",
-      "adoption": ["structured-containment", "liquid-depth", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "liquid-depth", "scientific-clarity"],
       "absorbedComponents": ["filter-toolbar", "logo-grid", "site-shell", "stat", "testimonial-card", "timeline"],
       "candidatePatterns": ["comparison-grid"]
     },
@@ -29,7 +29,7 @@
       "shot": "cosmograph-space.png",
       "shotAlt": "Cosmograph research universe using a Structured Liquidity cockpit",
       "description": "An immersive research universe with a rigid flight deck, persistent command dock, glass detail surfaces, and square telemetry controls orbiting a live WebGL scene.",
-      "adoption": ["structured-containment", "liquid-depth", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "liquid-depth", "scientific-clarity"],
       "absorbedComponents": ["detail-panel", "drawer", "filter-toolbar"],
       "candidatePatterns": ["telemetry-cockpit", "target-reticle"]
     },
@@ -45,7 +45,7 @@
       "shot": null,
       "shotAlt": "Exobase website operating system",
       "description": "The multi-tenant website operating system behind Interspace properties, carrying Structured Liquidity through reusable tenant chrome, content blocks, delivery controls, and portfolio surfaces.",
-      "adoption": ["structured-containment", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "scientific-clarity"],
       "absorbedComponents": ["filter-toolbar", "site-shell"],
       "candidatePatterns": ["tenant-switcher", "release-control-panel"]
     },
@@ -60,8 +60,8 @@
       "tag": "Investment syndicate",
       "shot": "2daysearly.png",
       "shotAlt": "2 Days Early investment-syndicate website built on Structured Liquidity",
-      "description": "An operator-led fintech investment syndicate using the structured-containment half of the language with a green accent, sharp portfolio grids, stat rails, and profile-driven storytelling.",
-      "adoption": ["structured-containment", "scientific-clarity"],
+      "description": "An operator-led fintech investment syndicate using the neobrutalist structure of the language with a green accent, sharp portfolio grids, stat rails, and profile-driven storytelling.",
+      "adoption": ["neobrutalist-structure", "scientific-clarity"],
       "absorbedComponents": ["logo-grid", "marquee", "profile-header", "section-header", "stat"],
       "candidatePatterns": []
     },
@@ -77,7 +77,7 @@
       "shot": "bumblebee-showcase.jpg",
       "shotAlt": "Bumblebee daycare portal for Brooklyn families",
       "description": "A daycare portal for Brooklyn families, using rigid black-bordered navigation, flat shadows, warm editorial cards, caregiver trust signals, and clear paths to program, testimonials, and visits.",
-      "adoption": ["structured-containment", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "scientific-clarity"],
       "absorbedComponents": ["card", "section-header", "testimonial-card"],
       "candidatePatterns": ["daily-rhythm", "family-faq", "credential-strip", "location-card"]
     },
@@ -93,7 +93,7 @@
       "shot": "universe-audio.png",
       "shotAlt": "Universe audio platform in development",
       "description": "A spectral music platform whose waveform, now-playing surface, and transport controls seeded the media primitives now shipped by the main library.",
-      "adoption": ["structured-containment", "liquid-depth", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "liquid-depth", "scientific-clarity"],
       "absorbedComponents": ["media-player", "waveform"],
       "candidatePatterns": ["spectral-mixer"]
     },
@@ -109,7 +109,7 @@
       "shot": "observatory-bio.png",
       "shotAlt": "Observatory biology workspace landing page using editorial scientific modernism",
       "description": "A scientific workspace for connected biological evidence, using an editorial research grid, oversized hierarchy, technical labeling, and one continuous visual thread from gene to protein to structure.",
-      "adoption": ["structured-containment", "liquid-depth", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "liquid-depth", "scientific-clarity"],
       "absorbedComponents": ["detail-panel", "omnibar", "sidebar", "stat"],
       "candidatePatterns": ["scientific-track-viewer", "evidence-report"]
     },
@@ -125,7 +125,7 @@
       "shot": null,
       "shotAlt": "Dropship private media utility in staging",
       "description": "A mobile-first capture library with one universal intake bar, persistent glass dock, media-aware cards, edge detail panels, and context-sensitive export actions.",
-      "adoption": ["structured-containment", "liquid-depth", "scientific-clarity"],
+      "adoption": ["neobrutalist-structure", "liquid-depth", "scientific-clarity"],
       "absorbedComponents": ["detail-panel", "mobile-nav", "omnibar", "unit-economics-chart"],
       "candidatePatterns": ["media-action-rail", "payload-chooser"]
     },

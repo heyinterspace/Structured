@@ -2,21 +2,21 @@
 
 ## The operating model
 
-**Structured framing. Liquid motion. Scientific clarity.**
+**Neobrutalism. Liquid motion. Scientific clarity.**
 
 Structured Liquidity is a trifecta of three orthogonal design tenets, represented by the three visible faces of its cube:
 
-1. **Structured Framing:** How information is organized—load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows. The frame makes hierarchy and action understandable before decoration is added.
+1. **Neobrutalism:** How the interface is physically structured—buttons, borders, navigation, footers, body containers, panels, square geometry, clear affordances, and selective flat shadows. These structural layers make boundaries and actions tangible before effects are added.
 2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible. Motion never becomes the only carrier of meaning, and every interaction has a complete reduced-motion state.
-3. **Scientific Clarity:** How meaning is communicated—disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. It is informed by Swiss modernism and the International Typographic Style, whose purpose is to make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
+3. **Scientific Clarity:** How information is organized and meaning is communicated—rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. It is informed by Swiss modernism and the International Typographic Style, whose purpose is to make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
 
 ## Decision ownership
 
 | Question                                                 | Owner                  |
 | -------------------------------------------------------- | ---------------------- |
-| How is the information organized?                        | Structured Framing |
-| How does the system behave?                              | Liquid Motion      |
-| How is meaning communicated?                             | Scientific Clarity |
+| What physically structures the interface and affords action? | Neobrutalism       |
+| How does the system behave?                                  | Liquid Motion      |
+| How is information organized and meaning communicated?       | Scientific Clarity |
 
 ## Expression rules
 
@@ -30,6 +30,6 @@ Structured Liquidity is a trifecta of three orthogonal design tenets, represente
 
 ## Short language
 
-Primary phrase: **Structured framing. Liquid motion. Scientific clarity.**
+Primary phrase: **Neobrutalism. Liquid motion. Scientific clarity.**
 
 Manifesto phrase: **Three faces. One design language.**
