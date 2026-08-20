@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-> **Structured framing. Liquid motion. Scientific clarity.** Together they form the Structured Liquidity trifecta, represented by the cube's three visible faces. This file makes the language machine-readable so an AI agent can adopt it faithfully.
+> **Structured framing. Liquid motion. Scientific clarity.** These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. Each tenet owns the clarity of its part of the interface. This file makes the language machine-readable so an AI agent can adopt it faithfully.
 
 ## Install before editing UI
 
@@ -10,13 +10,11 @@ Run this as the first implementation step, before recreating tokens or writing c
 
 This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Verify both landed, read the installed skill, and only then start UI work. For theme files without the agent skill, install `https://structured.glass/r/structured-liquidity.json`.
 
-## The three pillars
+## The three tenets
 
-1. **Structured Framing · Organization**: Load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows organize information.
-2. **Liquid Motion · Behavior**: Continuity, layered neutral glass, and purposeful motion make state and believable mass perceptible.
-3. **Scientific Clarity · Communication**: Disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace make meaning legible, ordered, and unmistakable. Swiss modernism and the International Typographic Style are the informing tradition.
-
-Scientific Clarity includes the quality test that every screen remains complete, legible, and useful without color, glass, or motion.
+1. **Structured Framing · Organization**: Load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows organize information. The frame makes hierarchy and action understandable before decoration is added.
+2. **Liquid Motion · Behavior**: Continuity, layered neutral glass, and purposeful motion make state and believable mass perceptible without becoming the only carrier of meaning. Every interaction has a complete reduced-motion state.
+3. **Scientific Clarity · Communication**: Disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace make meaning legible, ordered, and unmistakable. Swiss modernism and the International Typographic Style are the informing tradition. Every screen remains complete and useful without relying on color, glass, or motion.
 
 ## Hard rules (follow these literally to stay on-brand)
 

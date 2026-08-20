@@ -4,13 +4,11 @@
 
 **Structured framing. Liquid motion. Scientific clarity.**
 
-Structured Liquidity is a trifecta of three orthogonal design dimensions, represented by the three visible faces of its cube:
+Structured Liquidity is a trifecta of three orthogonal design tenets, represented by the three visible faces of its cube:
 
-1. **Structured Framing:** How information is organized—load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows.
-2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible.
-3. **Scientific Clarity:** How meaning is communicated—disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. It is informed by Swiss modernism and the International Typographic Style, whose purpose is to make information legible, ordered, and unmistakable.
-
-Scientific Clarity includes the system's quality test: every screen remains complete, legible, and useful without color, glass, or motion.
+1. **Structured Framing:** How information is organized—load-bearing borders, square geometry, rational grids, clear affordances, and selective flat shadows. The frame makes hierarchy and action understandable before decoration is added.
+2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible. Motion never becomes the only carrier of meaning, and every interaction has a complete reduced-motion state.
+3. **Scientific Clarity:** How meaning is communicated—disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. It is informed by Swiss modernism and the International Typographic Style, whose purpose is to make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
 
 ## Decision ownership
 

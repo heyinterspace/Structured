@@ -82,7 +82,7 @@ export function Adopt() {
             llms.txt
           </span>
           <p>
-            The AI-discoverable summary: the three pillars, the hard rules, the
+            The AI-discoverable summary: the three tenets, the hard rules, the
             tokens, and the font pairings, all in one Markdown file at the site
             root.
           </p>
