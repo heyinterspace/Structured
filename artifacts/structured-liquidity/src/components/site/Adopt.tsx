@@ -21,7 +21,8 @@ Rules:
 - Flat offset shadows only: box-shadow: 5px 5px 0 0 #000, never blurred; reserve them for tactile affordances and intentional cutout layers.
 - Solid 2px black borders; the edge defines the object.
 - Exactly one accent (#a388ee) carries all emphasis.
-- Liquid glass = backdrop-filter blur over neutral translucent surfaces; use it to communicate state and depth, not as a default card treatment.
+- Default information surfaces are flat; do not use decorative gradients as shorthand for liquidity.
+- Liquid Motion belongs in shared markers and transitions between navbar actions, menu options, tabs, filters, overlays, and page areas. Reserve neutral translucency and backdrop blur for those moving state boundaries.
 - Destructive surfaces are neutral gray (#242424), never red.
 - Type: Archivo for headings/buttons/brand and body, IBM Plex Mono for labels and data.
 - Scientific Clarity: communicate meaning with a rational grid, exact alignment, measured line lengths, purposeful whitespace, evidence, and one dominant statement per view.
