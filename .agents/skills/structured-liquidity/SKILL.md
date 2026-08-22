@@ -107,7 +107,7 @@ Use the installable `portfolio-card` component for company, investment, and vent
 npx shadcn@latest add https://structured.glass/r/portfolio-card.json
 ```
 
-Use `PortfolioGrid` with `PortfolioCard` and its anatomy exports. Keep card bodies aligned within the grid, use a consistent media plate for logo normalization, and use the action only when the destination is real. Unavailable or pre-launch companies render as non-link cards with their status exposed.
+Use `PortfolioGrid` with `PortfolioCard` and its anatomy exports. Put `PortfolioCardTags` inside `PortfolioCardMedia` so state and category labels overlay the image plate instead of changing the body height. Keep card bodies aligned within the grid, use a consistent media plate for logo normalization, and use the action only when the destination is real. Unavailable or pre-launch companies render as non-link cards with their status exposed.
 
 **B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load Inter and Space Mono; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
 

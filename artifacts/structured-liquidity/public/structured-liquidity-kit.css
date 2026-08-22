@@ -692,6 +692,7 @@
   outline-offset: 4px;
 }
 .sl-portfolio-card-media {
+  position: relative;
   display: grid;
   min-height: 9.5rem;
   flex: 0 0 9.5rem;
@@ -731,8 +732,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
-  margin-bottom: 0.7rem;
 }
+.sl-portfolio-card-media > .sl-portfolio-card-tags {
+  position: absolute;
+  inset: 0.65rem 0.65rem auto;
+  z-index: 1;
+}
+.sl-portfolio-card-body > .sl-portfolio-card-tags { margin-bottom: 0.7rem; }
 .sl-portfolio-card-tag {
   padding: 0.28rem 0.45rem;
   border: 1px solid rgb(var(--edge));
@@ -744,6 +750,7 @@
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
+  box-shadow: 2px 2px 0 0 var(--hard-shadow);
 }
 .sl-portfolio-card-title {
   margin: 0;

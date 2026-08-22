@@ -182,13 +182,13 @@ export function KitDataDisplay() {
           <PortfolioGrid>
             <PortfolioCard href="https://example.com" aria-label="Visit Northstar">
               <PortfolioCardMedia>
-                <PortfolioCardLogo>NS</PortfolioCardLogo>
-              </PortfolioCardMedia>
-              <PortfolioCardBody>
                 <PortfolioCardTags>
                   <PortfolioCardTag>Live</PortfolioCardTag>
                   <PortfolioCardTag>Fintech</PortfolioCardTag>
                 </PortfolioCardTags>
+                <PortfolioCardLogo>NS</PortfolioCardLogo>
+              </PortfolioCardMedia>
+              <PortfolioCardBody>
                 <PortfolioCardTitle>Northstar</PortfolioCardTitle>
                 <PortfolioCardDescription>
                   Infrastructure that helps operators move money with clarity.
@@ -198,12 +198,12 @@ export function KitDataDisplay() {
             </PortfolioCard>
             <PortfolioCard>
               <PortfolioCardMedia>
-                <PortfolioCardLogo>FV</PortfolioCardLogo>
-              </PortfolioCardMedia>
-              <PortfolioCardBody>
                 <PortfolioCardTags>
                   <PortfolioCardTag>Private preview</PortfolioCardTag>
                 </PortfolioCardTags>
+                <PortfolioCardLogo>FV</PortfolioCardLogo>
+              </PortfolioCardMedia>
+              <PortfolioCardBody>
                 <PortfolioCardTitle>Field View</PortfolioCardTitle>
                 <PortfolioCardDescription>
                   A research surface for turning evidence into decisions.
