@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Sparkles } from "lucide-react";
 import {
   SectionHeader,
@@ -54,8 +55,7 @@ export function KitLayoutStructure() {
           <ProfileCard
             label="Profile pattern"
             status="Building"
-            imageSrc="/construct-profile.jpg"
-            imageAlt="Daniel Levine"
+            initials="DL"
             summary="Product leader building collaborative ways to work with frontier technology."
             facts={[
               { label: "Focus", value: "Product · AI" },
@@ -167,4 +167,3 @@ export function KitLayoutStructure() {
     </div>
   );
 }
-import { useState } from "react";

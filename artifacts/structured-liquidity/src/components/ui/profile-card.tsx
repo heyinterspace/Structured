@@ -12,13 +12,14 @@ export interface ProfileCardProps extends Omit<
 > {
   label?: string;
   status?: string;
-  imageSrc: string;
-  imageAlt: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  initials?: string;
   summary: React.ReactNode;
   facts: ProfileCardFact[];
 }
 
-/** Field-sourced profile summary card: portrait, concise positioning, and scannable facts. */
+/** Field-sourced profile summary card: privacy-safe identity, concise positioning, and scannable facts. */
 export const ProfileCard = React.forwardRef<HTMLElement, ProfileCardProps>(
   (
     {
@@ -26,6 +27,7 @@ export const ProfileCard = React.forwardRef<HTMLElement, ProfileCardProps>(
       status = "Active",
       imageSrc,
       imageAlt,
+      initials = "SL",
       summary,
       facts,
       className,
@@ -39,7 +41,13 @@ export const ProfileCard = React.forwardRef<HTMLElement, ProfileCardProps>(
         <span className="sl-profile-card-status">{status}</span>
       </header>
       <div className="sl-profile-card-image">
-        <img src={imageSrc} alt={imageAlt} />
+        {imageSrc ? (
+          <img src={imageSrc} alt={imageAlt ?? ""} />
+        ) : (
+          <span className="sl-profile-card-initials" aria-label="Profile initials">
+            {initials}
+          </span>
+        )}
       </div>
       <p className="sl-profile-card-summary">{summary}</p>
       <dl className="sl-profile-card-facts">

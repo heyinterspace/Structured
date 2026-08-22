@@ -136,14 +136,18 @@
   pointer-events: none;
   filter: drop-shadow(var(--hard-x) var(--hard-y) 0 rgba(var(--edge), 0.3));
 }
-.lw-glass { fill: color-mix(in srgb, var(--accent) 12%, transparent); }
-.lw-wave-back { fill: color-mix(in srgb, var(--accent) 55%, white 14%); opacity: 0.7; }
+.lw-glass { fill: color-mix(in srgb, var(--accent) 20%, transparent); }
+.lw-wave-back { fill: color-mix(in srgb, var(--accent) 62%, white 18%); opacity: 0.74; }
 .lw-wave-front { fill: var(--accent); }
-.lw-shine { fill: none; stroke: color-mix(in srgb, white 70%, var(--accent)); stroke-width: 2.5; opacity: 0.5; vector-effect: non-scaling-stroke; }
+.lw-shine { fill: none; stroke: color-mix(in srgb, white 82%, var(--accent)); stroke-width: 2.5; opacity: 0.72; vector-effect: non-scaling-stroke; }
+.lw-meniscus { fill: none; stroke: color-mix(in srgb, white 54%, var(--accent)); stroke-width: 5; opacity: 0.28; vector-effect: non-scaling-stroke; }
+.lw-caustic { fill: none; stroke: color-mix(in srgb, white 68%, var(--accent)); stroke-width: 1.25; opacity: 0.18; vector-effect: non-scaling-stroke; }
+.lw-caustic-a { animation: lw-flow 13s linear infinite reverse; }
+.lw-caustic-b { animation: lw-flow 19s linear infinite; }
 .lw-ripple { fill: none; stroke: color-mix(in srgb, white 55%, var(--accent)); stroke-width: 1.6; vector-effect: non-scaling-stroke; }
 .lw-ripple-a { opacity: 0.32; animation: lw-flow 11s linear infinite; }
 .lw-ripple-b { opacity: 0.22; animation: lw-flow 17s linear infinite reverse; }
-.lw-outline { fill: none; stroke: rgb(var(--edge)); stroke-width: 2; paint-order: stroke; vector-effect: non-scaling-stroke; }
+.lw-outline { fill: none; stroke: color-mix(in srgb, rgb(var(--edge)) 82%, var(--ink)); stroke-width: 2.6; paint-order: stroke; vector-effect: non-scaling-stroke; }
 
 .lw-slosh { transform-box: fill-box; transform-origin: center; will-change: transform; }
 .lw-bob { animation: lw-bob 10s ease-in-out infinite; }
@@ -159,7 +163,7 @@
   50% { transform: translateY(calc(var(--amp, 6px) * -1)); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .lw-bob, .lw-wave-front, .lw-wave-back, .lw-shine, .lw-ripple { animation: none; }
+  .lw-bob, .lw-wave-front, .lw-wave-back, .lw-shine, .lw-ripple, .lw-meniscus, .lw-caustic { animation: none; }
   .lw-slosh { transform: none !important; }
 }
 

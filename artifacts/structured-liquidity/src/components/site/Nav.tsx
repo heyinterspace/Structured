@@ -1,9 +1,15 @@
 import { useCallback, useEffect, useRef } from "react";
-import { Sparkles, Github } from "lucide-react";
+import { Bot, Blocks, Github, Sparkles, Waypoints } from "lucide-react";
 import { Hypercube } from "./liquid";
 import { InstallButton } from "./InstallButton";
 
 const GITHUB = "https://github.com/heyinterspace/Structured";
+const NAV_ITEMS = [
+  { label: "Principles", href: "#manifesto", icon: Waypoints },
+  { label: "Components", href: "#components", icon: Blocks },
+  { label: "Showcase", href: "#showcase", icon: Sparkles },
+  { label: "For agents", href: "#adopt", icon: Bot },
+] as const;
 
 export function Nav() {
   const navRef = useRef<HTMLElement>(null);
@@ -48,42 +54,37 @@ export function Nav() {
         <Hypercube />
         <span className="name">Structured Liquidity</span>
       </a>
-      <div
-        className="links"
-        ref={linksRef}
-        onPointerLeave={() => positionMarker(0)}
-        onBlur={(event) => {
-          if (!event.currentTarget.contains(event.relatedTarget)) positionMarker(0);
-        }}
-      >
-        <span className="nav-liquid-marker" aria-hidden="true" />
-        <span
-          className="nav-action-slot"
-          onPointerEnter={() => positionMarker(0)}
-          onFocus={() => positionMarker(0)}
+      <div className="nav-cluster">
+        <div
+          className="links"
+          ref={linksRef}
+          onPointerLeave={() => positionMarker(0)}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) positionMarker(0);
+          }}
         >
-          <InstallButton className="btn nav-cta" />
-        </span>
-        <span
-          className="nav-action-slot"
-          onPointerEnter={() => positionMarker(1)}
-          onFocus={() => positionMarker(1)}
-        >
-          <a className="btn nav-cta" href={GITHUB} target="_blank" rel="noopener">
+          <span className="nav-liquid-marker" aria-hidden="true" />
+          {NAV_ITEMS.map(({ label, href, icon: Icon }, index) => (
+            <span
+              className="nav-action-slot"
+              onPointerEnter={() => positionMarker(index)}
+              onFocus={() => positionMarker(index)}
+              key={href}
+            >
+              <a href={href}>
+                <Icon />
+                <span className="nav-label">{label}</span>
+              </a>
+            </span>
+          ))}
+        </div>
+        <div className="nav-utilities">
+          <InstallButton className="btn nav-utility" label="Install" />
+          <a className="btn nav-utility" href={GITHUB} target="_blank" rel="noopener">
             <Github />
             Source
           </a>
-        </span>
-        <span
-          className="nav-action-slot"
-          onPointerEnter={() => positionMarker(2)}
-          onFocus={() => positionMarker(2)}
-        >
-          <a className="btn nav-cta" href="#showcase">
-            <Sparkles />
-            Showcase
-          </a>
-        </span>
+        </div>
       </div>
       <span className="nav-page-progress" aria-hidden="true" />
     </nav>

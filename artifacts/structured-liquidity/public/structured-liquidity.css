@@ -1,6 +1,6 @@
 /* ============================================================
    STRUCTURED LIQUIDITY — Neobrutalist structure. Liquid motion.
-   Scientific clarity. This stylesheet IS
+   Scientific modern clarity. This stylesheet IS
    the specimen.
    ============================================================ */
 
@@ -21,7 +21,7 @@
   --body-surface: var(--bg);
   --floating-ui-clearance: 96px;
 
-  /* ---- Scientific Clarity, informed by Swiss modernism and the International Typographic Style ---- */
+  /* ---- Scientific Modern Clarity, informed by Swiss modernism and the International Typographic Style ---- */
   --text-display-xl: clamp(4.2rem, 10.5vw, 9.5rem);
   --text-display-lg: clamp(2.6rem, 5.5vw, 5.25rem);
   --measure-reading: 62ch;
@@ -64,10 +64,12 @@
 }
 
 [data-mode="dark"] {
-  --bg: #171717;
-  --bg-2: #0f0f0f;
-  --ink: #f3f1eb;
-  --ink-dim: #aaa9a4;
+  /* Dark mode is color-responsive: the active accent tints the atmospheric
+     field while tactile components remain charcoal. There is no black mode. */
+  --bg: color-mix(in srgb, var(--accent) 18%, #100b16);
+  --bg-2: color-mix(in srgb, var(--accent) 27%, #15101c);
+  --ink: #f6f2f8;
+  --ink-dim: #b9b0bf;
   --edge: 0 0 0;
   --hard-shadow: #000000;
   --neg: #343434;
@@ -248,21 +250,27 @@ section {
 }
 .section-head {
   display: grid;
-  grid-template-columns: minmax(150px, 2fr) minmax(0, 7fr);
+  grid-template-columns: minmax(0, 5fr) minmax(280px, 4fr);
+  grid-template-rows: auto auto;
   column-gap: var(--grid-gutter);
   max-width: none;
   margin-bottom: clamp(2rem, 4vw, 4rem);
 }
 .section-head .eyebrow {
   grid-column: 1;
+  grid-row: 1;
   align-self: start;
+  margin-bottom: 0.8rem;
 }
-.section-head .section-title,
+.section-head .section-title {
+  grid-column: 1;
+  grid-row: 2;
+}
 .section-head .lead {
   grid-column: 2;
-}
-.section-head .lead {
-  margin-top: 1rem;
+  grid-row: 1 / span 2;
+  align-self: end;
+  margin: 0;
 }
 @media (max-width: 720px) {
   .section-head {
@@ -272,10 +280,9 @@ section {
   .section-head .section-title,
   .section-head .lead {
     grid-column: 1;
+    grid-row: auto;
   }
-  .section-head .section-title {
-    margin-top: 1.25rem;
-  }
+  .section-head .lead { margin-top: 1rem; }
 }
 
 .reveal {

@@ -58,7 +58,7 @@ export function Hero() {
           role="img"
           aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity."
         >
-          <Hypercube className="hero-cube" faceLabels={["01", "02", "03"]} />
+          <Hypercube className="hero-cube" faceLabels={["1", "2", "3"]} />
         </div>
       </div>
     </header>

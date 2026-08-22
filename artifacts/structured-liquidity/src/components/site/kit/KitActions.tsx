@@ -5,7 +5,6 @@ import {
   Ghost,
   Trash2,
   ExternalLink,
-  Ban,
   Bold,
   Italic,
   Underline,
@@ -20,7 +19,6 @@ import { Menubar } from "@/components/ui/menubar";
 import { Toggle } from "@/components/ui/toggle";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { Toolbar, ToolbarSeparator } from "@/components/ui/toolbar";
-import { Spinner } from "@/components/ui/spinner";
 
 export function KitActions() {
   return (
@@ -46,22 +44,14 @@ export function KitActions() {
         </div>
 
         <div className="glass kit-cell w8">
-          <span className="kit-cap">Button · variants &amp; sizes</span>
-          <div className="kit-row">
+          <span className="kit-cap">Button · variants</span>
+          <div className="kit-row sl-button-specimen">
             <Button variant="default"><Plus />Primary</Button>
             <Button variant="secondary"><Copy />Secondary</Button>
             <Button variant="outline"><Square />Outline</Button>
             <Button variant="ghost"><Ghost />Ghost</Button>
             <Button variant="destructive"><Trash2 />Delete</Button>
             <Button variant="link"><ExternalLink />Link</Button>
-          </div>
-          <div className="kit-row">
-            <Button variant="default" size="sm"><Plus />Small</Button>
-            <Button variant="default"><Plus />Default</Button>
-            <Button variant="default" size="lg"><Plus />Large</Button>
-            <Button variant="secondary" size="icon" aria-label="Add"><Plus /></Button>
-            <Button variant="default"><Spinner /> Loading</Button>
-            <Button variant="default" disabled><Ban />Disabled</Button>
           </div>
         </div>
 

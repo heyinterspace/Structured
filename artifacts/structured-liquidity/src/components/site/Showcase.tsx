@@ -21,8 +21,16 @@ interface Adopter {
 }
 
 const ADOPTERS = adopterRegistry.projects as Adopter[];
-const SHOWCASE = ADOPTERS.filter(
-  (project) => project.lifecycle === "live" || project.id === "observatory",
+const SHOWCASE_IDS = [
+  "interspace-ventures",
+  "cosmograph",
+  "observatory",
+  "exobase",
+  "construct",
+  "rampart",
+] as const;
+const SHOWCASE = SHOWCASE_IDS.map((id) => ADOPTERS.find((project) => project.id === id)).filter(
+  (project): project is Adopter => Boolean(project),
 );
 
 const STATUS_LABEL: Record<RouteStatus, string> = {
@@ -68,8 +76,13 @@ function ProjectCard({ project }: { project: Adopter }) {
           <div className="vbody">
             <p className="show-card-desc">{project.description}</p>
             <span className="show-card-cta">
-              {project.href ? `View ${project.name}` : `Tracking ${project.domain}`}{" "}
-              <span aria-hidden="true">→</span>
+              {project.href ? (
+                <>
+                  View {project.name} <span aria-hidden="true">→</span>
+                </>
+              ) : (
+                "Structured Liquidity field study"
+              )}
             </span>
           </div>
         </div>

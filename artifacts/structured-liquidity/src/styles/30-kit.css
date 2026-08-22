@@ -1000,6 +1000,8 @@
   content: "";
 }
 .sl-profile-card-image {
+  display: grid;
+  place-items: center;
   aspect-ratio: 1.55 / 1;
   overflow: hidden;
   border-bottom: var(--border-w) solid rgb(var(--edge));
@@ -1012,6 +1014,18 @@
   object-fit: cover;
   object-position: center 24%;
   filter: grayscale(1) contrast(1.04);
+}
+.sl-profile-card-initials {
+  display: grid;
+  place-items: center;
+  width: clamp(5rem, 24%, 7rem);
+  aspect-ratio: 1;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 5px 5px 0 var(--hard-shadow);
+  font: 750 clamp(1.5rem, 4vw, 2.4rem)/1 var(--display);
+  letter-spacing: -0.05em;
 }
 .sl-profile-card-summary {
   margin: 0;

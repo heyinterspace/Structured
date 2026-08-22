@@ -204,8 +204,8 @@
       "$description": "Color-responsive dark-mode overrides applied when <html data-mode=\"dark\">. The page field is derived from the active accent; there is no separate black mode.",
       "color": {
         "$type": "color",
-        "bg": { "$value": "color-mix(in srgb, var(--accent) 8%, #0d0a11)", "$extensions": { "cssVar": "--bg" } },
-        "bg2": { "$value": "color-mix(in srgb, var(--accent) 14%, #100d14)", "$extensions": { "cssVar": "--bg-2" } },
+        "bg": { "$value": "color-mix(in srgb, var(--accent) 18%, #100b16)", "$extensions": { "cssVar": "--bg" } },
+        "bg2": { "$value": "color-mix(in srgb, var(--accent) 27%, #15101c)", "$extensions": { "cssVar": "--bg-2" } },
         "ink": { "$value": "#f6f2f8", "$extensions": { "cssVar": "--ink" } },
         "inkDim": {
           "$value": "#b9b0bf",

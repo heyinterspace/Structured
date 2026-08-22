@@ -114,6 +114,38 @@
       "candidatePatterns": ["scientific-track-viewer", "evidence-report"]
     },
     {
+      "id": "construct",
+      "name": "Construct",
+      "domain": "construct.page",
+      "href": "https://construct.page",
+      "repository": "Interspace-Ventures/construct",
+      "lifecycle": "live",
+      "routeStatus": "verified",
+      "tag": "Profile network",
+      "shot": "construct-page.png",
+      "shotAlt": "Construct profile network landing page",
+      "description": "A profile network built around concise identity, useful context, and legible professional storytelling, using a restrained editorial grid and tactile controls.",
+      "adoption": ["neobrutalist-structure", "scientific-clarity"],
+      "absorbedComponents": ["profile-card", "profile-header", "section-header"],
+      "candidatePatterns": ["profile-directory"]
+    },
+    {
+      "id": "rampart",
+      "name": "Rampart",
+      "domain": "rampart.fit",
+      "href": null,
+      "repository": null,
+      "lifecycle": "staging",
+      "routeStatus": "concept",
+      "tag": "Fitness platform",
+      "shot": null,
+      "shotAlt": "Rampart fitness platform",
+      "description": "A fitness product that brings decisive typography, structured framing, and a sharply limited color system into the Structured Liquidity field network.",
+      "adoption": ["neobrutalist-structure", "scientific-clarity"],
+      "absorbedComponents": [],
+      "candidatePatterns": []
+    },
+    {
       "id": "dropship",
       "name": "Dropship",
       "domain": "dropship.wtf",
