@@ -13,12 +13,24 @@ import { Footer } from "@/components/site/Footer";
 import { Tweaker } from "@/components/site/Tweaker";
 
 export function App() {
+  const isStaging =
+    window.location.hostname === "staging.structured.glass" ||
+    import.meta.env.VITE_DEPLOYMENT_ENVIRONMENT === "staging";
+
   useEffect(() => {
     initBehaviors();
   }, []);
 
   return (
     <ToastProvider>
+      {isStaging ? (
+        <div
+          className="staging-environment-label"
+          aria-label="Staging environment"
+        >
+          Staging
+        </div>
+      ) : null}
       <Backdrop />
       <Nav />
       <Hero />

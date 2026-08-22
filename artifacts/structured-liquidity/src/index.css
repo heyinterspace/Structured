@@ -30,3 +30,21 @@
   --font-body: var(--body);
   --font-mono: var(--mono);
 }
+
+.staging-environment-label {
+  position: fixed;
+  z-index: 10000;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  padding: 0.45rem 0.65rem;
+  border: var(--border-w) solid rgb(var(--edge));
+  background: var(--accent);
+  color: var(--accent-ink);
+  box-shadow: 3px 3px 0 0 var(--hard-shadow);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
