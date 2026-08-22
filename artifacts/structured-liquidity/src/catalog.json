@@ -152,6 +152,20 @@
       ]
     },
     {
+      "name": "Portfolio card",
+      "registry": "portfolio-card",
+      "cap": "Portfolio card",
+      "category": "data-display",
+      "status": "stable",
+      "tags": [
+        "display",
+        "portfolio"
+      ],
+      "kinds": [
+        "display"
+      ]
+    },
+    {
       "name": "Waveform",
       "registry": "waveform",
       "cap": "Waveform",

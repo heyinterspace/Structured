@@ -99,6 +99,16 @@ npx shadcn@latest add https://structured.glass/r/button.json                  # 
 
 Each `registry:ui` item is a plain React component (no Radix) that emits the SL classes and declares the base style as a `registryDependency`, so the CSS comes along. The registry index lives at `/registry.json`.
 
+### Portfolio-grid default
+
+Use the installable `portfolio-card` component for company, investment, and venture grids. Its information hierarchy is persistent: logo or identity mark, company name, one concise description, state or category tags, and the primary action are visible without hover. Hover and press may reinforce tactility, but must never reveal information that is otherwise unavailable, especially on touch devices.
+
+```bash
+npx shadcn@latest add https://structured.glass/r/portfolio-card.json
+```
+
+Use `PortfolioGrid` with `PortfolioCard` and its anatomy exports. Keep card bodies aligned within the grid, use a consistent media plate for logo normalization, and use the action only when the destination is real. Unavailable or pre-launch companies render as non-link cards with their status exposed.
+
 **B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load Inter and Space Mono; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
 
 ## Anatomy of a stateful glass surface inside a rigid frame
