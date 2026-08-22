@@ -19,22 +19,21 @@ export function Hero() {
           </h1>
           <p className="lead reveal">
             <em>
-              Neobrutalism. Liquid motion. Scientific clarity.
+              Neobrutalist structure. Liquid motion. Scientific modern clarity.
             </em>{" "}
-            Framing organizes information. Motion makes the system's behavior
-            perceptible. Clarity communicates meaning through ordered,
-            unmistakable hierarchy. Three visible faces, one coherent
-            interface.
+            Structure makes the interface tangible. Motion makes changing state
+            perceptible. Clarity makes information ordered and unmistakable.
+            Three visible faces, one coherent interface.
           </p>
           <div className="hero-tags reveal">
             <span className="tag">
-              <b>01</b> Neobrutalism
+              <b>01</b> Neobrutalist structure
             </span>
             <span className="tag">
               <b>02</b> Liquid Motion
             </span>
             <span className="tag">
-              <b>03</b> Scientific Clarity
+              <b>03</b> Scientific Modern Clarity
             </span>
           </div>
           <div className="hero-cta reveal">
@@ -57,7 +56,7 @@ export function Hero() {
         <div
           className="hero-cube-wrap"
           role="img"
-          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalism, Liquid Motion, and Scientific Clarity."
+          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity."
         >
           <Hypercube className="hero-cube" faceLabels={["01", "02", "03"]} />
         </div>

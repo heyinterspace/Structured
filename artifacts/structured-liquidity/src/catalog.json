@@ -1,6 +1,6 @@
 {
   "name": "Structured Liquidity component catalog",
-  "description": "Single source of truth for the component inventory and how the live gallery is organized (category, status, tags). The gallery (bindGallery in src/lib/behaviors.ts) derives its filter chips and grouping from this file; each component's `cap` must match its .kit-cap text.",
+  "description": "Single source of truth for the installable component inventory and the curated live gallery (category, status, tags, showcase exclusions). The gallery (bindGallery in src/lib/behaviors.ts) derives its filter chips and grouping from this file; each rendered component's `cap` must match its .kit-cap text.",
   "categories": [
     {
       "key": "actions",
@@ -281,9 +281,9 @@
       ]
     },
     {
-      "name": "Progress · skeleton",
+      "name": "Progress",
       "registry": "progress",
-      "cap": "Progress · skeleton",
+      "cap": "Progress",
       "category": "data",
       "status": "stable",
       "tags": [
@@ -294,35 +294,9 @@
       ]
     },
     {
-      "name": "Skeleton · card",
+      "name": "Data skeleton",
       "registry": "skeleton",
-      "cap": "Skeleton · card",
-      "category": "data",
-      "status": "stable",
-      "tags": [
-        "display"
-      ],
-      "kinds": [
-        "feedback"
-      ]
-    },
-    {
-      "name": "Skeleton · text",
-      "registry": "skeleton",
-      "cap": "Skeleton · text",
-      "category": "data",
-      "status": "stable",
-      "tags": [
-        "display"
-      ],
-      "kinds": [
-        "feedback"
-      ]
-    },
-    {
-      "name": "Skeleton · list",
-      "registry": "skeleton",
-      "cap": "Skeleton · list",
+      "cap": "Data skeleton",
       "category": "data",
       "status": "stable",
       "tags": [
@@ -513,21 +487,6 @@
       ]
     },
     {
-      "name": "Native select",
-      "registry": "native-select",
-      "cap": "Native select",
-      "category": "data",
-      "status": "stable",
-      "tags": [
-        "form",
-        "interactive"
-      ],
-      "kinds": [
-        "form",
-        "interactive"
-      ]
-    },
-    {
       "name": "Number field",
       "registry": "number-field",
       "cap": "Number field",
@@ -558,9 +517,9 @@
       ]
     },
     {
-      "name": "Select",
+      "name": "Select / options",
       "registry": "select",
-      "cap": "Select",
+      "cap": "Select / options",
       "category": "data",
       "status": "stable",
       "tags": [
@@ -713,19 +672,6 @@
       "kinds": []
     },
     {
-      "name": "Tabs",
-      "registry": "tabs",
-      "cap": "Tabs",
-      "category": "navigation",
-      "status": "stable",
-      "tags": [
-        "navigation"
-      ],
-      "kinds": [
-        "interactive"
-      ]
-    },
-    {
       "name": "Alert dialog",
       "registry": "alert-dialog",
       "cap": "Alert dialog",
@@ -771,20 +717,6 @@
       "name": "Drawer",
       "registry": "drawer",
       "cap": "Drawer",
-      "category": "overlays",
-      "status": "stable",
-      "tags": [
-        "overlay",
-        "interactive"
-      ],
-      "kinds": [
-        "interactive"
-      ]
-    },
-    {
-      "name": "Dropdown menu",
-      "registry": "dropdown-menu",
-      "cap": "Dropdown menu",
       "category": "overlays",
       "status": "stable",
       "tags": [
@@ -953,39 +885,18 @@
       ]
     },
     {
-      "name": "Tab bar & drawer",
-      "registry": "mobile-nav",
-      "cap": "Tab bar & drawer",
-      "category": "navigation",
+      "name": "Profile card",
+      "registry": "profile-card",
+      "cap": "Profile card",
+      "category": "layout",
       "status": "stable",
-      "tags": [
-        "navigation",
-        "interactive"
-      ],
-      "kinds": [
-        "interactive",
-        "mobile"
-      ]
+      "tags": ["display", "identity", "field-sourced", "profile"],
+      "kinds": ["display"]
     },
     {
-      "name": "Floating glass tab bar",
+      "name": "Floating tab bar & drawer",
       "registry": "mobile-nav",
-      "cap": "Floating glass tab bar",
-      "category": "navigation",
-      "status": "stable",
-      "tags": [
-        "navigation",
-        "interactive"
-      ],
-      "kinds": [
-        "interactive",
-        "mobile"
-      ]
-    },
-    {
-      "name": "Segmented sub-nav",
-      "registry": "mobile-nav",
-      "cap": "Segmented sub-nav",
+      "cap": "Floating tab bar & drawer",
       "category": "navigation",
       "status": "stable",
       "tags": [
@@ -1140,6 +1051,34 @@
       "kinds": ["display"]
     }
   ],
+  "showcase": {
+    "exclude": [
+      "Button group",
+      "Avatar",
+      "Empty",
+      "Fonts",
+      "Item",
+      "Kbd",
+      "Marquee",
+      "Meter",
+      "Spinner",
+      "Collapsible",
+      "Field",
+      "Fieldset",
+      "Label",
+      "Aspect ratio",
+      "Separator",
+      "Breadcrumb",
+      "Menubar",
+      "Pagination",
+      "Drawer",
+      "Checkbox group",
+      "Keycap tiles",
+      "Profile header",
+      "Framework attribution",
+      "Logo grid"
+    ]
+  },
   "facets": [
     {
       "key": "interactive",

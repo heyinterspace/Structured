@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-A live, deployable specimen + landing page for **Structured Liquidity** — **Neobrutalism. Liquid motion. Scientific clarity.** Neobrutalism owns the physical structure of the interface: buttons, borders, navigation, footers, body containers, panels, square geometry, clear affordances, and selective flat shadows. Liquid Motion makes system behavior perceptible through shared markers and transitions between navbar actions, menu options, tabs, filters, overlays, and page areas without becoming the only carrier of meaning; default information surfaces remain flat, gradients are not shorthand for liquidity, and every interaction has a complete reduced-motion state. Scientific Clarity organizes information and communicates meaning through rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: information should be legible, ordered, and unmistakable, and every screen remains complete without relying on color, glass, or motion. These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. The page is both the specimen and the documentation of the language, with a live in-page theme tweaker, and it **dogfoods its own React components**. It also publishes those components as a **shadcn-installable registry** at `/r/*.json`. Structured Liquidity is an Interspace Venture (est. 2026); the source is on GitHub at https://github.com/heyinterspace/Structured.
+A live, deployable specimen + landing page for **Structured Liquidity** — **Neobrutalist structure. Liquid motion. Scientific modern clarity.** Neobrutalist structure owns the physical frame of the interface: buttons, borders, navigation, footers, body containers, panels, square geometry, and selective flat shadows. Liquid Motion makes system behavior perceptible through shared markers and transitions between navbar actions, menu options, tabs, filters, overlays, and page areas without becoming the only carrier of meaning; default information surfaces remain flat, gradients are not shorthand for liquidity, and every interaction has a complete reduced-motion state. Scientific Modern Clarity organizes information and communicates meaning through rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: information should be legible, ordered, and unmistakable, and every screen remains complete without relying on color, glass, or motion. These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. The page is both the specimen and the documentation of the language, with a live in-page theme tweaker, and it **dogfoods its own React components**. It also publishes those components as a **shadcn-installable registry** at `/r/*.json`. Structured Liquidity is an Interspace Venture (est. 2026); the source is on GitHub at https://github.com/heyinterspace/Structured.
 
 ## Run & Operate
 
@@ -59,7 +59,7 @@ Cross-item URLs use `REGISTRY_BASE_URL` (default `https://structured.glass`). Th
 
 ## Product
 
-A single-page specimen + reference for the Structured Liquidity design language: it explains the trifecta in order—Neobrutalism as physical structure, Liquid Motion as behavior, Scientific Clarity as information and communication—demonstrates a full component kit, lets visitors retheme it live, and lets them install it via shadcn. The cube's three visible faces represent the trifecta; there is no fourth group.
+A single-page specimen + reference for the Structured Liquidity design language: it explains the trifecta in order—Neobrutalist structure as the physical frame, Liquid Motion as behavior, Scientific Modern Clarity as information and communication—demonstrates a curated component gallery backed by the full registry, lets visitors retheme it live, and lets them install it via shadcn. The cube's three visible faces represent the trifecta; there is no fourth group.
 
 ## Design language tokens (the knobs the page reads)
 
@@ -68,10 +68,10 @@ Defined in `src/styles/10-tokens-base.css` / `public/structured-liquidity.css` `
 - `--accent` (default `#a388ee`) + `--accent-ink` (luminance-derived black/white)
 - `--glass-blur` (18px), `--glass-tint` (rgb), `--glass-alpha`
 - `--border-w` (2px), `--hard-x`/`--hard-y` (7px, flat offset shadow), `--radius` (0px)
-- `--display` and `--body` (Archivo), `--mono` (IBM Plex Mono)
+- `--display` and `--body` (Inter), `--mono` (Space Mono)
 - `data-mode` attribute on `<html>`: `dark` | `light`
-- Tweaker ranges: blur 0–40, radius 0–40, border 0–5, shadow 0–16; accents `#a388ee #7c9cff #3dd7c8 #ffb454 #ff7a90`; fonts Archivo / Space Grotesk / Syne
-- **Canonical font roles** (Header · Body · Detail): `Archivo · Archivo · IBM Plex Mono`. Use a single disciplined grotesk across hierarchy and reading; reserve mono for labels, evidence, data, and code.
+- Tweaker ranges: blur 0–40, radius 0–40, border 0–5, shadow 0–16; accents `#a388ee #7c9cff #3dd7c8 #ffb454 #ff7a90`; typography stays fixed.
+- **Canonical font roles** (Header · Body · Detail): `Inter · Inter · Space Mono`. Use Inter across hierarchy and reading; reserve mono for labels, evidence, data, and code.
 
 ## User preferences
 

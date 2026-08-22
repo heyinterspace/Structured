@@ -12,16 +12,6 @@ import {
   EmptyTitle,
   EmptyDescription,
 } from "@/components/ui/empty";
-import {
-  FontPairings,
-  FontPair,
-  FontPairTitle,
-  FontPairFonts,
-  FontSpecimen,
-  FontRole,
-  FontName,
-  FontPairNote,
-} from "@/components/ui/fonts";
 import { Item, ItemBody, ItemTitle, ItemSubtitle } from "@/components/ui/item";
 import {
   Typography,
@@ -38,7 +28,7 @@ export function KitContentData() {
         <span className="kg-name">Content &amp; data</span>
         <span className="kg-rule"></span>
         <span className="kg-count">
-          Carousel · Chart · Collapsible · Empty · Fonts · Item · Typography
+          Carousel · Chart · Collapsible · Empty · Item · Typography
         </span>
       </div>
       <div className="kit-grid">
@@ -78,33 +68,6 @@ export function KitContentData() {
             </EmptyDescription>
             <Button size="sm">Import</Button>
           </Empty>
-        </div>
-
-        <div className="glass kit-cell w6 pairings-card">
-          <span className="kit-cap">Fonts</span>
-          <FontPairings>
-            <FontPair>
-              <FontPairTitle>Set 01 · Canonical</FontPairTitle>
-              <FontPairFonts>
-                <FontSpecimen role="header">
-                  <FontRole>Header</FontRole>
-                  <FontName className="ff-archivo">Archivo</FontName>
-                </FontSpecimen>
-                <FontSpecimen role="body">
-                  <FontRole>Body</FontRole>
-                  <FontName className="ff-archivo">Archivo</FontName>
-                </FontSpecimen>
-                <FontSpecimen role="detail">
-                  <FontRole>Detail</FontRole>
-                  <FontName className="ff-plexmono">IBM Plex Mono</FontName>
-                </FontSpecimen>
-              </FontPairFonts>
-              <FontPairNote>
-                A measured grotesk carries hierarchy and reading; a precise mono
-                is reserved for labels, evidence, data, and code.
-              </FontPairNote>
-            </FontPair>
-          </FontPairings>
         </div>
 
         <div className="glass kit-cell w6">

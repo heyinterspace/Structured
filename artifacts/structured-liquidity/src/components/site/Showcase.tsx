@@ -40,6 +40,13 @@ function ProjectCard({ project }: { project: Adopter }) {
         <span className="tl" />
         <span className="tl" />
         <span className="url">{project.domain}</span>
+        {project.lifecycle === "live" ? (
+          <span
+            className={`sl-badge ${project.routeStatus === "verified" ? "default" : "outline"}`}
+          >
+            {STATUS_LABEL[project.routeStatus]}
+          </span>
+        ) : null}
       </div>
       <div className="show-card-shot">
         {project.shot ? (
@@ -75,13 +82,6 @@ function ProjectCard({ project }: { project: Adopter }) {
           <span className="show-name">{project.name}</span>
           <span className="mono">{project.tag}</span>
         </div>
-        {project.lifecycle === "live" ? (
-          <span
-            className={`sl-badge ${project.routeStatus === "verified" ? "default" : "outline"}`}
-          >
-            {STATUS_LABEL[project.routeStatus]}
-          </span>
-        ) : null}
       </div>
     </>
   );

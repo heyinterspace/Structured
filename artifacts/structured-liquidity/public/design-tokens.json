@@ -1,5 +1,5 @@
 {
-  "$description": "Structured Liquidity design tokens for Structured Framing, Liquid Motion, and Scientific Clarity: the three-part trifecta represented by the cube's visible faces. W3C Design Tokens Community Group format. Each token carries its CSS custom-property name in $extensions.cssVar so an agent can apply it directly to :root.",
+  "$description": "Structured Liquidity design tokens for Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity: the three-part trifecta represented by the cube's visible faces. W3C Design Tokens Community Group format. Each token carries its CSS custom-property name in $extensions.cssVar so an agent can apply it directly to :root.",
   "color": {
     "$type": "color",
     "accent": {
@@ -110,7 +110,7 @@
     "$type": "fontFamily",
     "display": {
       "$value": [
-        "Archivo",
+        "Inter",
         "Helvetica Neue",
         "Arial",
         "system-ui",
@@ -121,7 +121,7 @@
     },
     "body": {
       "$value": [
-        "Archivo",
+        "Inter",
         "Helvetica Neue",
         "Arial",
         "system-ui",
@@ -132,7 +132,7 @@
     },
     "mono": {
       "$value": [
-        "IBM Plex Mono",
+        "Space Mono",
         "SFMono-Regular",
         "ui-monospace",
         "monospace"
@@ -201,14 +201,14 @@
   },
   "mode": {
     "dark": {
-      "$description": "Overrides applied when <html data-mode=\"dark\">. Apply these values on top of the light-first defaults above.",
+      "$description": "Color-responsive dark-mode overrides applied when <html data-mode=\"dark\">. The page field is derived from the active accent; there is no separate black mode.",
       "color": {
         "$type": "color",
-        "bg": { "$value": "#171717", "$extensions": { "cssVar": "--bg" } },
-        "bg2": { "$value": "#0f0f0f", "$extensions": { "cssVar": "--bg-2" } },
-        "ink": { "$value": "#f3f1eb", "$extensions": { "cssVar": "--ink" } },
+        "bg": { "$value": "color-mix(in srgb, var(--accent) 8%, #0d0a11)", "$extensions": { "cssVar": "--bg" } },
+        "bg2": { "$value": "color-mix(in srgb, var(--accent) 14%, #100d14)", "$extensions": { "cssVar": "--bg-2" } },
+        "ink": { "$value": "#f6f2f8", "$extensions": { "cssVar": "--ink" } },
         "inkDim": {
-          "$value": "#aaa9a4",
+          "$value": "#b9b0bf",
           "$extensions": { "cssVar": "--ink-dim" }
         },
         "negative": {

@@ -16,14 +16,6 @@ import {
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-} from "@/components/ui/dropdown-menu";
 import { Menubar } from "@/components/ui/menubar";
 import { Toggle } from "@/components/ui/toggle";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
@@ -36,7 +28,7 @@ export function KitActions() {
       <div className="kit-group-head">
         <span className="kg-name">Actions</span>
         <span className="kg-rule"></span>
-        <span className="kg-count">Badge · Button · Dropdown · Toggle</span>
+        <span className="kg-count">Badge · Button · Toggle · Toolbar</span>
       </div>
       <div className="kit-grid">
 
@@ -71,21 +63,6 @@ export function KitActions() {
             <Button variant="default"><Spinner /> Loading</Button>
             <Button variant="default" disabled><Ban />Disabled</Button>
           </div>
-        </div>
-
-        <div className="glass kit-cell w4">
-          <span className="kit-cap">Dropdown menu</span>
-          <DropdownMenu>
-            <DropdownMenuTrigger>Options</DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuLabel>My account</DropdownMenuLabel>
-              <DropdownMenuItem shortcut="⌘P">Profile</DropdownMenuItem>
-              <DropdownMenuItem shortcut="⌘,">Settings</DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Invite team</DropdownMenuItem>
-              <DropdownMenuItem>Sign out</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
         </div>
 
         <div className="glass kit-cell w4">

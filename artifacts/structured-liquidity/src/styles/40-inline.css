@@ -43,6 +43,7 @@
   .show-card-foot .show-id .show-name{font-size:.95rem;}
   .show-card-foot .show-id .mono{font-size:.68rem;color:var(--ink-dim);}
   .show-card-foot .sl-badge{margin-left:auto;flex:none;}
+  .browser-bar .sl-badge{margin-left:auto;flex:none;font-size:.56rem;padding:.18rem .4rem;}
   .show-project-mark{display:grid;place-items:center;background:var(--accent)!important;color:var(--accent-ink);font-family:var(--mono);font-size:.62rem;font-weight:700;}
   .show-registry-meta{display:flex;flex-wrap:wrap;gap:.55rem;margin:-1.2rem 0 1.2rem;}
   .show-registry-meta span{padding:.28rem .52rem;border:1.5px solid rgb(var(--edge));background:rgb(var(--glass-tint)/.05);font-family:var(--mono);font-size:.62rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-dim);}
@@ -194,10 +195,13 @@
   /* navbar + marquee menubar — application navigation modeled on universe.audio */
   .sl-navbar{display:flex;align-items:center;gap:0.7rem;flex-wrap:wrap;padding:0.55rem 0.7rem;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:rgba(var(--glass-tint),0.05);}
   .sl-navbar .nb-brand{display:flex;align-items:center;gap:0.5rem;font-family:var(--display);font-weight:800;letter-spacing:-0.02em;font-size:1rem;}
-  .sl-navbar .nb-links{display:flex;gap:0.15rem;flex-wrap:wrap;}
-  .sl-navbar .nb-links a{font-family:var(--mono);font-size:0.76rem;padding:0.4rem 0.7rem;color:var(--ink-dim);text-decoration:none;border-radius:var(--radius);}
-  .sl-navbar .nb-links a:hover{color:var(--ink);}
-  .sl-navbar .nb-links a[aria-current="page"]{background:var(--accent);color:var(--accent-ink);}
+  .sl-navbar .nb-links{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:0;isolation:isolate;border:1px solid rgb(var(--edge));}
+  .sl-navbar .nb-liquid-marker{position:absolute;inset-block:0;left:0;z-index:0;width:33.333%;transform:translateX(calc(var(--nb-index,0) * 100%));background:var(--accent);transition:transform var(--motion) var(--ease-liquid-over);pointer-events:none;}
+  .sl-navbar .nb-link{position:relative;z-index:1;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;font-family:var(--body);font-size:0.76rem;font-weight:650;padding:0.45rem 0.7rem;color:var(--ink-dim);background:transparent;border:0;border-left:1px solid color-mix(in srgb,rgb(var(--edge)) 35%,transparent);cursor:pointer;transition:color var(--motion-fast) var(--ease-liquid);}
+  .sl-navbar .nb-link:first-of-type{border-left:0;}
+  .sl-navbar .nb-link:hover{color:var(--ink);}
+  .sl-navbar .nb-link[aria-current="page"]{color:var(--accent-ink);}
+  .sl-navbar .nb-link svg{width:15px;height:15px;stroke-width:1.8;}
   .sl-navbar .nb-right{margin-left:auto;display:flex;align-items:center;gap:0.55rem;}
   @media (max-width:600px){ .sl-navbar .nb-right{margin-left:0;width:100%;flex-wrap:wrap;} }
 
@@ -233,26 +237,27 @@
     transition:grid-template-rows var(--motion) var(--ease-liquid);}
   .mn-drawer[data-open="true"]{grid-template-rows:1fr;border-bottom-width:var(--border-w);}
   .mn-drawer > div{min-height:0;display:flex;flex-direction:column;}
-  .mn-d-item{display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.85rem;font-family:var(--mono);font-size:0.78rem;color:var(--ink-dim);
-    text-decoration:none;border-top:1px solid color-mix(in srgb, rgb(var(--edge)) 40%, transparent);}
+  .mn-d-item{width:100%;display:flex;align-items:center;gap:0.6rem;padding:0.6rem 0.85rem;font-family:var(--body);font-size:0.78rem;color:var(--ink-dim);
+    text-align:left;text-decoration:none;background:transparent;border:0;border-top:1px solid color-mix(in srgb, rgb(var(--edge)) 40%, transparent);cursor:pointer;}
   .mn-d-item:first-child{border-top:0;}
   .mn-d-item svg{width:15px;height:15px;}
   .mn-d-item:hover{color:var(--ink);background:rgb(var(--glass-tint) / 0.12);}
-  .mn-screen{flex:1;display:flex;flex-direction:column;gap:0.55rem;padding:0.9rem 0.8rem;}
+  .mn-screen{flex:1;display:flex;flex-direction:column;gap:0.55rem;padding:0.9rem 0.8rem 5.2rem;}
   .mn-sk{border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);background:rgb(var(--glass-tint) / 0.05);}
   .mn-sk.tall{flex:1;min-height:60px;}
   .mn-sk.line{height:11px;}
   .mn-sk.line.short{width:55%;}
-  .mn-tabs{display:flex;border-top:var(--border-w) solid rgb(var(--edge));background:rgb(var(--glass-tint) / 0.10);
+  .mn-tabs{position:relative;display:flex;isolation:isolate;border-top:var(--border-w) solid rgb(var(--edge));background:rgb(var(--glass-tint) / 0.10);
     -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(150%);backdrop-filter:blur(var(--glass-blur)) saturate(150%);}
-  .mn-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:0.18rem;padding:0.5rem 0.2rem 0.45rem;cursor:pointer;color:var(--ink-dim);
+  .mn-tab-marker{position:absolute;inset-block:0;left:0;z-index:0;width:20%;transform:translateX(calc(var(--mn-tab-index,0) * 100%));background:var(--accent);transition:transform var(--motion) var(--ease-liquid-over);pointer-events:none;}
+  .mn-tab{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:0.18rem;padding:0.5rem 0.2rem 0.45rem;cursor:pointer;color:var(--ink-dim);
     background:none;border:0;border-right:1px solid color-mix(in srgb, rgb(var(--edge)) 40%, transparent);
     font-family:var(--mono);font-size:0.58rem;letter-spacing:0.02em;text-transform:uppercase;}
   .mn-tab:last-child{border-right:0;}
   .mn-tab svg{width:17px;height:17px;}
   .mn-tab:hover{color:var(--ink);}
-  .mn-tab.is-active{color:var(--accent-ink);background:var(--accent);}
-  @media (prefers-reduced-motion:reduce){ .mn-drawer{transition:none;} }
+  .mn-tab.is-active{color:var(--accent-ink);background:transparent;}
+  @media (prefers-reduced-motion:reduce){ .mn-drawer,.mn-tab-marker{transition:none;} }
 
   /* ── Mobile navigation · liquid-glass nav bars. Two specimens that float
      translucent glass over app content: a PRIMARY bottom tab bar hovering above
@@ -269,8 +274,8 @@
     background:rgb(var(--glass-tint) / calc(var(--glass-alpha) + 0.08));
     -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(160%);backdrop-filter:blur(var(--glass-blur)) saturate(160%);
     box-shadow:var(--hard-x) var(--hard-y) 0 0 var(--hard-shadow);}
-  .gnav-marker{position:absolute;top:0.3rem;bottom:0.3rem;left:0;z-index:0;width:var(--gnav-w,0);
-    transform:translateX(var(--gnav-x,0));background:var(--accent);border-radius:calc(var(--radius) * 0.7);
+  .gnav-marker{position:absolute;top:0.3rem;bottom:0.3rem;left:0;z-index:0;width:calc(100% / var(--gnav-count,4));
+    transform:translateX(calc(var(--gnav-index,0) * 100%));background:var(--accent);border-radius:calc(var(--radius) * 0.7);
     box-shadow:inset 0 0 0 var(--border-w) rgb(var(--glass-tint) / 0.5);
     transition:transform var(--motion) var(--ease-liquid-over),width var(--motion) var(--ease-liquid);}
   .gnav-tab{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;gap:0.16rem;
@@ -291,8 +296,8 @@
     border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);
     background:rgb(var(--glass-tint) / var(--glass-alpha));
     -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(160%);backdrop-filter:blur(var(--glass-blur)) saturate(160%);}
-  .snav-marker{position:absolute;top:0.22rem;bottom:0.22rem;left:0;z-index:0;width:var(--seg-w,0);
-    transform:translateX(var(--seg-x,0));background:rgb(var(--glass-tint) / 0.07);border-radius:calc(var(--radius) * 0.7);
+  .snav-marker{position:absolute;top:0.22rem;bottom:0.22rem;left:0;z-index:0;width:50%;
+    transform:translateX(calc(var(--seg-index,0) * 100%));background:rgb(var(--glass-tint) / 0.07);border-radius:calc(var(--radius) * 0.7);
     box-shadow:inset 0 0 0 var(--border-w) rgb(var(--glass-tint) / 0.7);
     transition:transform var(--motion) var(--ease-liquid-over),width var(--motion) var(--ease-liquid);}
   .snav-seg-btn{position:relative;z-index:1;flex:1;padding:0.4rem 0.3rem;border:0;background:none;cursor:pointer;white-space:nowrap;
@@ -466,8 +471,8 @@
   section[id], header[id]{scroll-margin-top:clamp(86px, 9vw, 104px);}
 
   /* ── Partner icon library (Lucide): leading icons are the default for navbars & buttons ── */
-  .nav .links a, .sl-navbar .nb-links a{display:inline-flex;align-items:center;gap:0.5em;}
-  .btn svg, .sl-btn svg, .nav .links a svg, .sl-navbar .nb-links a svg{
+  .nav .links a, .sl-navbar .nb-link{display:inline-flex;align-items:center;gap:0.5em;}
+  .btn svg, .sl-btn svg, .nav .links a svg, .sl-navbar .nb-link svg{
     width:1.05em;height:1.05em;flex:0 0 auto;stroke-width:2.25;}
   .sl-btn.icon svg{width:1.15em;height:1.15em;}
 
@@ -525,12 +530,12 @@
   /* ── Number field: numeric input flanked by hard stepper buttons.
      Behaviour (clamp, steppers, ↑/↓ keys) lives in the React app. ── */
   .sl-numfield{display:inline-flex;align-items:stretch;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:rgba(var(--glass-tint),0.06);overflow:hidden;}
-  .sl-numfield .nf-step{width:2.3rem;border:0;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:background 0.12s,color 0.12s;}
+  .sl-numfield .nf-step{width:2.3rem;min-width:2.3rem;flex:0 0 2.3rem;border:0;background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:background 0.12s,color 0.12s;}
   .sl-numfield .nf-step:hover{background:var(--accent);color:var(--accent-ink);}
   .sl-numfield .nf-step:first-child{border-right:var(--border-w) solid rgb(var(--edge));}
   .sl-numfield .nf-step:last-child{border-left:var(--border-w) solid rgb(var(--edge));}
   .sl-numfield .nf-step svg{width:1em;height:1em;}
-  .sl-numfield .nf-input{width:3.4rem;border:0;background:transparent;text-align:center;font-family:var(--mono);font-size:0.9rem;color:var(--ink);outline:none;}
+  .sl-numfield .nf-input{width:3.4rem;min-width:0;flex:0 0 3.4rem;border:0;background:transparent;text-align:center;font-family:var(--mono);font-size:0.9rem;color:var(--ink);outline:none;}
 
   /* ── Fieldset: bordered group of fields with a boxed accent legend ── */
   .sl-fieldset{border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:rgba(var(--glass-tint),0.05);padding:0.9rem 1rem 1rem;margin:0;display:flex;flex-direction:column;gap:0.7rem;}
@@ -545,7 +550,7 @@
   .sl-meter .mt-fill{height:100%;background:var(--accent);border-right:var(--border-w) solid rgb(var(--edge));}
   /* .sl-skel (verbatim kit CSS) uses legacy rgba(var(--glass-tint),a)/rgba(var(--edge),a); --glass-tint & --edge are space-separated triplets here, so that syntax is invalid and the shimmer renders transparent. Restore the gradient via background-image (keeps the verbatim background-size/animation) + border, mode-aware off --ink so it shows in both modes. */
   .sl-skel{background-image:linear-gradient(90deg,color-mix(in srgb,var(--ink) 6%,transparent) 25%,color-mix(in srgb,var(--ink) 14%,transparent) 37%,color-mix(in srgb,var(--ink) 6%,transparent) 63%);border:1px solid rgb(var(--edge) / 0.18);}
-  /* Radios square (not round) to match the design language's 90° corners; tracks the live --radius knob. Verbatim kit CSS hard-codes border-radius:50% on .sl-radio + its .dot. */
+  /* Radio selection fills the complete framed well; there is no nested dot. */
   .sl-radio,.sl-radio .dot{border-radius:var(--radius);}
   /* ── Field-sourced components: patterns internalized from the showcase sites (universe.audio, 2daysearly.xyz, samir.xyz) back into the kit ── */
   .sl-stat-strip{display:flex;flex-wrap:wrap;gap:1.4rem;}
@@ -602,6 +607,8 @@
   .sl-player .pl-vol{display:flex;align-items:center;gap:0.6rem;min-width:0;}
   .sl-player .pl-vol svg{width:1.05rem;height:1.05rem;color:var(--ink-dim);flex:none;}
   .sl-player .pl-vol .sl-slider{flex:1;min-width:0;}
+  .pl-volume-slider{position:relative;}
+  .pl-volume-slider input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;}
 
   /* ── Toolbar: a bar grouping controls (toggle groups, separators, buttons) ── */
   .sl-toolbar{display:flex;align-items:center;gap:0.3rem;flex-wrap:nowrap;padding:0.4rem 0.45rem;border:var(--border-w) solid rgb(var(--edge));border-radius:var(--radius);box-shadow:2px 2px 0 0 var(--hard-shadow);background:rgba(var(--glass-tint),0.06);overflow-x:auto;scrollbar-width:none;}
@@ -722,8 +729,11 @@
   .sl-ctx-menu .item .k{margin-left:auto;opacity:0.6;font-size:0.72rem;}
   .sl-ctx-menu .sep{height:1px;background:rgba(var(--edge),0.2);margin:0.3rem 0;}
 
-  .sl-drawer-overlay{align-items:end;justify-items:stretch;}
-  .sl-drawer{width:100%;padding:1.3rem 1.6rem 1.7rem;background:var(--bg-2);border-top:var(--border-w) solid rgb(var(--edge));box-shadow:0 -10px 0 0 rgba(0,0,0,0.2);transform:translateY(100%);transition:transform 0.28s cubic-bezier(.2,.9,.2,1);}
+  .sl-drawer-overlay{align-items:end;justify-items:stretch;z-index:2147483646;}
+  .sl-drawer{width:100%;padding:1.3rem 1.6rem max(1.7rem,env(safe-area-inset-bottom));background:var(--bg-2);border-top:var(--border-w) solid rgb(var(--edge));box-shadow:0 -10px 0 0 rgba(0,0,0,0.2);transform:translateY(100%);transition:transform 0.28s cubic-bezier(.2,.9,.2,1);}
+
+  .sl-sidebar-demo .sb-main{display:flex;flex-direction:column;gap:0.45rem;}
+  .sl-sidebar-demo .sb-main strong{font-family:var(--display);font-size:1rem;color:var(--ink);}
   .sl-drawer-overlay.open .sl-drawer{transform:none;}
   .sl-drawer .dr-grip{display:block;width:46px;height:5px;background:rgb(var(--edge));margin:0 auto 1rem;}
 
@@ -785,15 +795,6 @@
   .pairings .pf.is-detail .pf-name{font-size:0.95rem;font-weight:400;letter-spacing:0;}
   .pairings .pair-note{font-family:var(--mono);font-size:0.72rem;color:var(--ink-dim);margin-top:0.6rem;}
   /* Show each face in its own typeface so it's visible at a glance. */
-  .ff-archivo{font-family:"Inter","Helvetica Neue",sans-serif;}
-  .ff-outfit{font-family:"Inter","Helvetica Neue",sans-serif;}
-  .ff-syne{font-family:"Syne","Helvetica Neue",sans-serif;}
-  .ff-inter{font-family:"Inter","Helvetica Neue",sans-serif;}
-  .ff-bricolage{font-family:"Bricolage Grotesque","Helvetica Neue",sans-serif;}
-  .ff-jakarta{font-family:"Plus Jakarta Sans","Helvetica Neue",sans-serif;}
-  .ff-spacemono{font-family:"Space Mono",ui-monospace,monospace;font-weight:400;}
-  .ff-ibmplexmono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:400;}
-  .ff-jetbrainsmono{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:400;}
 
   /* Data progress: read the fill as glassy LIQUID, not a candy stripe. Static
      here (everyone) — the flow/crest motion is layered in the reduced-motion-
@@ -1389,8 +1390,25 @@ body {
 }
 
 [data-mode="dark"] .nav {
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-  border-color: color-mix(in srgb, var(--ink) 22%, transparent);
+  background: color-mix(in srgb, var(--bg) 96%, transparent);
+  border-color: color-mix(in srgb, var(--ink) 28%, transparent);
+}
+[data-mode="dark"] .nav .links {
+  background: color-mix(in srgb, var(--bg-2) 90%, transparent);
+  border-color: color-mix(in srgb, var(--ink) 38%, transparent);
+}
+[data-mode="dark"] .nav .nav-action-slot {
+  border-color: color-mix(in srgb, var(--ink) 24%, transparent);
+}
+[data-mode="dark"] .nav .nav-liquid-marker {
+  background: color-mix(in srgb, var(--accent) 28%, var(--bg-2));
+}
+[data-mode="dark"] .nav .links .nav-cta {
+  color: #ffffff;
+}
+[data-mode="dark"] .nav .links a,
+[data-mode="dark"] .nav .links button {
+  color: #ffffff;
 }
 [data-mode="dark"] .glass,
 [data-mode="dark"] .tenet-neobrutalism,

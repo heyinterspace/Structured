@@ -6,13 +6,7 @@ import {
   SectionHeaderTitle,
   SectionHeaderSubtitle,
 } from "@/components/ui/section-header";
-import {
-  ProfileHeader,
-  ProfileAvatar,
-  ProfileId,
-  ProfileName,
-  ProfileRole,
-} from "@/components/ui/profile-header";
+import { ProfileCard } from "@/components/ui/profile-card";
 import { Keycaps, Keycap } from "@/components/ui/keycap";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Resizable, ResizablePanel } from "@/components/ui/resizable";
@@ -27,6 +21,9 @@ import {
 } from "@/components/ui/sidebar";
 
 export function KitLayoutStructure() {
+  const [sidebarView, setSidebarView] = useState("Overview");
+  const sidebarLinks = ["Overview", "Library", "Tokens", "Settings"];
+
   return (
     <div className="kit-group reveal">
       <div className="kit-group-head">
@@ -53,14 +50,19 @@ export function KitLayoutStructure() {
         </div>
 
         <div className="glass kit-cell w6">
-          <span className="kit-cap">Profile header</span>
-          <ProfileHeader>
-            <ProfileAvatar>SL</ProfileAvatar>
-            <ProfileId>
-              <ProfileName>Hey, I'm Samir</ProfileName>
-              <ProfileRole>I drive impact at startups</ProfileRole>
-            </ProfileId>
-          </ProfileHeader>
+          <span className="kit-cap">Profile card</span>
+          <ProfileCard
+            label="Profile pattern"
+            status="Building"
+            imageSrc="/construct-profile.jpg"
+            imageAlt="Daniel Levine"
+            summary="Product leader building collaborative ways to work with frontier technology."
+            facts={[
+              { label: "Focus", value: "Product · AI" },
+              { label: "Base", value: "Brooklyn, New York" },
+              { label: "Source", value: "Construct" },
+            ]}
+          />
         </div>
 
         <div className="glass kit-cell w6">
@@ -134,17 +136,30 @@ export function KitLayoutStructure() {
           <Sidebar>
             <SidebarNav>
               <SidebarHeading>Workspace</SidebarHeading>
-              <SidebarLink href="#" active>
-                Overview
-              </SidebarLink>
-              <SidebarLink href="#">Library</SidebarLink>
-              <SidebarLink href="#">Tokens</SidebarLink>
+              {sidebarLinks.slice(0, 3).map((label) => (
+                <SidebarLink
+                  href="#"
+                  active={sidebarView === label}
+                  onClick={() => setSidebarView(label)}
+                  key={label}
+                >
+                  {label}
+                </SidebarLink>
+              ))}
               <SidebarHeading>Account</SidebarHeading>
-              <SidebarLink href="#">Settings</SidebarLink>
+              <SidebarLink
+                href="#"
+                active={sidebarView === "Settings"}
+                onClick={() => setSidebarView("Settings")}
+              >
+                Settings
+              </SidebarLink>
             </SidebarNav>
             <SidebarMain>
-              A structural rail: rigid border, glass fill, one accent for the
-              active route.
+              <strong>{sidebarView}</strong>
+              <span>
+                The active view changes in place. No link leaves this specimen.
+              </span>
             </SidebarMain>
           </Sidebar>
         </div>
@@ -152,3 +167,4 @@ export function KitLayoutStructure() {
     </div>
   );
 }
+import { useState } from "react";

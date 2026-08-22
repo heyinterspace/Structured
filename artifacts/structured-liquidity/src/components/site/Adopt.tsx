@@ -24,8 +24,9 @@ Rules:
 - Default information surfaces are flat; do not use decorative gradients as shorthand for liquidity.
 - Liquid Motion belongs in shared markers and transitions between navbar actions, menu options, tabs, filters, overlays, and page areas. Reserve neutral translucency and backdrop blur for those moving state boundaries.
 - Destructive surfaces are neutral gray (#242424), never red.
-- Type: Archivo for headings/buttons/brand and body, IBM Plex Mono for labels and data.
-- Scientific Clarity: communicate meaning with a rational grid, exact alignment, measured line lengths, purposeful whitespace, evidence, and one dominant statement per view.
+- Dark mode derives its atmospheric field from the active accent; purple becomes aubergine, green becomes deep green, and yellow becomes deep ochre. There is no separate black mode; charcoal components sit above the tinted field.
+- Type: Inter for headings/buttons/brand and body, Space Mono only for labels and data.
+- Scientific Modern Clarity: communicate meaning with a rational grid, exact alignment, measured line lengths, purposeful whitespace, evidence, and one dominant statement per view.
 - Leading icons (Lucide) on nav links and buttons.
 Use the tokens in design-tokens.json and the component markup in registry.json.
 Full spec: llms.txt.`;
@@ -36,9 +37,9 @@ const ROOT_TOKENS = `:root{
   --edge:0 0 0; --hard-shadow:#000000; --neg:#242424; --neg-ink:#ffffff;
   --glass-blur:14px; --glass-tint:255 255 255; --glass-alpha:0.72;
   --border-w:2px; --hard-x:5px; --hard-y:5px; --radius:0px;
-  --display:"Archivo","Helvetica Neue",Arial,system-ui,sans-serif;
-  --body:"Archivo","Helvetica Neue",Arial,system-ui,sans-serif;
-  --mono:"IBM Plex Mono","SFMono-Regular",ui-monospace,monospace;
+  --display:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+  --body:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;
+  --mono:"Space Mono","SFMono-Regular",ui-monospace,monospace;
 }`;
 
 function CopyButton({ text }: { text: string }) {

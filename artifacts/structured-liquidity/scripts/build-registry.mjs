@@ -232,9 +232,9 @@ const cssVars = {
     "hard-x": "5px",
     "hard-y": "5px",
     radius: "0px",
-    display: '"Archivo","Helvetica Neue",Arial,system-ui,sans-serif',
-    body: '"Archivo","Helvetica Neue",Arial,system-ui,sans-serif',
-    mono: '"IBM Plex Mono","SFMono-Regular",ui-monospace,monospace',
+    display: '"Inter","Helvetica Neue",Arial,system-ui,sans-serif',
+    body: '"Inter","Helvetica Neue",Arial,system-ui,sans-serif',
+    mono: '"Space Mono","SFMono-Regular",ui-monospace,monospace',
     "text-display-xl": "clamp(4.2rem, 10.5vw, 9.5rem)",
     "text-display-lg": "clamp(2.6rem, 5.5vw, 5.25rem)",
     "measure-reading": "62ch",
@@ -272,7 +272,7 @@ const baseItem = {
   type: "registry:style",
   title: "Structured Liquidity",
   description:
-    "The Structured Liquidity design language base: Structured Framing, Liquid Motion, and Scientific Clarity. Includes theme tokens, three distributable stylesheets, and the kit interaction script. Install this first — every component depends on it.",
+    "The Structured Liquidity design language base: Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity. Includes theme tokens, three distributable stylesheets, and the kit interaction script. Install this first — every component depends on it.",
   dependencies: [
     "clsx",
     "tailwind-merge",
@@ -290,7 +290,7 @@ const agentItem = {
   type: "registry:item",
   title: "Structured Liquidity Agent Bundle",
   description:
-    "Install the Structured Framing, Liquid Motion, and Scientific Clarity language plus its persistent local agent skill before the first UI edit.",
+    "Install the Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity language plus its persistent local agent skill before the first UI edit.",
   registryDependencies: [itemUrl(BASE_NAME)],
   files: [
     {

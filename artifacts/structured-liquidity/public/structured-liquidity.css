@@ -1,5 +1,5 @@
 /* ============================================================
-   STRUCTURED LIQUIDITY — Structured framing. Liquid motion.
+   STRUCTURED LIQUIDITY — Neobrutalist structure. Liquid motion.
    Scientific clarity. This stylesheet IS
    the specimen.
    ============================================================ */
@@ -43,9 +43,9 @@
   --neg: #242424; /* negative / destructive surface (gray, never red) */
   --neg-ink: #ffffff;
 
-  --display: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --body: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+  --display: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --mono: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
 }
 
 /* tighter rhythm — denser, less airy */

@@ -5,13 +5,12 @@ import {
 import { Field, FieldLabel, FieldDescription, FieldError } from "@/components/ui/field";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
 import { Kbd } from "@/components/ui/kbd";
-import { NativeSelect } from "@/components/ui/native-select";
 import { Spinner } from "@/components/ui/spinner";
 
 export function KitFieldsControls() {
   return (
     <div className="kit-group reveal">
-      <div className="kit-group-head"><span className="kg-name">Fields &amp; controls</span><span className="kg-rule"></span><span className="kg-count">Button group · Field · Input group · Kbd · Native select · Spinner</span></div>
+      <div className="kit-group-head"><span className="kg-name">Fields &amp; controls</span><span className="kg-rule"></span><span className="kg-count">Button group · Field · Input group · Kbd · Spinner</span></div>
       <div className="kit-grid">
 
         <div className="glass kit-cell w4">
@@ -59,15 +58,6 @@ export function KitFieldsControls() {
             <span className="mono" style={{ fontSize: "0.78rem", color: "var(--ink-dim)" }}>Save</span>
             <span><Kbd>⌘</Kbd> <Kbd>S</Kbd></span>
           </div>
-        </div>
-
-        <div className="glass kit-cell w4">
-          <span className="kit-cap">Native select</span>
-          <NativeSelect>
-            <option>Solid surface</option>
-            <option>Glass surface</option>
-            <option>Liquid surface</option>
-          </NativeSelect>
         </div>
 
         <div className="glass kit-cell w4">

@@ -70,6 +70,10 @@ function apply(t: Tweaks): void {
   root.setProperty("--hard-x", t.shadow + "px");
   root.setProperty("--hard-y", t.shadow + "px");
   root.setProperty("--radius", t.radius + "px");
+  /* Dark backgrounds are derived from --accent in CSS. Clear legacy inline
+     overrides so changing the accent always retunes the full page field. */
+  root.removeProperty("--bg");
+  root.removeProperty("--bg-2");
   document.documentElement.setAttribute("data-mode", t.mode);
 }
 
@@ -158,7 +162,7 @@ export function Tweaker() {
           type="button"
           className="sl-tweaks-fab sl-mode-fab"
           aria-label="Toggle dark or light mode"
-          aria-pressed={state.mode === "light"}
+          aria-pressed={state.mode === "dark"}
           onClick={() => set("mode", state.mode === "dark" ? "light" : "dark")}
         >
           {state.mode === "dark" ? <Moon /> : <Sun />}

@@ -5,23 +5,22 @@ export function Tenets() {
         <span className="eyebrow">Principles · the foundation</span>
         <h2 className="section-title">Three faces. One design language.</h2>
         <p className="lead">
-          Neobrutalism gives the interface a tangible frame. Liquid Motion makes
-          the system's behavior perceptible. Scientific Clarity organizes
-          information and communicates meaning with disciplined hierarchy,
-          evidence, and unmistakable legibility.
-          Together these three tenets form Structured Liquidity.
+          Neobrutalist structure makes the interface tangible. Liquid Motion
+          makes changing state perceptible. Scientific Modern Clarity makes
+          information ordered and unmistakable. Together these three tenets form
+          Structured Liquidity.
         </p>
       </div>
 
       <div className="tenets">
         <article className="tenet tenet-neobrutalism reveal">
           <span className="pnum">Tenet 01</span>
-          <span className="psub">Structure · Affordance</span>
-          <h3>Neobrutalism</h3>
+          <span className="psub">Physical frame</span>
+          <h3>Neobrutalist structure</h3>
           <p>
             Buttons, borders, navigation, footers, body containers, and panels
-            form a tactile system through square geometry, clear affordances,
-            and selective flat shadows.
+            form a tactile system through square geometry, obvious controls and
+            boundaries, and selective flat shadows.
           </p>
           <ul>
             <li>
@@ -41,7 +40,7 @@ export function Tenets() {
 
         <article className="tenet tenet-liquid reveal">
           <span className="pnum">Tenet 02</span>
-          <span className="psub">State · Continuity</span>
+          <span className="psub">State transitions</span>
           <h3>Liquid Motion</h3>
           <p>
             Motion carries state between navbar actions, menu options, tabs,
@@ -51,9 +50,11 @@ export function Tenets() {
           <ul>
             <li>
               <div>
-                <strong className="rule-h">One marker carries continuity</strong>
-                : selection travels between related options instead of repainting
-                each surface.
+                <strong className="rule-h">
+                  One marker carries continuity
+                </strong>
+                : selection travels between related options instead of
+                repainting each surface.
               </div>
             </li>
             <li>
@@ -68,8 +69,8 @@ export function Tenets() {
 
         <article className="tenet tenet-clarity reveal">
           <span className="pnum">Tenet 03</span>
-          <span className="psub">Information · Meaning</span>
-          <h3>Scientific Clarity</h3>
+          <span className="psub">Information hierarchy</span>
+          <h3>Scientific Modern Clarity</h3>
           <p>
             Information organized through rational grids, disciplined hierarchy,
             measured typography, captions, evidence, and purposeful whitespace.

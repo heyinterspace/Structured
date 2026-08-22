@@ -4,7 +4,6 @@ import {
   GalleryVerticalEnd,
   PanelsTopLeft,
 } from "lucide-react";
-import { InstallButton } from "./InstallButton";
 
 const templates = [
   {
@@ -54,9 +53,6 @@ export function Templates() {
                 <p>{parts}</p>
               </article>
             ))}
-          </div>
-          <div className="template-install">
-            <InstallButton item="site-templates" label="Install templates" />
           </div>
         </div>
       </div>

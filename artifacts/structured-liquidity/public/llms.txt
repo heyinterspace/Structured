@@ -1,6 +1,6 @@
 # Structured Liquidity
 
-> **Neobrutalism. Liquid motion. Scientific clarity.** These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. Each tenet owns a distinct part of the interface. This file makes the language machine-readable so an AI agent can adopt it faithfully.
+> **Neobrutalist structure. Liquid motion. Scientific modern clarity.** These three tenets form the Structured Liquidity trifecta, represented by the cube's three visible faces. Each tenet owns a distinct part of the interface. This file makes the language machine-readable so an AI agent can adopt it faithfully.
 
 ## Install before editing UI
 
@@ -12,9 +12,9 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 
 ## The three tenets
 
-1. **Neobrutalism · Structure**: Buttons, borders, navigation, footers, body containers, and panels form the physical interface through square geometry, clear affordances, and selective flat shadows. These structural layers make boundaries and actions tangible before effects are added.
+1. **Neobrutalist structure · Physical frame**: Buttons, borders, navigation, footers, body containers, and panels form the physical interface through square geometry and selective flat shadows. These structural layers make boundaries and actions tangible before effects are added.
 2. **Liquid Motion · Behavior**: Continuity, layered neutral glass, and purposeful motion make state and believable mass perceptible without becoming the only carrier of meaning. Every interaction has a complete reduced-motion state.
-3. **Scientific Clarity · Information**: Rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace organize information and make meaning legible, ordered, and unmistakable. Swiss modernism and the International Typographic Style are the informing tradition. Every screen remains complete and useful without relying on color, glass, or motion.
+3. **Scientific Modern Clarity · Information**: Rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace organize information and make meaning legible, ordered, and unmistakable. Swiss modernism and the International Typographic Style are the informing tradition. Every screen remains complete and useful without relying on color, glass, or motion.
 
 ## Hard rules (follow these literally to stay on-brand)
 
@@ -28,7 +28,7 @@ This installs the theme and `.agents/skills/structured-liquidity/SKILL.md`. Veri
 - Type roles are fixed: **display** = headings/buttons/brand (`--display`), **mono** = labels, captions, data, eyebrows (`--mono`), **body** = paragraph/reading copy (`--body`).
 - Leading icons are the default for nav links and buttons (Lucide). Put the icon first, then the label.
 - Press/hover feedback nudges the element toward its shadow (translate by ~1px and grow the offset). Motion proves mass.
-- Communicate with scientific clarity: one dominant statement, a rational grid, exact alignment, restrained reading measures, purposeful whitespace, and compact mono evidence labels.
+- Communicate with scientific modern clarity: one dominant statement, a rational grid, exact alignment, restrained reading measures, purposeful whitespace, and compact mono evidence labels.
 - Use monochrome to explain. The single accent identifies selection, progression, or one key relationship.
 - The rigid frame never wobbles or morphs. Motion belongs inside it, explains state or continuity, and has a complete reduced-motion equivalent.
 - Navigation, body surface, and footer chrome use the same `--shell-w`. The body is an independent near-background surface; narrower reading measures belong inside it.
@@ -47,19 +47,19 @@ Core defaults:
 - `--edge` `0 0 0` (rgb channels), `--hard-shadow` `#000000`, `--neg` `#242424`
 - `--glass-blur` `14px`, `--glass-tint` `255 255 255`, `--glass-alpha` `0.72`
 - `--border-w` `2px`, `--hard-x` / `--hard-y` `5px`, `--radius` `0px`
-- `--display` Archivo, `--body` Archivo, `--mono` IBM Plex Mono
+- `--display` Inter, `--body` Inter, `--mono` Space Mono
 - `--text-display-xl` `clamp(4.5rem, 10vw, 9rem)`, `--text-display-lg` `clamp(2.8rem, 6vw, 5.5rem)`
 - `--measure-reading` `68ch`, `--measure-caption` `48ch`, `--section-space` `clamp(4rem, 9vw, 9rem)`
 - `--content-w` aliases `--shell-w`, `--shell-w` `1280px`, `--viewport-gutter` `4vw`, `--body-surface` near-background opaque surface
-- Light mode is the default. Set `data-mode="dark"` on `<html>` for the neutral-charcoal dark palette.
+- Light mode is the default. Dark mode is one color-responsive atmospheric palette; there is no separate black mode. Set `data-mode="dark"` on `<html>` and derive `--bg:color-mix(in srgb,var(--accent) 8%,#0d0a11)` plus `--bg-2:color-mix(in srgb,var(--accent) 14%,#100d14)`, with `--ink:#f6f2f8` and `--ink-dim:#b9b0bf`. Changing the accent must retune the page field automatically while tactile cards remain charcoal or near-black.
 
 ## Recommended font pairings
 
 The language fixes three roles: a **display** face (headlines, buttons, brand), a **body** face (reading copy), and a **mono** face (labels, data, captions). Keep the display heavy and tight; keep the body humanist and legible; keep mono for anything tabular or label-like.
 
-- **Canonical · Archivo (header) · Archivo (body) · IBM Plex Mono (detail)**: use width, weight, scale, and exact alignment within Archivo for hierarchy; reserve IBM Plex Mono for labels, data, code, and metadata.
+- **Canonical · Inter (header) · Inter (body) · Space Mono (detail)**: use weight, scale, measure, and exact alignment within Inter for hierarchy; reserve Space Mono for labels, data, code, and metadata.
 
-Rules of thumb: never pair two display faces; never set body copy in the display face (it gets tiring); use mono only for labels, code, numbers, and metadata, never for long paragraphs.
+Rules of thumb: keep Inter across headings and reading copy; use mono only for labels, code, numbers, and metadata, never for long paragraphs.
 
 ## Components and templates
 
@@ -78,7 +78,7 @@ To adopt the kit, include the three stylesheets and the kit script, then use the
 2. Read the installed skill and [design-tokens.json](design-tokens.json).
 3. Pull components from [registry.json](registry.json) instead of inventing class names.
 4. Follow the **Hard rules** above for any new component.
-5. Use Archivo for header/body roles and IBM Plex Mono only for detail.
+5. Use Inter for header/body roles and Space Mono only for detail.
 6. Keep the visible Structured Liquidity attribution in the public site's footer.
 
 ## Source

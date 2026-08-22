@@ -1,15 +1,15 @@
 ---
 name: structured-liquidity
-description: Apply the Structured Liquidity UI design language — Neobrutalism, Liquid Motion, and Scientific Clarity. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
+description: Apply the Structured Liquidity UI design language — Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity. Use when building or restyling any UI that should follow Structured Liquidity, when the user references the language by name, or when adopting its tokens/components in a new project.
 ---
 
 # Structured Liquidity
 
-**Neobrutalism. Liquid motion. Scientific clarity.**
+**Neobrutalist structure. Liquid motion. Scientific modern clarity.**
 
-1. **Neobrutalism:** How the interface is physically structured—buttons, borders, navigation, footers, body containers, panels, square geometry, clear affordances, and selective flat shadows. These structural layers make boundaries and actions tangible before effects are added.
+1. **Neobrutalist structure:** How the interface is physically framed—buttons, borders, navigation, footers, body containers, panels, square geometry, and selective flat shadows. It makes boundaries and actions tangible before effects are added.
 2. **Liquid Motion:** How the system behaves—continuity, layered neutral glass, and purposeful motion that make state and believable mass perceptible without becoming the only carrier of meaning. Every interaction has a complete reduced-motion state.
-3. **Scientific Clarity:** How information is organized and meaning is communicated—rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
+3. **Scientific Modern Clarity:** How information is organized and meaning is communicated—rational grids, disciplined hierarchy, measured typography, captions, labeling, evidence, and purposeful whitespace. Swiss modernism and the International Typographic Style are the informing tradition: make information legible, ordered, and unmistakable. Every screen remains complete and useful without relying on color, glass, or motion.
 
 Together these three tenets form the Structured Liquidity trifecta, represented by the three visible faces of the cube. Each tenet owns the clarity of its part of the interface. The living specimen, machine-readable tokens, and component registry are served by the `structured-liquidity` artifact.
 
@@ -23,10 +23,10 @@ Follow these literally — they are what keep generated output on-brand:
 4. **Exactly one accent.** `--accent` carries all emphasis. Never add a competing hue.
 5. **Liquid is movement, not a gradient treatment.** Default information surfaces are flat. Express liquidity through moving selection markers, menu and popover settling, tab changes, scroll continuity, and transitions between areas. Use neutral translucency or `backdrop-filter` only at moving state boundaries such as navigation, menus, and overlays—not on every card.
 6. **Destructive is gray, not red.** Destructive _containers_ use `--neg`. Error _text_ may warn in color.
-7. **Fixed type roles.** display (`--display`, Archivo) = headings/buttons/brand; body (`--body`, Archivo) = reading copy; mono (`--mono`, IBM Plex Mono) = labels/data/captions/eyebrows.
+7. **Fixed type roles.** display (`--display`, Inter) = headings/buttons/brand; body (`--body`, Inter) = reading copy; mono (`--mono`, Space Mono) = labels/data/captions/eyebrows.
 8. **Leading icons.** Nav links and buttons take a leading Lucide icon, then the label.
 9. **Motion proves mass.** On press/hover, nudge the element ~1px toward its shadow and grow the offset.
-10. **Communicate with scientific clarity.** Use a rational grid, exact alignment, asymmetric balance, measured line lengths, purposeful whitespace, and compact mono captions for sources, state, and evidence. Swiss modernism and the International Typographic Style are the reference tradition.
+10. **Communicate with scientific modern clarity.** Use a rational grid, exact alignment, asymmetric balance, measured line lengths, purposeful whitespace, and compact mono captions for sources, state, and evidence. Swiss modernism and the International Typographic Style are the reference tradition.
 11. **Monochrome carries information.** The accent identifies selection, progression, or one key relationship; it does not decorate the page.
 
 ## Tokens
@@ -52,9 +52,9 @@ Apply these as CSS custom properties on `:root` (light-mode defaults):
   --hard-x: 5px;
   --hard-y: 5px;
   --radius: 0px;
-  --display: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --body: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, monospace;
+  --display: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --body: "Inter", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --mono: "Space Mono", "SFMono-Regular", ui-monospace, monospace;
   --text-display-xl: clamp(4.2rem, 10.5vw, 9.5rem);
   --text-display-lg: clamp(2.6rem, 5.5vw, 5.25rem);
   --measure-reading: 62ch;
@@ -64,13 +64,13 @@ Apply these as CSS custom properties on `:root` (light-mode defaults):
 }
 ```
 
-Dark mode: set `data-mode="dark"` on `<html>` and override `--bg:#171717; --bg-2:#0f0f0f; --ink:#f3f1eb; --ink-dim:#aaa9a4; --neg:#343434; --neg-ink:#fff; --glass-alpha:0.08`.
+Dark mode has one color-responsive atmospheric palette; there is no separate black mode. Set `data-mode="dark"` on `<html>` and derive `--bg:color-mix(in srgb,var(--accent) 8%,#0d0a11)` plus `--bg-2:color-mix(in srgb,var(--accent) 14%,#100d14)`, with `--ink:#f6f2f8; --ink-dim:#b9b0bf; --neg:#343434; --neg-ink:#fff; --glass-alpha:0.08`. Changing the single accent must retune the dark page field automatically: purple becomes deep aubergine, green becomes deep green, yellow becomes deep ochre. Tactile components may remain charcoal or near-black above that field.
 
 The canonical machine-readable set is `design-tokens.json` (W3C Design Tokens format; each token's `$extensions.cssVar` gives the exact variable name).
 
 ## Type layout
 
-Three roles — header / body / detail (display / body / mono). Archivo carries both sans-serif roles; use scale, weight, measure, and alignment for hierarchy. Use IBM Plex Mono only for labels, data, code, captions, and eyebrows. Prefer one dominant statement, a 12-column or similarly disciplined grid, short reading measures, and figure captions that identify evidence and state.
+Three roles — header / body / detail (display / body / mono). Inter carries both sans-serif roles; use scale, weight, measure, and alignment for hierarchy. Use Space Mono only for labels, data, code, captions, and eyebrows. Prefer one dominant statement, a 12-column or similarly disciplined grid, short reading measures, and figure captions that identify evidence and state.
 
 ## Motion contract
 
@@ -99,7 +99,7 @@ npx shadcn@latest add https://structured.glass/r/button.json                  # 
 
 Each `registry:ui` item is a plain React component (no Radix) that emits the SL classes and declares the base style as a `registryDependency`, so the CSS comes along. The registry index lives at `/registry.json`.
 
-**B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load Archivo and IBM Plex Mono; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
+**B. Any stack (plain HTML/CSS).** Include `structured-liquidity.css`, `structured-liquidity-components.css`, `structured-liquidity-kit.css`, and `structured-liquidity-kit.js`; load Inter and Space Mono; then use the SL classes directly. Core kit: `sl-btn`, `sl-badge`, `sl-toggle`/`sl-toggle-group`, `sl-switch`, `sl-check`, `sl-radio-item` (inside a `[data-radio-group]`), `sl-input`/`sl-label`, `sl-slider`, `sl-progress`, `sl-ava`, `sl-tabs` (`.tablist` buttons + `.panel` nodes), and overlays (`sl-overlay` + `sl-dialog`/`sl-sheet`). In plain HTML, interactive components are wired by `structured-liquidity-kit.js` via `data-toggle-aria`, `data-toggle-group`, `data-radio-group`, `data-open-overlay`, `data-close-overlay`.
 
 ## Anatomy of a stateful glass surface inside a rigid frame
 
