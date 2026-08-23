@@ -25,7 +25,9 @@ export function Components() {
           A curated view of the patterns that carry a distinct job in a real
           product. The full installable registry remains available; this gallery
           favors useful composition, working state, and motion you can test by
-          clicking, typing, toggling, and opening.
+          clicking, typing, toggling, and opening. Demo content belongs to the
+          fictional Kepler Station survey, keeping product examples coherent
+          without borrowing private language from live applications.
         </p>
       </div>
 

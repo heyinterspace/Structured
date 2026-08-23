@@ -60,7 +60,7 @@ export const MobileTabBar = React.forwardRef<
               style={{ "--s": "18px" } as CSSProperties}
               aria-hidden="true"
             />
-            universe
+            Kepler
           </span>
           <span className="mn-icon" aria-hidden="true">
             <Search />
@@ -74,7 +74,7 @@ export const MobileTabBar = React.forwardRef<
               onClick={() => select(0)}
             >
               <Compass />
-              Discover
+              Mission
             </button>
             <button
               type="button"
@@ -82,7 +82,7 @@ export const MobileTabBar = React.forwardRef<
               onClick={() => select(1)}
             >
               <Library />
-              Library
+              Signals
             </button>
             <button
               type="button"
@@ -90,7 +90,7 @@ export const MobileTabBar = React.forwardRef<
               onClick={() => select(2)}
             >
               <Radio />
-              Radio
+              Atlas
             </button>
             <button
               type="button"
@@ -98,7 +98,7 @@ export const MobileTabBar = React.forwardRef<
               onClick={() => select(3)}
             >
               <Heart />
-              Saved
+              Archive
             </button>
           </div>
         </div>
@@ -115,7 +115,7 @@ export const MobileTabBar = React.forwardRef<
             onClick={() => select(0)}
           >
             <House />
-            <span>Home</span>
+            <span>Mission</span>
           </button>
           <button
             className={cn("gnav-tab", active === 1 && "is-active")}
@@ -123,7 +123,7 @@ export const MobileTabBar = React.forwardRef<
             onClick={() => select(1)}
           >
             <Search />
-            <span>Search</span>
+            <span>Signals</span>
           </button>
           <button
             className={cn("gnav-tab", active === 2 && "is-active")}
@@ -131,7 +131,7 @@ export const MobileTabBar = React.forwardRef<
             onClick={() => select(2)}
           >
             <Compass />
-            <span>Browse</span>
+            <span>Atlas</span>
           </button>
           <button
             className={cn("gnav-tab", active === 3 && "is-active")}
@@ -139,7 +139,7 @@ export const MobileTabBar = React.forwardRef<
             onClick={() => select(3)}
           >
             <Heart />
-            <span>Saved</span>
+            <span>Archive</span>
           </button>
           <button
             className={cn("gnav-tab", active === 4 && "is-active")}
@@ -147,7 +147,7 @@ export const MobileTabBar = React.forwardRef<
             onClick={() => select(4)}
           >
             <User />
-            <span>You</span>
+            <span>Crew</span>
           </button>
         </nav>
       </div>
@@ -178,7 +178,7 @@ export const GlassTabBar = React.forwardRef<
             onClick={() => setActive(0)}
           >
             <Disc3 />
-            <span>Playback</span>
+            <span>Mission</span>
           </button>
           <button
             className={cn("gnav-tab", active === 1 && "is-active")}
@@ -186,7 +186,7 @@ export const GlassTabBar = React.forwardRef<
             onClick={() => setActive(1)}
           >
             <Music />
-            <span>Music</span>
+            <span>Signals</span>
           </button>
           <button
             className={cn("gnav-tab", active === 2 && "is-active")}
@@ -194,7 +194,7 @@ export const GlassTabBar = React.forwardRef<
             onClick={() => setActive(2)}
           >
             <BarChart3 />
-            <span>Billboard</span>
+            <span>Atlas</span>
           </button>
           <button
             className={cn("gnav-tab", active === 3 && "is-active")}
@@ -202,7 +202,7 @@ export const GlassTabBar = React.forwardRef<
             onClick={() => setActive(3)}
           >
             <Sparkles />
-            <span>Lyriq</span>
+            <span>Archive</span>
           </button>
         </nav>
       </div>
@@ -224,7 +224,7 @@ export const SegmentedNav = React.forwardRef<
           <button className="snav-back" aria-label="Back">
             <ChevronLeft />
           </button>
-          <span className="snav-title">Library</span>
+          <span className="snav-title">Signal archive</span>
           <span className="snav-act" aria-hidden="true">
             <Search />
           </span>
@@ -243,7 +243,7 @@ export const SegmentedNav = React.forwardRef<
             aria-selected={active === 0}
             onClick={() => setActive(0)}
           >
-            Playlists
+            Observations
           </button>
           <button
             className="snav-seg-btn"
@@ -251,7 +251,7 @@ export const SegmentedNav = React.forwardRef<
             aria-selected={active === 1}
             onClick={() => setActive(1)}
           >
-            Songs
+            Transits
           </button>
         </div>
         <PhoneScreen />

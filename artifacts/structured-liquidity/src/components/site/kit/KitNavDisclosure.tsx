@@ -38,8 +38,8 @@ export function KitNavDisclosure() {
               <AccordionTrigger>Is it tied to one product?</AccordionTrigger>
               <AccordionContent>
                 <p>
-                  No. universe.audio is only one example; the language is
-                  product-agnostic and travels from product to product by its
+                  No. Kepler Station is a fictional specimen world; the language
+                  is product-agnostic and travels between products through its
                   tokens.
                 </p>
               </AccordionContent>

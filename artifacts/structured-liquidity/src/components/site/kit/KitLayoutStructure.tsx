@@ -45,7 +45,7 @@ export function KitLayoutStructure() {
               <SectionHeaderTitle>Purpose</SectionHeaderTitle>
             </SectionHeaderRow>
             <SectionHeaderSubtitle>
-              By operators. For operators.
+              Signals, ordered for the mission.
             </SectionHeaderSubtitle>
           </SectionHeader>
         </div>
@@ -55,12 +55,12 @@ export function KitLayoutStructure() {
           <ProfileCard
             label="Profile pattern"
             status="Building"
-            initials="DL"
-            summary="Product leader building collaborative ways to work with frontier technology."
+            initials="KS"
+            summary="Deep-space survey station mapping a newly observed planetary system."
             facts={[
-              { label: "Focus", value: "Product · AI" },
-              { label: "Base", value: "Brooklyn, New York" },
-              { label: "Source", value: "Construct" },
+              { label: "Mission", value: "Orbital survey" },
+              { label: "Sector", value: "Kepler-186" },
+              { label: "Status", value: "Nominal" },
             ]}
           />
         </div>
@@ -93,13 +93,13 @@ export function KitLayoutStructure() {
         <div className="glass kit-cell w4">
           <span className="kit-cap">Scroll area</span>
           <ScrollArea>
-            <ScrollAreaRow>Track 01 · Aurora</ScrollAreaRow>
-            <ScrollAreaRow>Track 02 · Meniscus</ScrollAreaRow>
-            <ScrollAreaRow>Track 03 · Offset</ScrollAreaRow>
-            <ScrollAreaRow>Track 04 · Specular</ScrollAreaRow>
-            <ScrollAreaRow>Track 05 · Viscosity</ScrollAreaRow>
-            <ScrollAreaRow>Track 06 · Containment</ScrollAreaRow>
-            <ScrollAreaRow>Track 07 · Refraction</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 01 · Periapsis</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 02 · Transit</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 03 · Eclipse</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 04 · Relay</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 05 · Survey</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 06 · Return</ScrollAreaRow>
+            <ScrollAreaRow>Orbit 07 · Archive</ScrollAreaRow>
           </ScrollArea>
         </div>
 

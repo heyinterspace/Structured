@@ -337,14 +337,14 @@ export function KitFormsInputs() {
         <div className="glass kit-cell w4">
           <span className="kit-cap">Fieldset</span>
           <Fieldset>
-            <Legend>Billing address</Legend>
+            <Legend>Station coordinates</Legend>
             <FormField>
-              <Label>City</Label>
-              <Input placeholder="Brooklyn, New York" />
+              <Label>Sector</Label>
+              <Input placeholder="Kepler-186" />
             </FormField>
             <FormField>
-              <Label>Postal code</Label>
-              <Input placeholder="11201" />
+              <Label>Orbit code</Label>
+              <Input placeholder="K186-F" />
             </FormField>
           </Fieldset>
         </div>

@@ -50,25 +50,25 @@ export function KitDataDisplay() {
           <StatStrip>
             <Stat>
               <StatNumber>100+</StatNumber>
-              <StatCaption>Languages</StatCaption>
+              <StatCaption>Survey sectors</StatCaption>
             </Stat>
             <Stat>
               <StatNumber>1M+</StatNumber>
-              <StatCaption>Songs</StatCaption>
+              <StatCaption>Signals indexed</StatCaption>
             </Stat>
             <Stat>
               <StatNumber>2.7K</StatNumber>
-              <StatCaption>Words translated</StatCaption>
+              <StatCaption>Spectra classified</StatCaption>
             </Stat>
           </StatStrip>
           <StatCards>
             <StatCard>
               <StatNumber accent>200+</StatNumber>
-              <StatCaption>Operators in syndicate</StatCaption>
+              <StatCaption>Crew online</StatCaption>
             </StatCard>
             <StatCard>
               <StatNumber accent>60%</StatNumber>
-              <StatCaption>Scaled 0–100 FTEs</StatCaption>
+              <StatCaption>Survey complete</StatCaption>
             </StatCard>
           </StatCards>
         </div>
@@ -87,7 +87,9 @@ export function KitDataDisplay() {
               <TriangleAlert className="ai" />
               <div>
                 <AlertTitle>Build failed</AlertTitle>
-                <AlertDescription>Border weight must be ≥ 1px.</AlertDescription>
+                <AlertDescription>
+                  Border weight must be ≥ 1px.
+                </AlertDescription>
               </div>
             </Alert>
           </div>
@@ -97,14 +99,25 @@ export function KitDataDisplay() {
           <span className="kit-cap">Avatar</span>
           <div className="kit-row">
             <Avatar>SL</Avatar>
-            <Avatar style={{ background: "rgba(var(--glass-tint),0.1)", color: "var(--ink)" }}>
+            <Avatar
+              style={{
+                background: "rgba(var(--glass-tint),0.1)",
+                color: "var(--ink)",
+              }}
+            >
               JD
             </Avatar>
             <AvatarGroup>
               <Avatar>A</Avatar>
-              <Avatar style={{ background: "#ffffff", color: "#111111" }}>B</Avatar>
-              <Avatar style={{ background: "#8a8a93", color: "#ffffff" }}>C</Avatar>
-              <Avatar style={{ background: "#111111", color: "#ffffff" }}>+5</Avatar>
+              <Avatar style={{ background: "#ffffff", color: "#111111" }}>
+                B
+              </Avatar>
+              <Avatar style={{ background: "#8a8a93", color: "#ffffff" }}>
+                C
+              </Avatar>
+              <Avatar style={{ background: "#111111", color: "#ffffff" }}>
+                +5
+              </Avatar>
             </AvatarGroup>
           </div>
           <span className="kit-cap" style={{ marginTop: "0.4rem" }}>
@@ -119,23 +132,23 @@ export function KitDataDisplay() {
             <HoverCard
               content={
                 <div className="kit-row" style={{ gap: "0.6rem" }}>
-                  <Avatar>U</Avatar>
+                  <Avatar>KS</Avatar>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: "0.85rem" }}>
-                      universe.audio
+                      Kepler Station
                     </div>
                     <div
                       className="mono"
                       style={{ fontSize: "0.7rem", color: "var(--ink-dim)" }}
                     >
-                      Built on SL
+                      Survey nominal
                     </div>
                   </div>
                 </div>
               }
             >
               <Button variant="ghost" size="sm">
-                @universe
+                Station profile
               </Button>
             </HoverCard>
           </div>
@@ -167,7 +180,11 @@ export function KitDataDisplay() {
 
         <div className="glass kit-cell w4">
           <span className="kit-cap">Waveform</span>
-          <Waveform bars={48} played={20} aria-label="Audio waveform, 42% played" />
+          <Waveform
+            bars={48}
+            played={20}
+            aria-label="Audio waveform, 42% played"
+          />
         </div>
 
         <div className="glass kit-cell w8">

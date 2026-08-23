@@ -1,5 +1,13 @@
-import { useCallback, useEffect, useRef } from "react";
-import { Bot, Blocks, Github, Sparkles, Waypoints } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  Bot,
+  Blocks,
+  Github,
+  Menu,
+  Sparkles,
+  Waypoints,
+  X,
+} from "lucide-react";
 import { Hypercube } from "./liquid";
 import { InstallButton } from "./InstallButton";
 
@@ -14,6 +22,7 @@ const NAV_ITEMS = [
 export function Nav() {
   const navRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const positionMarker = useCallback((index: number) => {
     const links = linksRef.current;
@@ -33,7 +42,10 @@ export function Nav() {
       const page = document.documentElement;
       const distance = Math.max(1, page.scrollHeight - window.innerHeight);
       const progress = Math.min(1, Math.max(0, window.scrollY / distance));
-      navRef.current?.style.setProperty("--page-progress", `${progress * 100}%`);
+      navRef.current?.style.setProperty(
+        "--page-progress",
+        `${progress * 100}%`,
+      );
     };
     const requestUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
@@ -48,19 +60,39 @@ export function Nav() {
     };
   }, [positionMarker]);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [mobileOpen]);
+
   return (
     <nav className="nav" ref={navRef}>
       <a className="brand" href="#top">
         <Hypercube />
         <span className="name">Structured Liquidity</span>
       </a>
+      <button
+        type="button"
+        className="nav-mobile-trigger"
+        aria-expanded={mobileOpen}
+        aria-controls="mobile-site-menu"
+        onClick={() => setMobileOpen((open) => !open)}
+      >
+        {mobileOpen ? <X /> : <Menu />}
+        <span>{mobileOpen ? "Close" : "Menu"}</span>
+      </button>
       <div className="nav-cluster">
         <div
           className="links"
           ref={linksRef}
           onPointerLeave={() => positionMarker(0)}
           onBlur={(event) => {
-            if (!event.currentTarget.contains(event.relatedTarget)) positionMarker(0);
+            if (!event.currentTarget.contains(event.relatedTarget))
+              positionMarker(0);
           }}
         >
           <span className="nav-liquid-marker" aria-hidden="true" />
@@ -80,7 +112,38 @@ export function Nav() {
         </div>
         <div className="nav-utilities">
           <InstallButton className="btn nav-utility" label="Install" />
-          <a className="btn nav-utility" href={GITHUB} target="_blank" rel="noopener">
+          <a
+            className="btn nav-utility"
+            href={GITHUB}
+            target="_blank"
+            rel="noopener"
+          >
+            <Github />
+            Source
+          </a>
+        </div>
+      </div>
+      <div
+        id="mobile-site-menu"
+        className="nav-mobile-menu"
+        data-open={mobileOpen}
+      >
+        <div className="nav-mobile-links">
+          {NAV_ITEMS.map(({ label, href, icon: Icon }) => (
+            <a href={href} onClick={() => setMobileOpen(false)} key={href}>
+              <Icon />
+              <span>{label}</span>
+            </a>
+          ))}
+        </div>
+        <div className="nav-mobile-utilities">
+          <InstallButton className="btn nav-utility" label="Install" />
+          <a
+            className="btn nav-utility"
+            href={GITHUB}
+            target="_blank"
+            rel="noopener"
+          >
             <Github />
             Source
           </a>

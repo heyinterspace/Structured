@@ -78,7 +78,9 @@ export function KitPatterns() {
         <div className="glass kit-cell w12">
           <span className="kit-cap">Site shell</span>
           <div className="sl-shell-demo">
-            <SiteShell>Navigation and footer use the shared site frame</SiteShell>
+            <SiteShell>
+              Navigation and footer use the shared site frame
+            </SiteShell>
             <SiteContent>Body surface aligns to the same frame</SiteContent>
           </div>
         </div>
@@ -124,10 +126,10 @@ export function KitPatterns() {
           <FilterToolbar>
             <FilterGroup>
               <Button size="sm" variant="outline">
-                Fintech
+                Spectral
               </Button>
               <Button size="sm" variant="outline">
-                New York
+                Kepler-186
               </Button>
             </FilterGroup>
             <FilterSummary>26 results</FilterSummary>
@@ -173,11 +175,11 @@ export function KitPatterns() {
           <TestimonialCard>
             <TestimonialSource>Verified family review</TestimonialSource>
             <TestimonialQuote>
-              “The same familiar faces, thoughtful updates, and a place our
-              child is excited to return to.”
+              “The transit log made a complex orbital shift immediately clear to
+              every crew on the station.”
             </TestimonialQuote>
             <TestimonialAuthor>
-              Brooklyn parent <TestimonialMeta>Daycare portal</TestimonialMeta>
+              Mission review <TestimonialMeta>Flight archive</TestimonialMeta>
             </TestimonialAuthor>
           </TestimonialCard>
         </div>
@@ -186,10 +188,10 @@ export function KitPatterns() {
           <span className="kit-cap">Logo grid</span>
           <LogoGrid>
             {[
-              ["IV", "Advisory"],
-              ["2D", "Syndicate"],
-              ["BB", "Daycare"],
-              ["CG", "Research"],
+              ["KS", "Station"],
+              ["AT", "Atlas"],
+              ["SR", "Survey"],
+              ["RL", "Relay"],
             ].map(([mark, label]) => (
               <LogoTile key={mark}>
                 <LogoMark>{mark}</LogoMark>
@@ -206,11 +208,11 @@ export function KitPatterns() {
               <ActivityMarker>01</ActivityMarker>
               <ActivityContent>
                 <ActivityHeader>
-                  <ActivityTitle>Investor update published</ActivityTitle>
+                  <ActivityTitle>Transit report published</ActivityTitle>
                   <ActivityMeta>Today · 09:42</ActivityMeta>
                 </ActivityHeader>
                 <ActivityDescription>
-                  Operating notes and portfolio metrics are ready for review.
+                  Orbital notes and instrument readings are ready for review.
                 </ActivityDescription>
               </ActivityContent>
             </ActivityItem>
@@ -248,7 +250,7 @@ export function KitPatterns() {
           <span className="kit-cap">Pricing card</span>
           <PricingCard featured>
             <PricingHeader>
-              <PricingName>Operator</PricingName>
+              <PricingName>Expedition</PricingName>
               <span className="sl-badge default">Recommended</span>
             </PricingHeader>
             <PricingPrice>
@@ -273,7 +275,7 @@ export function KitPatterns() {
               </PricingFeature>
             </PricingFeatures>
             <PricingFooter>
-              <Button size="sm">Choose Operator</Button>
+              <Button size="sm">Choose Expedition</Button>
             </PricingFooter>
           </PricingCard>
         </div>
@@ -281,32 +283,32 @@ export function KitPatterns() {
         <div className="glass kit-cell w6">
           <span className="kit-cap">Unit economics chart</span>
           <UnitEconomicsChart
-            totalLabel="Monthly membership"
+            totalLabel="Monthly mission allocation"
             totalValue="$3.99"
             allocations={[
               {
-                label: "Payments",
+                label: "Telemetry",
                 value: "$0.50",
                 share: 12.5,
-                description: "Checkout, billing, and tax tooling.",
+                description: "Transmission, parsing, and signal storage.",
               },
               {
-                label: "Infrastructure",
+                label: "Navigation",
                 value: "$0.75",
                 share: 18.75,
-                description: "Delivery, storage, and shared hosting.",
+                description: "Orbital models, routing, and shared compute.",
               },
               {
-                label: "AI capacity",
+                label: "Analysis",
                 value: "$0.25",
                 share: 6.25,
-                description: "Private routing and reliability headroom.",
+                description: "Anomaly detection and reliability headroom.",
               },
               {
-                label: "Build + support",
+                label: "Science + crew",
                 value: "$2.50",
                 share: 62.5,
-                description: "Product work, safety, support, and margin.",
+                description: "Research time, safety, operations, and reserve.",
               },
             ]}
             note="Quarter-rounded allocations make the model legible without implying every month costs exactly the same."

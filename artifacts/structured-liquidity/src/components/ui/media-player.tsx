@@ -37,8 +37,8 @@ export const MediaPlayer = React.forwardRef<HTMLDivElement, MediaPlayerProps>(
   (
     {
       eyebrow = "Now playing",
-      title = "Gracias a la Vida",
-      artist = "Violeta Parra",
+      title = "Transit Echo 04",
+      artist = "Kepler Station Archive",
       badge = "Live",
       elapsed = "1:48",
       duration = "4:38",

@@ -61,12 +61,12 @@ export function KitContentData() {
         <div className="glass kit-cell w4">
           <span className="kit-cap">Empty</span>
           <Empty>
-            <EmptyIcon>♪</EmptyIcon>
-            <EmptyTitle>No tracks yet</EmptyTitle>
+            <EmptyIcon>✦</EmptyIcon>
+            <EmptyTitle>No signals yet</EmptyTitle>
             <EmptyDescription>
-              Import audio to start a library.
+              Connect an instrument to begin the survey.
             </EmptyDescription>
-            <Button size="sm">Import</Button>
+            <Button size="sm">Connect</Button>
           </Empty>
         </div>
 
@@ -76,8 +76,8 @@ export function KitContentData() {
             <Item>
               <span className="sl-ava">U</span>
               <ItemBody>
-                <ItemTitle>universe.audio</ItemTitle>
-                <ItemSubtitle>Audio platform · Live</ItemSubtitle>
+                <ItemTitle>Kepler Station</ItemTitle>
+                <ItemSubtitle>Orbital survey · Live</ItemSubtitle>
               </ItemBody>
               <Button variant="outline" size="sm">
                 Open
@@ -94,8 +94,8 @@ export function KitContentData() {
                 SL
               </span>
               <ItemBody>
-                <ItemTitle>Structured Liquidity</ItemTitle>
-                <ItemSubtitle>Design language</ItemSubtitle>
+                <ItemTitle>Asteria Atlas</ItemTitle>
+                <ItemSubtitle>Survey catalogue</ItemSubtitle>
               </ItemBody>
               <Button variant="outline" size="sm">
                 Open
