@@ -32,6 +32,7 @@
   --rule-hairline: 1px;
   --diagram-line: color-mix(in srgb, var(--ink) 72%, transparent);
   --diagram-muted: color-mix(in srgb, var(--ink) 42%, transparent);
+  --grid-line: rgba(17, 17, 17, 0.065);
 
   /* ---- light-first paper palette ---- */
   --bg: #f2f0ea;
@@ -61,6 +62,7 @@
   --neg-ink: #ffffff;
   --glass-tint: 255 255 255;
   --glass-alpha: 0.72;
+  --grid-line: rgba(17, 17, 17, 0.065);
 }
 
 [data-mode="dark"] {
@@ -76,6 +78,7 @@
   --neg-ink: #ffffff;
   --glass-tint: 255 255 255;
   --glass-alpha: 0.08;
+  --grid-line: rgba(246, 242, 248, 0.07);
 }
 
 * {
@@ -131,10 +134,10 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(var(--edge), 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(var(--edge), 0.045) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 64px 64px;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .grain {

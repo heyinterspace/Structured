@@ -389,21 +389,23 @@
   .kit-filter:hover{color:var(--ink);transform:translate(-1px,-1px);box-shadow:4px 4px 0 0 var(--hard-shadow);}
   .kit-filter.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
   .kit-filter.active:hover{color:var(--accent-ink);}
-  /* Masonry columns: uniform-width cards pack tight vertically (no ragged empty
-     space under short cards) and get a clear horizontal gap between columns. */
+  /* Masonry columns: one on mobile, two on ordinary laptop viewports, and three
+     only once a wide display can preserve useful specimen width. */
   .kit-grid.gallery{display:block;column-count:2;column-gap:1.4rem;}
   .kit-grid.gallery .kit-cell{width:100%;margin:0 0 1.4rem;padding:1.5rem 1.6rem;
     -webkit-column-break-inside:avoid;break-inside:avoid;}
+  @media (min-width:1440px){.kit-grid.gallery{column-count:3;}}
   @media (max-width:600px){.kit-grid.gallery{column-count:1;}}
   .kit-cell.is-hidden{display:none;}
 
-  /* Two-axis gallery filters: a primary "Type" row + a secondary "Kind" row */
+  /* Two useful axes: Category describes the job; Type describes implementation
+     scope (primitive, composite, pattern, or template). Type stays subordinate. */
   .kit-filterbars{display:flex;flex-direction:column;gap:0.6rem;margin:0.2rem 0 1.5rem;}
   .kit-filter-row{display:flex;align-items:baseline;gap:0.7rem;flex-wrap:wrap;}
   .kit-filter-axis{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--ink);min-width:3rem;flex:0 0 auto;padding-top:0.55rem;display:flex;align-items:center;gap:0.45rem;}
   .kit-filter-axis::before{content:"";width:0.5rem;height:0.5rem;background:var(--accent);flex:0 0 auto;}
   .kit-filterbars .kit-filters{margin:0;flex:1 1 auto;}
-  /* The secondary "Kind" axis is deliberately subordinate to "Type": a hollow
+  /* The secondary Type axis is deliberately subordinate to Category: a hollow
      axis marker, smaller/flatter chips, and an accent-OUTLINE active state (vs
      the primary row's solid accent fill). Distinct hierarchy, one accent. */
   .kit-filter-row.is-secondary{padding-left:0.1rem;}
@@ -1502,6 +1504,9 @@ body {
   column-count: 2;
   column-gap: 1px;
 }
+@media (min-width: 1440px) {
+  #components .kit-grid.gallery { column-count: 3; }
+}
 #components .kit-grid.gallery .kit-cell {
   display: flex;
   flex-direction: column;
@@ -1534,8 +1539,9 @@ body {
 }
 .kit-filters[data-axis="cat"] .kit-filter.active:hover { color: var(--accent-ink); }
 .kit-filters[data-axis="kind"] .kit-filter {
-  background: color-mix(in srgb, var(--ink) 4%, transparent);
-  border-color: color-mix(in srgb, var(--ink) 34%, transparent);
+  background: color-mix(in srgb, var(--ink) 6%, var(--bg-2));
+  border-color: color-mix(in srgb, var(--ink) 42%, transparent);
+  box-shadow: 1px 1px 0 0 color-mix(in srgb, var(--hard-shadow) 70%, transparent);
 }
 [data-mode="dark"] .kit-filters[data-axis="cat"] .kit-filter.active {
   background: color-mix(in srgb, var(--accent) 54%, var(--bg-2));
