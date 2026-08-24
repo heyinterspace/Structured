@@ -11,8 +11,16 @@ import { Adopt } from "@/components/site/Adopt";
 import { FooterCta } from "@/components/site/FooterCta";
 import { Footer } from "@/components/site/Footer";
 import { Tweaker } from "@/components/site/Tweaker";
+import { AuthPage } from "@/components/site/AuthPage";
 
 export function App() {
+  if (
+    window.location.pathname === "/sign-in" ||
+    window.location.pathname.startsWith("/sign-in/")
+  ) {
+    return <AuthPage />;
+  }
+
   const isStaging =
     window.location.hostname === "staging.structured.glass" ||
     import.meta.env.VITE_DEPLOYMENT_ENVIRONMENT === "staging";

@@ -106,6 +106,16 @@ function isApiRequest(req: Request): boolean {
   return req.path === "/api" || req.path.startsWith("/api/");
 }
 
+function isPublicAuthSurfaceRequest(req: Request): boolean {
+  return (
+    req.path === "/sign-in" ||
+    req.path.startsWith("/sign-in/") ||
+    req.path.startsWith("/assets/") ||
+    req.path === "/favicon.svg" ||
+    req.path === "/favicon.ico"
+  );
+}
+
 function signInRedirect(config: StagingAccessConfig, req: Request): string {
   const signInUrl = new URL(config.signInUrl);
   const returnUrl = new URL(req.originalUrl || "/", config.canonicalOrigin);
@@ -185,7 +195,7 @@ export function installStagingAccess(app: Express): void {
   );
 
   app.use(async (req: Request, res: Response, next: NextFunction) => {
-    if (isHealthRequest(req)) {
+    if (isHealthRequest(req) || isPublicAuthSurfaceRequest(req)) {
       next();
       return;
     }
