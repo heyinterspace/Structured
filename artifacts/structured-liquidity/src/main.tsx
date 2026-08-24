@@ -13,7 +13,7 @@ const app = clerkPublishableKey ? (
   <ClerkProvider
     publishableKey={clerkPublishableKey}
     signInUrl="/sign-in"
-    signUpUrl="/sign-in"
+    signUpUrl="/sign-up"
     signInFallbackRedirectUrl="/"
     signUpFallbackRedirectUrl="/"
   >

@@ -110,6 +110,8 @@ function isPublicAuthSurfaceRequest(req: Request): boolean {
   return (
     req.path === "/sign-in" ||
     req.path.startsWith("/sign-in/") ||
+    req.path === "/sign-up" ||
+    req.path.startsWith("/sign-up/") ||
     req.path.startsWith("/assets/") ||
     req.path === "/favicon.svg" ||
     req.path === "/favicon.ico"

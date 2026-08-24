@@ -16,7 +16,9 @@ import { AuthPage } from "@/components/site/AuthPage";
 export function App() {
   if (
     window.location.pathname === "/sign-in" ||
-    window.location.pathname.startsWith("/sign-in/")
+    window.location.pathname.startsWith("/sign-in/") ||
+    window.location.pathname === "/sign-up" ||
+    window.location.pathname.startsWith("/sign-up/")
   ) {
     return <AuthPage />;
   }
