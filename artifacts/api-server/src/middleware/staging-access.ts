@@ -1,4 +1,5 @@
 import { clerkClient, clerkMiddleware, getAuth } from "@clerk/express";
+import { timingSafeEqual } from "node:crypto";
 import type { Express, NextFunction, Request, Response } from "express";
 
 const STAGING_ROBOTS = "noindex, nofollow, noarchive, nosnippet";
@@ -8,6 +9,7 @@ type StagingAccessConfig = {
   allowedEmails: Set<string>;
   authorizedParties: string[];
   canonicalOrigin: string;
+  constructPageProxySecret: string | null;
   publishableKey: string;
   secretKey: string;
   signInUrl: string;
@@ -50,6 +52,8 @@ function readConfig(): StagingAccessConfig {
   const secretKey = process.env["CLERK_SECRET_KEY"]?.trim();
   const signInUrlValue = process.env["CLERK_SIGN_IN_URL"]?.trim();
   const canonicalOriginValue = process.env["STAGING_CANONICAL_ORIGIN"]?.trim();
+  const constructPageProxySecret =
+    process.env["CONSTRUCT_PAGE_PROXY_SECRET"]?.trim() || null;
   const allowedEmails = new Set(
     parseCsv(process.env["STAGING_ALLOWED_EMAILS"]).map((email) =>
       email.toLowerCase(),
@@ -76,6 +80,10 @@ function readConfig(): StagingAccessConfig {
     );
   }
 
+  if (constructPageProxySecret && constructPageProxySecret.length < 32) {
+    throw new Error("CONSTRUCT_PAGE_PROXY_SECRET must be at least 32 characters");
+  }
+
   const canonicalOrigin = parseHttpsUrl(
     canonicalOriginValue,
     "STAGING_CANONICAL_ORIGIN",
@@ -92,10 +100,23 @@ function readConfig(): StagingAccessConfig {
     allowedEmails,
     authorizedParties,
     canonicalOrigin,
+    constructPageProxySecret,
     publishableKey,
     secretKey,
     signInUrl,
   };
+}
+
+function isTrustedConstructPageRequest(
+  req: Request,
+  expectedToken: string | null,
+): boolean {
+  const suppliedToken = req.get("x-construct-page-token")?.trim();
+  if (!expectedToken || !suppliedToken) return false;
+
+  const supplied = Buffer.from(suppliedToken);
+  const expected = Buffer.from(expectedToken);
+  return supplied.length === expected.length && timingSafeEqual(supplied, expected);
 }
 
 function isHealthRequest(req: Request): boolean {
@@ -156,6 +177,10 @@ export function installStagingAccess(app: Express): void {
   const canonicalHostname = new URL(config.canonicalOrigin).hostname;
 
   app.use((req, res, next) => {
+    res.locals["constructPageProxy"] = isTrustedConstructPageRequest(
+      req,
+      config.constructPageProxySecret,
+    );
     res.setHeader("X-Robots-Tag", STAGING_ROBOTS);
     res.setHeader("Referrer-Policy", "same-origin");
 
@@ -174,6 +199,7 @@ export function installStagingAccess(app: Express): void {
     if (
       !isHealthRequest(req) &&
       !isApiRequest(req) &&
+      !res.locals["constructPageProxy"] &&
       req.hostname !== canonicalHostname
     ) {
       const destination = new URL(
@@ -187,17 +213,27 @@ export function installStagingAccess(app: Express): void {
     next();
   });
 
-  app.use(
-    clerkMiddleware({
-      authorizedParties: config.authorizedParties,
-      publishableKey: config.publishableKey,
-      secretKey: config.secretKey,
-      signInUrl: config.signInUrl,
-    }),
-  );
+  const clerkAccess = clerkMiddleware({
+    authorizedParties: config.authorizedParties,
+    publishableKey: config.publishableKey,
+    secretKey: config.secretKey,
+    signInUrl: config.signInUrl,
+  });
+
+  app.use((req, res, next) => {
+    if (res.locals["constructPageProxy"]) {
+      next();
+      return;
+    }
+    clerkAccess(req, res, next);
+  });
 
   app.use(async (req: Request, res: Response, next: NextFunction) => {
-    if (isHealthRequest(req) || isPublicAuthSurfaceRequest(req)) {
+    if (
+      isHealthRequest(req) ||
+      isPublicAuthSurfaceRequest(req) ||
+      res.locals["constructPageProxy"]
+    ) {
       next();
       return;
     }
