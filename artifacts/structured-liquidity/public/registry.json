@@ -340,6 +340,12 @@
       "description": "Structured Liquidity Popover — React component driving the SL class system."
     },
     {
+      "name": "portfolio-card",
+      "type": "registry:ui",
+      "title": "Portfolio Card",
+      "description": "Structured Liquidity Portfolio Card — React component driving the SL class system."
+    },
+    {
       "name": "pricing-card",
       "type": "registry:ui",
       "title": "Pricing Card",

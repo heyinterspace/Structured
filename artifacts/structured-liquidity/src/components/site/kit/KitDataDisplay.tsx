@@ -32,6 +32,18 @@ import {
   TableCell,
 } from "@/components/ui/table";
 import { Meter } from "@/components/ui/meter";
+import {
+  PortfolioCard,
+  PortfolioCardAction,
+  PortfolioCardBody,
+  PortfolioCardDescription,
+  PortfolioCardLogo,
+  PortfolioCardMedia,
+  PortfolioCardTag,
+  PortfolioCardTags,
+  PortfolioCardTitle,
+  PortfolioGrid,
+} from "@/components/ui/portfolio-card";
 
 export function KitDataDisplay() {
   return (
@@ -40,8 +52,8 @@ export function KitDataDisplay() {
         <span className="kg-name">Data display</span>
         <span className="kg-rule"></span>
         <span className="kg-count">
-          Alert · Avatar · Calendar · Card · Media player · Stat · Table ·
-          Waveform
+          Alert · Avatar · Calendar · Card · Media player · Portfolio card ·
+          Stat · Table · Waveform
         </span>
       </div>
       <div className="kit-grid">
@@ -176,6 +188,42 @@ export function KitDataDisplay() {
               </Button>
             </CardContent>
           </Card>
+        </div>
+
+        <div className="glass kit-cell w8">
+          <span className="kit-cap">Portfolio card</span>
+          <PortfolioGrid>
+            <PortfolioCard href="https://example.com" aria-label="Visit Northstar">
+              <PortfolioCardMedia>
+                <PortfolioCardTags>
+                  <PortfolioCardTag>Live</PortfolioCardTag>
+                  <PortfolioCardTag>Fintech</PortfolioCardTag>
+                </PortfolioCardTags>
+                <PortfolioCardLogo>NS</PortfolioCardLogo>
+              </PortfolioCardMedia>
+              <PortfolioCardBody>
+                <PortfolioCardTitle>Northstar</PortfolioCardTitle>
+                <PortfolioCardDescription>
+                  Infrastructure that helps operators move money with clarity.
+                </PortfolioCardDescription>
+                <PortfolioCardAction />
+              </PortfolioCardBody>
+            </PortfolioCard>
+            <PortfolioCard>
+              <PortfolioCardMedia>
+                <PortfolioCardTags>
+                  <PortfolioCardTag>Private preview</PortfolioCardTag>
+                </PortfolioCardTags>
+                <PortfolioCardLogo>FV</PortfolioCardLogo>
+              </PortfolioCardMedia>
+              <PortfolioCardBody>
+                <PortfolioCardTitle>Field View</PortfolioCardTitle>
+                <PortfolioCardDescription>
+                  A research surface for turning evidence into decisions.
+                </PortfolioCardDescription>
+              </PortfolioCardBody>
+            </PortfolioCard>
+          </PortfolioGrid>
         </div>
 
         <div className="glass kit-cell w4">
