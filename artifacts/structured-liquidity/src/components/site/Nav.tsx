@@ -40,7 +40,9 @@ export function Nav() {
     let frame = 0;
     const update = () => {
       frame = 0;
-      const threshold = (navRef.current?.offsetHeight ?? 72) + 32;
+      // Match the sections' scroll-margin so a clicked destination becomes
+      // active as soon as it settles below the sticky navigation.
+      const threshold = (navRef.current?.offsetHeight ?? 72) + 48;
       let nextIndex = 0;
       NAV_ITEMS.forEach(({ href }, index) => {
         const section = document.getElementById(href.slice(1));
