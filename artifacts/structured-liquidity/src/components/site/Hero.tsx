@@ -1,6 +1,7 @@
 import { Sparkles, Github } from "lucide-react";
-import { LiquidWord, Hypercube } from "./liquid";
+import { LiquidWord } from "./liquid";
 import { InstallButton } from "./InstallButton";
+import { LiquidStaircase } from "./LiquidStaircase";
 
 const GITHUB = "https://github.com/heyinterspace/Structured";
 
@@ -23,7 +24,7 @@ export function Hero() {
             </em>{" "}
             Structure makes the interface tangible. Motion makes changing state
             perceptible. Clarity makes information ordered and unmistakable.
-            Three visible faces, one coherent interface.
+            Three tenets, one coherent interface.
           </p>
           <div className="hero-tags reveal">
             <span className="tag">
@@ -53,12 +54,8 @@ export function Hero() {
             </a>
           </div>
         </div>
-        <div
-          className="hero-cube-wrap"
-          role="img"
-          aria-label="The Structured Liquidity trifecta shown on the cube's three visible faces: Neobrutalist structure, Liquid Motion, and Scientific Modern Clarity."
-        >
-          <Hypercube className="hero-cube" faceLabels={["1", "2", "3"]} />
+        <div className="hero-cube-wrap">
+          <LiquidStaircase />
         </div>
       </div>
     </header>

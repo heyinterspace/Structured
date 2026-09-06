@@ -3,7 +3,7 @@ export function Tenets() {
     <section id="manifesto" className="wrap">
       <div className="section-head reveal">
         <span className="eyebrow">Principles · the foundation</span>
-        <h2 className="section-title">Three faces. One design language.</h2>
+        <h2 className="section-title">Three tenets. One design language.</h2>
         <p className="lead">
           Neobrutalist structure makes the interface tangible. Liquid Motion
           makes changing state perceptible. Scientific Modern Clarity makes
@@ -15,7 +15,7 @@ export function Tenets() {
       <div className="tenets">
         <article className="tenet tenet-neobrutalism reveal">
           <span className="pnum">Tenet 01</span>
-          <span className="psub">Physical frame</span>
+          <span className="psub">Frame</span>
           <h3>Neobrutalist structure</h3>
           <p>
             Buttons, borders, navigation, footers, body containers, and panels
@@ -40,7 +40,7 @@ export function Tenets() {
 
         <article className="tenet tenet-liquid reveal">
           <span className="pnum">Tenet 02</span>
-          <span className="psub">State transitions</span>
+          <span className="psub">Transition</span>
           <h3>Liquid Motion</h3>
           <p>
             Motion carries state between navbar actions, menu options, tabs,
@@ -69,7 +69,7 @@ export function Tenets() {
 
         <article className="tenet tenet-clarity reveal">
           <span className="pnum">Tenet 03</span>
-          <span className="psub">Information hierarchy</span>
+          <span className="psub">Hierarchy</span>
           <h3>Scientific Modern Clarity</h3>
           <p>
             Information organized through rational grids, disciplined hierarchy,

@@ -35,4 +35,4 @@ Structured Liquidity is a trifecta of three orthogonal design tenets, represente
 
 Primary phrase: **Neobrutalist structure. Liquid motion. Scientific modern clarity.**
 
-Manifesto phrase: **Three faces. One design language.**
+Manifesto phrase: **Three tenets. One design language.**

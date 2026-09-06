@@ -14,8 +14,8 @@
 
   /* Showcase product grid — cards auto-flow 1→4 across; description + CTA reveal on hover/focus,
      name/badge stay visible so the wall of screenshots is still scannable. */
-  .show-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;align-items:start;}
-  .show-card{display:flex;flex-direction:column;width:100%;max-width:520px;margin-inline:auto;text-decoration:none;color:inherit;overflow:hidden;cursor:pointer;transition:transform .25s ease;}
+  .show-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;align-items:start;}
+  .show-card{display:flex;flex-direction:column;width:100%;text-decoration:none;color:inherit;overflow:hidden;cursor:pointer;transition:transform .25s ease;}
   .show-card.is-static{cursor:default;}
   .show-card:hover,.show-card:focus-visible{transform:translateY(-4px);}
   .show-card.is-static:hover{transform:none;}
@@ -63,6 +63,8 @@
     [data-mode="light"] .show-card-veil{background:linear-gradient(180deg,transparent,rgba(223,229,242,.92) 42%);}
     .show-card-veil .vbody{transform:none;}
   }
+  @media (min-width:1440px){.show-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+  @media (max-width:680px){.show-grid{grid-template-columns:1fr;}}
 
   /* Per-component one-click install — a small ghost icon button injected into
      each gallery cell's .kit-cap (see bindGallery in src/lib/behaviors.ts). It
@@ -450,15 +452,15 @@
      standard two-value form only where ::-webkit-scrollbar is unsupported.
      Colours use modern rgb( r g b / a ) slash syntax because --glass-tint is a
      space-separated triplet. */
-  ::-webkit-scrollbar{width:12px;height:12px;}
-  ::-webkit-scrollbar-track{background:rgb(var(--glass-tint) / 0.06);}
-  ::-webkit-scrollbar-thumb{background:var(--accent);border:2px solid rgb(var(--edge));
+  ::-webkit-scrollbar{width:9px;height:9px;}
+  ::-webkit-scrollbar-track{background:rgb(var(--glass-tint) / 0.04);}
+  ::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--ink) 32%,var(--bg));border:2px solid var(--bg);
     border-radius:var(--radius);background-clip:padding-box;}
-  ::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--accent) 82%,#fff);
-    border:2px solid rgb(var(--edge));background-clip:padding-box;}
+  ::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--ink) 52%,var(--bg));
+    border:2px solid var(--bg);background-clip:padding-box;}
   ::-webkit-scrollbar-corner{background:rgb(var(--glass-tint) / 0.06);}
   @supports not selector(::-webkit-scrollbar){
-    html{scrollbar-width:thin;scrollbar-color:var(--accent) rgb(var(--glass-tint) / 0.16);}
+    html{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--ink) 32%,var(--bg)) rgb(var(--glass-tint) / 0.12);}
   }
   /* Component names: a touch larger and higher-contrast than the default dim caption. */
   #components .kit-cap{font-size:0.82rem;color:var(--ink);font-weight:700;}
@@ -1241,6 +1243,76 @@ body {
 .hero-cube.is-cube .lw-cube-edge {
   stroke-width: 0.8;
 }
+.liquid-staircase {
+  display: block;
+  width: clamp(330px, 38vw, 560px);
+  height: auto;
+  overflow: visible;
+  color: var(--ink);
+}
+.liquid-staircase path { vector-effect: non-scaling-stroke; stroke-linejoin: bevel; }
+.liquid-staircase__top {
+  fill: color-mix(in srgb, var(--accent) 22%, var(--bg-2));
+  stroke: rgb(var(--edge));
+  stroke-width: 2;
+}
+.liquid-staircase__rise {
+  fill: color-mix(in srgb, var(--accent) 42%, var(--bg-2));
+  stroke: rgb(var(--edge));
+  stroke-width: 2;
+}
+.liquid-staircase__side {
+  fill: color-mix(in srgb, var(--accent) 12%, var(--bg-2));
+  stroke: rgb(var(--edge));
+  stroke-width: 2;
+}
+.liquid-staircase__echo {
+  fill: none;
+  stroke: color-mix(in srgb, var(--ink) 28%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 4 7;
+}
+.liquid-staircase__flow path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--accent) 78%, white);
+  stroke-width: 3;
+  stroke-linecap: square;
+  stroke-dasharray: 12 18;
+  animation: liquid-stair-flow 3.8s linear infinite;
+}
+.liquid-staircase__flow path:nth-child(2) { animation-delay: -1.25s; }
+.liquid-staircase__flow path:nth-child(3) { animation-delay: -2.5s; }
+.liquid-staircase__cube {
+  transform-origin: 364px 222px;
+  animation: liquid-stair-cube 3.8s var(--ease-liquid-over) infinite;
+  filter: drop-shadow(9px 11px 0 var(--hard-shadow));
+}
+.liquid-staircase__cube-top,
+.liquid-staircase__cube-left,
+.liquid-staircase__cube-right { stroke: rgb(var(--edge)); stroke-width: 2.4; }
+.liquid-staircase__cube-top { fill: color-mix(in srgb, var(--accent) 22%, var(--bg-2)); }
+.liquid-staircase__cube-left { fill: color-mix(in srgb, var(--accent) 68%, var(--bg-2)); }
+.liquid-staircase__cube-right { fill: color-mix(in srgb, var(--accent) 42%, var(--bg-2)); }
+.liquid-staircase__cube-glint {
+  fill: none;
+  stroke: color-mix(in srgb, white 72%, transparent);
+  stroke-width: 1.5;
+}
+.liquid-staircase__caption path { stroke: var(--ink); stroke-width: 1; }
+.liquid-staircase__caption text {
+  fill: var(--ink-dim);
+  font: 700 10px var(--mono);
+  letter-spacing: 1.2px;
+}
+@keyframes liquid-stair-flow { to { stroke-dashoffset: -60; } }
+@keyframes liquid-stair-cube {
+  0%, 100% { transform: translate3d(0, -4px, 0); }
+  50% { transform: translate3d(-7px, 8px, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .liquid-staircase__flow path,
+  .liquid-staircase__cube { animation: none; }
+}
 
 .tenets {
   gap: 0;
@@ -1487,7 +1559,7 @@ body {
 
 .tenet {
   display: grid;
-  grid-template-rows: auto auto 5.1rem minmax(11.5rem, 1fr) auto;
+  grid-template-rows: auto auto 5.1rem 14rem auto;
 }
 .tenet h3 {
   align-self: end;
@@ -1583,7 +1655,11 @@ body {
     display: flex;
     min-height: auto;
   }
-  .tenet h3 { white-space: normal; font-size: 1.55rem; }
+  .tenet h3 {
+    align-self: stretch;
+    white-space: normal;
+    font-size: 1.55rem;
+  }
 }
 
 @media (max-width: 900px) {

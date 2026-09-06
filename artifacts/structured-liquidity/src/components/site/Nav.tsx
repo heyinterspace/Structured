@@ -22,6 +22,8 @@ const NAV_ITEMS = [
 export function Nav() {
   const navRef = useRef<HTMLElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
+  const activeIndexRef = useRef(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const positionMarker = useCallback((index: number) => {
@@ -38,14 +40,17 @@ export function Nav() {
     let frame = 0;
     const update = () => {
       frame = 0;
-      positionMarker(0);
-      const page = document.documentElement;
-      const distance = Math.max(1, page.scrollHeight - window.innerHeight);
-      const progress = Math.min(1, Math.max(0, window.scrollY / distance));
-      navRef.current?.style.setProperty(
-        "--page-progress",
-        `${progress * 100}%`,
-      );
+      const threshold = (navRef.current?.offsetHeight ?? 72) + 32;
+      let nextIndex = 0;
+      NAV_ITEMS.forEach(({ href }, index) => {
+        const section = document.getElementById(href.slice(1));
+        if (section && section.getBoundingClientRect().top <= threshold) {
+          nextIndex = index;
+        }
+      });
+      activeIndexRef.current = nextIndex;
+      setActiveIndex(nextIndex);
+      positionMarker(nextIndex);
     };
     const requestUpdate = () => {
       if (!frame) frame = window.requestAnimationFrame(update);
@@ -60,6 +65,17 @@ export function Nav() {
     };
   }, [positionMarker]);
 
+  const navigateTo = useCallback((href: string) => {
+    const target = document.getElementById(href.slice(1));
+    if (!target) return;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    window.history.replaceState(null, "", href);
+    target.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
+    setMobileOpen(false);
+  }, []);
+
   useEffect(() => {
     if (!mobileOpen) return;
     const closeOnEscape = (event: KeyboardEvent) => {
@@ -71,7 +87,14 @@ export function Nav() {
 
   return (
     <nav className="nav" ref={navRef}>
-      <a className="brand" href="#top">
+      <a
+        className="brand"
+        href="#top"
+        onClick={(event) => {
+          event.preventDefault();
+          navigateTo("#top");
+        }}
+      >
         <Hypercube />
         <span className="name">Structured Liquidity</span>
       </a>
@@ -89,10 +112,10 @@ export function Nav() {
         <div
           className="links"
           ref={linksRef}
-          onPointerLeave={() => positionMarker(0)}
+          onPointerLeave={() => positionMarker(activeIndexRef.current)}
           onBlur={(event) => {
             if (!event.currentTarget.contains(event.relatedTarget))
-              positionMarker(0);
+              positionMarker(activeIndexRef.current);
           }}
         >
           <span className="nav-liquid-marker" aria-hidden="true" />
@@ -103,7 +126,14 @@ export function Nav() {
               onFocus={() => positionMarker(index)}
               key={href}
             >
-              <a href={href}>
+              <a
+                href={href}
+                aria-current={activeIndex === index ? "location" : undefined}
+                onClick={(event) => {
+                  event.preventDefault();
+                  navigateTo(href);
+                }}
+              >
                 <Icon />
                 <span className="nav-label">{label}</span>
               </a>
@@ -130,7 +160,14 @@ export function Nav() {
       >
         <div className="nav-mobile-links">
           {NAV_ITEMS.map(({ label, href, icon: Icon }) => (
-            <a href={href} onClick={() => setMobileOpen(false)} key={href}>
+            <a
+              href={href}
+              onClick={(event) => {
+                event.preventDefault();
+                navigateTo(href);
+              }}
+              key={href}
+            >
               <Icon />
               <span>{label}</span>
             </a>
@@ -149,7 +186,6 @@ export function Nav() {
           </a>
         </div>
       </div>
-      <span className="nav-page-progress" aria-hidden="true" />
     </nav>
   );
 }
