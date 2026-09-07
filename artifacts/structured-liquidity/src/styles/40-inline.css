@@ -66,6 +66,19 @@
   @media (min-width:1440px){.show-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
   @media (max-width:680px){.show-grid{grid-template-columns:1fr;}}
 
+  /* Showcase uses the shared portfolio anatomy, with persistent copy and action. */
+  .showcase-projects { grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; align-items:stretch; }
+  .showcase-project { min-width:0; }
+  .showcase-project-media { aspect-ratio:16/9; min-height:0; flex:0 0 auto; padding:0; overflow:hidden; }
+  .showcase-project-media > img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; }
+  .showcase-project .sl-portfolio-card-body { padding:1.25rem; }
+  .showcase-project-domain { margin-bottom:.65rem; font-family:var(--mono); font-size:.65rem; color:color-mix(in srgb,var(--neg-ink) 72%,transparent); }
+  .showcase-project .sl-portfolio-card-title { font-size:1.35rem; }
+  .showcase-project .sl-portfolio-card-description { display:block; overflow:visible; font-size:.9rem; -webkit-line-clamp:unset; }
+  .showcase-project .sl-portfolio-card-action { min-height:44px; }
+  @media (min-width:1440px){ .showcase-projects { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media (max-width:680px){ .showcase-projects { grid-template-columns:1fr; } }
+
   /* Per-component one-click install — a small ghost icon button injected into
      each gallery cell's .kit-cap (see bindGallery in src/lib/behaviors.ts). It
      copies `npx shadcn@latest add …/r/<slug>.json` and flashes a check glyph.
